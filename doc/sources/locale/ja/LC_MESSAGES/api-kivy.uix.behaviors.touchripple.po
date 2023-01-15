@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../sources/api-kivy.uix.behaviors.touchripple.rst:3
+msgid "Touch Ripple"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple:5 of
+msgid ""
+"This code is still experimental, and its API is subject to change in a "
+"future version."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple:8 of
+msgid ""
+"This module contains `mixin <https://en.wikipedia.org/wiki/Mixin>`_ "
+"classes to add a touch ripple visual effect known from `Google Material "
+"Design <https://en.wikipedia.org/wiki/Material_Design>_` to widgets."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple:12 of
+msgid ""
+"For an overview of behaviors, please refer to the "
+":mod:`~kivy.uix.behaviors` documentation."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple:15 of
+msgid ""
+"The class :class:`~kivy.uix.behaviors.touchripple.TouchRippleBehavior` "
+"provides rendering the ripple animation."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple:18 of
+msgid ""
+"The class "
+":class:`~kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior` "
+"basically provides the same functionality as "
+":class:`~kivy.uix.behaviors.button.ButtonBehavior` but rendering the "
+"ripple animation instead of default press/release visualization."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`builtins.object`"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior:1 of
+msgid "Touch ripple behavior."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior:3 of
+msgid "Supposed to be used as mixin on widget classes."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior:5 of
+msgid ""
+"Ripple behavior does not trigger automatically, concrete implementation "
+"needs to call :func:`ripple_show` respective :func:`ripple_fade` "
+"manually."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior:9 of
+msgid "Example"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior:11 of
+msgid ""
+"Here we create a Label which renders the touch ripple animation on "
+"interaction::"
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_duration_in:1 of
+msgid "Animation duration taken to show the overlay."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_duration_in:3 of
+msgid ""
+":attr:`ripple_duration_in` is a :class:`~kivy.properties.NumericProperty`"
+" and defaults to `0.5`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_duration_out:1 of
+msgid "Animation duration taken to fade the overlay."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_duration_out:3 of
+msgid ""
+":attr:`ripple_duration_out` is a "
+":class:`~kivy.properties.NumericProperty` and defaults to `0.2`."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_fade:1 of
+msgid "Finish ripple animation on current widget."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_fade_from_alpha:1
+#: of
+msgid "Alpha channel for ripple color the animation starts with."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_fade_from_alpha:3
+#: of
+msgid ""
+":attr:`ripple_fade_from_alpha` is a "
+":class:`~kivy.properties.NumericProperty` and defaults to `0.5`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_fade_to_alpha:1 of
+msgid "Alpha channel for ripple color the animation targets to."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_fade_to_alpha:3 of
+msgid ""
+":attr:`ripple_fade_to_alpha` is a "
+":class:`~kivy.properties.NumericProperty` and defaults to `0.8`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_func_in:1 of
+msgid "Animation callback for showing the overlay."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_func_in:3 of
+msgid ""
+":attr:`ripple_func_in` is a :class:`~kivy.properties.StringProperty` and "
+"defaults to `in_cubic`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_func_out:1 of
+msgid "Animation callback for hiding the overlay."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_func_out:3 of
+msgid ""
+":attr:`ripple_func_out` is a :class:`~kivy.properties.StringProperty` and"
+" defaults to `out_quad`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_rad_default:1 of
+msgid "Default radius the animation starts from."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_rad_default:3 of
+msgid ""
+":attr:`ripple_rad_default` is a :class:`~kivy.properties.NumericProperty`"
+" and defaults to `10`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_scale:1 of
+msgid ""
+"Max scale of the animation overlay calculated from max(width/height) of "
+"the decorated widget."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_scale:4 of
+msgid ""
+":attr:`ripple_scale` is a :class:`~kivy.properties.NumericProperty` and "
+"defaults to `2.0`."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_show:1 of
+msgid "Begin ripple animation on current widget."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleBehavior.ripple_show:3 of
+msgid "Expects touch event as argument."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.uix.behaviors.touchripple.TouchRippleBehavior`"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior:1 of
+msgid ""
+"This `mixin <https://en.wikipedia.org/wiki/Mixin>`_ class provides a "
+"similar behavior to :class:`~kivy.uix.behaviors.button.ButtonBehavior` "
+"but provides touch ripple animation instead of button pressed/released as"
+" visual effect."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior of
+msgid "Events"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior:7 of
+msgid "`on_press`"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior:8 of
+msgid "Fired when the button is pressed."
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior:12 of
+msgid "`on_release`"
+msgstr ""
+
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior:10 of
+msgid ""
+"Fired when the button is released (i.e. the touch/click that pressed the "
+"button goes away)."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior.always_release:1 of
+msgid ""
+"This determines whether or not the widget fires an `on_release` event if "
+"the touch_up is outside the widget."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior.always_release:4 of
+msgid ""
+":attr:`always_release` is a :class:`~kivy.properties.BooleanProperty` and"
+" defaults to `False`."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior.last_touch:1 of
+msgid ""
+"Contains the last relevant touch received by the Button. This can be used"
+" in `on_press` or `on_release` in order to know which touch dispatched "
+"the event."
+msgstr ""
+
+#: ../../docstring
+#: kivy.uix.behaviors.touchripple.TouchRippleButtonBehavior.last_touch:5 of
+msgid ""
+":attr:`last_touch` is a :class:`~kivy.properties.ObjectProperty` and "
+"defaults to `None`."
+msgstr ""
+

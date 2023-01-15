@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../sources/installation/installation-osx.rst:4
+msgid "Installation on macOS"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:6
+msgid ""
+"To install Kivy on macOS using ``pip``, please follow the main "
+":ref:`installation guide<installation-canonical>`. Otherwise, continue to"
+" the :ref:`Kivy.app instructions below<osx-app>`."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:11
+msgid "Installation components"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:13
+msgid ""
+"Following, are additional information linked to from some of the steps in"
+" the main :ref:`installation guide<installation-canonical>`, specific to "
+"macOS."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:19
+msgid "Installing Python"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:22
+#: ../../sources/installation/installation-osx.rst:59
+msgid "Homebrew"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:24
+msgid ""
+"If you're using `Homebrew <http://brew.sh>`_, you can install Python "
+"with::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:29
+#: ../../sources/installation/installation-osx.rst:66
+msgid "MacPorts"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:31
+msgid ""
+"If you're using `Macports <https://www.macports.org>`_, you can install "
+"Python with::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:42
+#: ../../sources/installation/installation-osx.rst:79
+msgid "Frameworks"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:44
+msgid ""
+"To install frameworks Python on macOS, download it from the main `Python "
+"website <https://www.python.org/downloads/macos/>`_ and follow the "
+"installation steps. You can read more about the installation in the "
+"`Python guide <https://docs.python.org/3/using/mac.html>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:52
+msgid "Source installation Dependencies"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:54
+msgid ""
+"To install Kivy from source, please follow the installation guide until "
+"you reach the :ref:`Kivy install step<kivy-source-install>` and then "
+"install the additional dependencies below before continuing."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:61
+msgid ""
+"If you're using Homebrew, you can install the (default) dependencies "
+"with::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:70
+msgid ""
+"You will have to manually install gstreamer support if you wish to "
+"support video playback in your Kivy App. The latest port documents show "
+"the following `py-gst-python port "
+"<https://trac.macports.org/ticket/44813>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:74
+msgid "If you're using MacPorts, you can install the dependencies with::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:81
+msgid ""
+"If you're installing Python from a framework, you will need to install "
+"Kivy's dependencies from frameworks as well. You can do that with the "
+"following commands (customize as needed)::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:113
+msgid ""
+"At the time of writing, only certain SDL2 deps are shipped as universal2 "
+"frameworks with binaries for both Intel and Apple Silicon Macs. On our CI"
+" workflow that builds ``.whl`` and ``Kivy.app`` we're building the "
+"Frameworks from source with universal2 support. (See: `create-osx-"
+"bundle.sh <https://github.com/kivy/kivy-sdk-packager/blob/master/osx"
+"/create-osx-bundle.sh>`_)"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:118
+msgid ""
+"Now that you have all the dependencies for kivy, you need to make sure "
+"you have the command line tools installed::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:126
+msgid "Using The Kivy.app"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:130
+msgid "Kivy.app is built with ``MACOSX_DEPLOYMENT_TARGET=10.9``."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:132
+msgid ""
+"You can find complete instructions to build and package apps with "
+"Kivy.app in the readme of the `kivy-sdk-packager repo "
+"<https://github.com/kivy/kivy-sdk-packager/tree/master/osx>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:135
+msgid "To install the Kivy virtualenv, you must:"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:137
+msgid ""
+"Navigate to the latest Kivy release on Kivy's `website "
+"<https://kivy.org/downloads/>`_ or `GitHub "
+"<https://github.com/kivy/kivy/releases>`_ and download ``Kivy.dmg``. You "
+"can also download a nightly snapshot of `Kivy.app "
+"<https://kivy.org/downloads/ci/osx/app/Kivy.dmg>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:141
+msgid "Open the dmg"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:142
+msgid ""
+"In the GUI copy the Kivy.app to /Applications by dragging the folder icon"
+" to the right."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:143
+msgid "Optionally create a symlink by running the following command::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:147
+msgid ""
+"This creates the ``kivy`` binary that you can use instead of python to "
+"run scripts. I.e. instead of doing ``python my_script.py`` or ``python -m"
+" pip install <module name>``, write ``kivy my_script.py`` or ``kivy -m "
+"pip install <module name>`` to run it using the kivy bundled Python "
+"interpreter with the kivy environment."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:152
+msgid ""
+"As opposed to activating the virtualenv below, running with ``kivy`` will"
+" use the virtualenv but also properly configure the script environment "
+"required to run a Kivy app (i.e. setting kivy's home path etc.)."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:157
+msgid "Using the App Virtual environment"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:159
+msgid ""
+"The path to the underlying virtualenv is "
+"``/Applications/Kivy.app/Contents/Resources/venv``. To activate it so you"
+" can use python, like any normal virtualenv, do::"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:168
+msgid ""
+"On the default mac (zsh) shell you **must** be in the bin directory "
+"containing ``activate`` to be able to ``activate`` the virtualenv, hence "
+"why we changed the directory temporarily."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:171
+msgid ""
+"``kivy_activate`` sets up the environment to be able to run Kivy, by "
+"setting the kivy home, and other variables."
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:174
+msgid "Start any Kivy Application"
+msgstr ""
+
+#: ../../sources/installation/installation-osx.rst:176
+msgid ""
+"You can run any Kivy application by simply dragging the application's "
+"main file onto the Kivy.app icon."
+msgstr ""
+

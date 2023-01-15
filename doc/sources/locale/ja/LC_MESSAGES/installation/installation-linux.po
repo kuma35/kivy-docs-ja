@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../sources/installation/installation-linux.rst:4
+msgid "Installation on Linux"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:6
+msgid ""
+"To install Kivy on Linux using ``pip``, please follow the main "
+":ref:`installation guide<installation-canonical>`. Otherwise, continue to"
+" the :ref:`PPA instructions below<linux-ppa>`."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:10
+msgid "Installation components"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:12
+msgid ""
+"Following, are additional information linked to from some of the steps in"
+" the main :ref:`pip installation guide<installation-canonical>`, specific"
+" to Linux."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:18
+msgid "Installing Python"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:20
+msgid "Python and python-pip must be installed from the package manager:"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:23
+#: ../../sources/installation/installation-linux.rst:63
+msgid "Ubuntu"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:25
+#: ../../sources/installation/installation-linux.rst:65
+msgid "Using apt::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:35
+#: ../../sources/installation/installation-linux.rst:87
+msgid "Fedora"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:37
+msgid ""
+"You will likely need to do this preliminary step which installs the "
+"rpmfusion-free repository unless you have some other 3rd-party repo "
+"installed which has the required packages. See rpmfusion.org for complete"
+" installation instructions, but only the rpmfusion-free repo is needed "
+"for acquiring kivy dependencies (though rpmfusion-nonfree is recommended "
+"by rpm fusion installation instructions) as shown in this step."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:42
+#: ../../sources/installation/installation-linux.rst:89
+msgid "Using dnf::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:46
+msgid ""
+"After you ensure that a 3rd-party repository containing any packages that"
+" dnf is otherwise unable to find, continue installing dependencies::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:54
+msgid "Source installation Dependencies"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:56
+msgid ""
+"To install Kivy from source, please follow the installation guide until "
+"you reach the :ref:`Kivy install step<kivy-source-install>` and then "
+"install the dependencies below before continuing. Additionally, if you'd "
+"like to be able to use the x11 window backend do::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:108
+msgid "Using software packages (PPA etc.)"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:111
+msgid "Ubuntu / Kubuntu / Xubuntu / Lubuntu (Saucy and above)"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:113
+msgid "Add one of the PPAs as you prefer"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "stable builds"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:116
+msgid "$ sudo add-apt-repository ppa:kivy-team/kivy"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "nightly builds"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:118
+msgid "$ sudo add-apt-repository ppa:kivy-team/kivy-daily"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:121
+msgid "Update your package list using your package manager"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:121
+msgid "$ sudo apt-get update"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:123
+msgid "Install Kivy"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "Python3 - **python3-kivy**"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:126
+msgid "$ sudo apt-get install python3-kivy"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid ""
+"optionally the `gallery of Examples <../examples/gallery.html>`_ - "
+"**kivy-examples**"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:128
+msgid "$ sudo apt-get install kivy-examples"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:132
+msgid "Debian  (Jessie or newer)"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:134
+msgid "Add one of the PPAs to your sources.list in apt manually or via Synaptic"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:137
+msgid "deb http://ppa.launchpad.net/kivy-team/kivy/ubuntu xenial main"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "daily builds"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:139
+msgid "deb http://ppa.launchpad.net/kivy-team/kivy-daily/ubuntu xenial main"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:141
+msgid ""
+"**Notice**: Wheezy is not supported - You'll need to upgrade to Jessie at"
+" least!"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:143
+msgid "Add the GPG key to your apt keyring by executing"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:145
+msgid "as user:"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:147
+msgid "``sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A863D2D6``"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:149
+msgid "as root:"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:151
+msgid "``apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A863D2D6``"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:153
+msgid ""
+"Refresh your package list and install **python-kivy** and/or "
+"**python3-kivy** and optionally the examples found in **kivy-examples**"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:158
+msgid "Linux Mint"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:160
+msgid ""
+"Find out on which Ubuntu release your installation is based on, using "
+"this `overview <https://linuxmint.com/download_all.php>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:162
+#: ../../sources/installation/installation-linux.rst:182
+msgid ""
+"Continue as described for Ubuntu above, depending on which version your "
+"installation is based on."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:167
+msgid "Bodhi Linux"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:169
+msgid ""
+"Find out which version of the distribution you are running and use the "
+"table below to find out on which Ubuntu LTS it is based."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "Bodhi 1"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:173
+msgid "Ubuntu 10.04 LTS aka Lucid (No packages, just manual install)"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "Bodhi 2"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:175
+msgid "Ubuntu 12.04 LTS aka Precise"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "Bodhi 3"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:177
+msgid "Ubuntu 14.04 LTS aka Trusty"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst
+msgid "Bodhi 4"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:179
+msgid "Ubuntu 16.04 LTS aka Xenial"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:186
+msgid "OpenSuSE"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:188
+msgid ""
+"To install kivy go to http://software.opensuse.org/package/python-Kivy "
+"and use the \"1 Click Install\" for your openSuse version. You might need"
+" to make the latest kivy version appear in the list by clicking on \"Show"
+" unstable packages\". We prefer to use packages by \" "
+"devel:languages:python\"."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:190
+msgid ""
+"If you would like access to the examples, please select **python-Kivy-"
+"examples** in the upcoming installation wizard."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:194
+msgid "Gentoo"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:196
+msgid ""
+"**Add** the `raiagent overlay <https://github.com/leycec/raiagent>`_ "
+"packaging the `full Kivy + KivyMD + Buildozer + python-for-android stack "
+"<https://github.com/kivy/kivy/issues/7868>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:204
+msgid "**Synchronize** (i.e., fetch) this overlay."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:210
+msgid ""
+"Install **Kivy** and optionally **KivyMD**, **Buildozer**, and **python-"
+"for-android**."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:217
+msgid "(\\ *Optional*\\ ) Describe all **USE flags** supported by these ebuilds."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:225
+msgid "Device permissions"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:227
+msgid ""
+"When you app starts, Kivy uses `Mtdev "
+"<http://wiki.ubuntu.com/Multitouch>`_ to scan for available multi-touch "
+"devices to use for input. Access to these devices is typically restricted"
+" to users or groups with the appropriate permissions."
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:232
+msgid ""
+"If you do not have access to these devices, Kivy will log an error or "
+"warning specifying these devices, normally something like::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:237
+msgid ""
+"In order to use these devices, you can add your user to a group that has "
+"the required permissions. For example, in Ubuntu, you can add the user to"
+" the 'input' group::"
+msgstr ""
+
+#: ../../sources/installation/installation-linux.rst:243
+msgid ""
+"Note that you need to log out then back in again for these permissions to"
+" be applied."
+msgstr ""
+

@@ -250,3 +250,7 @@ for key, value in replacements.items():
     epilog.append(rep)
 
 rst_epilog = '\n'.join(epilog)
+
+# for sphinx-intl
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.

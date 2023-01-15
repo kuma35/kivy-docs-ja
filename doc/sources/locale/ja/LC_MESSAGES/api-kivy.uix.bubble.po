@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../sources/api-kivy.uix.bubble.rst:3
+msgid "Bubble"
+msgstr ""
+
+#: kivy.uix.bubble:7 of
+msgid ""
+"The :class:`Bubble` widget is a form of menu or a small popup with an "
+"arrow arranged on one side of it's content."
+msgstr ""
+
+#: kivy.uix.bubble:10 of
+msgid ""
+"The :class:`Bubble` contains an arrow attached to the content (e.g., "
+":class:`BubbleContent`) pointing in the direction you choose. It can be "
+"placed either at a predefined location or flexibly by specifying a "
+"relative position on the border of the widget."
+msgstr ""
+
+#: kivy.uix.bubble:15 of
+msgid ""
+"The :class:`BubbleContent` is a styled BoxLayout and is thought to be "
+"added to the :class:`Bubble` as a child widget. The :class:`Bubble` will "
+"then arrange an arrow around the content as desired. Instead of the "
+"class:`BubbleContent`, you can theoretically use any other "
+":class:`Widget` as well as long as it supports the 'bind' and 'unbind' "
+"function of the :class:`EventDispatcher` and is compatible with Kivy to "
+"be placed inside a :class:`BoxLayout`."
+msgstr ""
+
+#: kivy.uix.bubble:22 of
+msgid ""
+"The :class:`BubbleButton`is a styled Button. It suits to the style of "
+":class:`Bubble` and :class:`BubbleContent`. Feel free to place other "
+"Widgets inside the 'content' of the :class:`Bubble`."
+msgstr ""
+
+#: kivy.uix.bubble:28 of
+msgid ""
+"The properties :attr:`background_image`, :attr:`background_color`, "
+":attr:`border` and :attr:`border_auto_scale` were removed from "
+":class:`Bubble`. These properties had only been used by the content "
+"widget that now uses it's own properties instead. The color of the arrow "
+"is now changed with :attr:`arrow_color` instead of "
+":attr:`background_color`. These changes makes the :class:`Bubble` "
+"transparent to use with other layouts as content without any side-effects"
+" due to property inheritance."
+msgstr ""
+
+#: kivy.uix.bubble:36 of
+msgid ""
+"The property :attr:`flex_arrow_pos` has been added to allow further "
+"customization of the arrow positioning."
+msgstr ""
+
+#: kivy.uix.bubble:39 of
+msgid ""
+"The properties :attr:`arrow_margin`, :attr:`arrow_margin_x`, "
+":attr:`arrow_margin_y`, :attr:`content_size`, :attr:`content_width` and "
+":attr:`content_height` have been added to ease proper sizing of a "
+":class:`Bubble` e.g., based on it's content size."
+msgstr ""
+
+#: kivy.uix.bubble:45 of
+msgid "BubbleContent"
+msgstr ""
+
+#: kivy.uix.bubble:47 of
+msgid ""
+"The :class:`BubbleContent` is a styled BoxLayout that can be used to add "
+"e.g., :class:`BubbleButtons` as menu items."
+msgstr ""
+
+#: kivy.uix.bubble:51 of
+msgid ""
+"The properties :attr:`background_image`, :attr:`background_color`, "
+":attr:`border` and :attr:`border_auto_scale` were added to the "
+":class:`BubbleContent`. The :class:`BubbleContent` does no longer rely on"
+" these properties being present in the parent class."
+msgstr ""
+
+#: kivy.uix.bubble:57 of
+msgid "BubbleButton"
+msgstr ""
+
+#: kivy.uix.bubble:59 of
+msgid ""
+"The :class:`BubbleButton` is a styled :class:`Button` that can be used to"
+" be added to the :class:`BubbleContent`."
+msgstr ""
+
+#: kivy.uix.bubble:63 of
+msgid "Simple example"
+msgstr ""
+
+#: kivy.uix.bubble:69 of
+msgid "Customize the Bubble"
+msgstr ""
+
+#: kivy.uix.bubble:71 of
+msgid "You can choose the direction in which the arrow points::"
+msgstr ""
+
+#: kivy.uix.bubble:80 of
+msgid "You can change the appearance of the bubble::"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.uix.boxlayout.BoxLayout`"
+msgstr ""
+
+#: kivy.uix.bubble.Bubble:1 of
+msgid "Bubble class. See module documentation for more information."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:1 of
+msgid "Add a new widget as a child of this widget."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget kivy.uix.bubble.Bubble.remove_widget of
+msgid "Parameters"
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:4 kivy.uix.bubble.Bubble.remove_widget:5
+#: of
+msgid "`widget`: :class:`Widget`"
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:5 of
+msgid "Widget to add to our list of children."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:12 of
+msgid "`index`: int, defaults to 0"
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:7 of
+msgid ""
+"Index to insert the widget in the list. Notice that the default of 0 "
+"means the widget is inserted at the beginning of the list and will thus "
+"be drawn on top of other sibling widgets. For a full discussion of the "
+"index and widget hierarchy, please see the :doc:`Widgets Programming "
+"Guide <guide/widgets>`."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:18 of
+msgid "`canvas`: str, defaults to None"
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.add_widget:15 of
+msgid ""
+"Canvas to add widget's canvas to. Can be 'before', 'after' or None for "
+"the default canvas."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_color:1 of
+msgid ""
+"Arrow color, in the format (r, g, b, a). To use it you have to set "
+":attr:`arrow_image` first."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_color:6 of
+msgid ""
+":attr:`arrow_color` is a :class:`~kivy.properties.ColorProperty` and "
+"defaults to [1, 1, 1, 1]."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_image:1 of
+msgid "Image of the arrow pointing to the bubble."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_image:3 of
+msgid ""
+":attr:`arrow_image` is a :class:`~kivy.properties.StringProperty` and "
+"defaults to 'atlas://data/images/defaulttheme/bubble_arrow'."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin:1 of
+msgid ""
+"Automatically computed margin that the arrow widget occupies in x and y "
+"direction in pixel."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin:4 of
+msgid ""
+"Check the description of :attr:`arrow_margin_x` and "
+":attr:`arrow_margin_y`."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin:8 of
+msgid ""
+":attr:`arrow_margin` is a :class:`~kivy.properties.ReferenceListProperty`"
+" of (:attr:`arrow_margin_x`, :attr:`arrow_margin_y`) properties. It is "
+"read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_x:1 of
+msgid ""
+"Automatically computed margin in x direction that the arrow widget "
+"occupies in pixel."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_x:4 of
+msgid ""
+"In combination with the :attr:`content_width`, this property can be used "
+"to determine the correct width of the Bubble to exactly enclose the arrow"
+" + content by adding :attr:`content_width` and :attr:`arrow_margin_x`"
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_x:10 of
+msgid ""
+":attr:`arrow_margin_x` is a :class:`~kivy.properties.NumericProperty` and"
+" represents the added margin in x direction due to the arrow widget. It "
+"defaults to 0 and is read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_y:1 of
+msgid ""
+"Automatically computed margin in y direction that the arrow widget "
+"occupies in pixel."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_y:4 of
+msgid ""
+"In combination with the :attr:`content_height`, this property can be used"
+" to determine the correct height of the Bubble to exactly enclose the "
+"arrow + content by adding :attr:`content_height` and "
+":attr:`arrow_margin_y`"
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_margin_y:10 of
+msgid ""
+":attr:`arrow_margin_y` is a :class:`~kivy.properties.NumericProperty` and"
+" represents the added margin in y direction due to the arrow widget. It "
+"defaults to 0 and is read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_pos:1 of
+msgid ""
+"Specifies the position of the arrow as predefined relative position to "
+"the bubble. Can be one of: left_top, left_mid, left_bottom top_left, "
+"top_mid, top_right right_top, right_mid, right_bottom bottom_left, "
+"bottom_mid, bottom_right."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.arrow_pos:6 of
+msgid ""
+":attr:`arrow_pos` is a :class:`~kivy.properties.OptionProperty` and "
+"defaults to 'bottom_mid'."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content:1 of
+msgid "This is the object where the main content of the bubble is held."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content:3 of
+msgid ""
+"The content of the Bubble set by 'add_widget' and removed with "
+"'remove_widget' similarly to the :class:`ActionView` which is placed into"
+" a class:`ActionBar`"
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content:7 of
+msgid ""
+":attr:`content` is a :class:`~kivy.properties.ObjectProperty` and "
+"defaults to None."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_height:1 of
+msgid "The height of the content Widget."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_height:5 of
+msgid ""
+":attr:`content_height` is a :class:`~kivy.properties.NumericProperty` and"
+" is the same as self.content.height if content is not None, else it "
+"defaults to 0. It is read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_size:1 of
+msgid "The size of the content Widget."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_size:5 of
+msgid ""
+":attr:`content_size` is a :class:`~kivy.properties.ReferenceListProperty`"
+" of (:attr:`content_width`, :attr:`content_height`) properties. It is "
+"read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_width:1 of
+msgid "The width of the content Widget."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.content_width:5 of
+msgid ""
+":attr:`content_width` is a :class:`~kivy.properties.NumericProperty` and "
+"is the same as self.content.width if content is not None, else it "
+"defaults to 0. It is read only."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.flex_arrow_pos:1 of
+msgid ""
+"Specifies the position of the arrow as flex coordinate around the border "
+"of the :class:`Bubble` Widget. If this property is set to a proper "
+"position (relative pixel coordinates within the :class:`Bubble` widget, "
+"it overwrites the setting :attr:`arrow_pos`."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.flex_arrow_pos:9 of
+msgid ""
+":attr:`flex_arrow_pos` is a :class:`~kivy.properties.ListProperty` and "
+"defaults to None."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.limit_to:1 of
+msgid "Specifies the widget to which the bubbles position is restricted."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.limit_to:5 of
+msgid ""
+":attr:`limit_to` is a :class:`~kivy.properties.ObjectProperty` and "
+"defaults to 'None'."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.remove_widget:1 of
+msgid "Remove a widget from the children of this widget."
+msgstr ""
+
+#: kivy.uix.bubble.Bubble.remove_widget:5 of
+msgid "Widget to remove from our children list."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.show_arrow:1 of
+msgid "Indicates whether to show arrow."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.Bubble.show_arrow:5 of
+msgid ""
+":attr:`show_arrow` is a :class:`~kivy.properties.BooleanProperty` and "
+"defaults to `True`."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.uix.button.Button`"
+msgstr ""
+
+#: kivy.uix.bubble.BubbleButton:1 of
+msgid ""
+"A button intended for use in a BubbleContent widget. You can use a "
+"\"normal\" button class, but it will not look good unless the background "
+"is changed."
+msgstr ""
+
+#: kivy.uix.bubble.BubbleButton:5 of
+msgid ""
+"Rather use this BubbleButton widget that is already defined and provides "
+"a suitable background for you."
+msgstr ""
+
+#: kivy.uix.bubble.BubbleContent:1 of
+msgid "A styled BoxLayout that can be used as the content widget of a Bubble."
+msgstr ""
+
+#: kivy.uix.bubble.BubbleContent:4 of
+msgid ""
+"The graphical appearance of :class:`BubbleContent` is now based on it's "
+"own properties :attr:`background_image`, :attr:`background_color`, "
+":attr:`border` and :attr:`border_auto_scale`. The parent widget "
+"properties are no longer considered. This makes the BubbleContent a "
+"standalone themed BoxLayout."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.background_color:1 of
+msgid ""
+"Background color, in the format (r, g, b, a). To use it you have to set "
+":attr:`background_image` first."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.background_color:6 of
+msgid ""
+":attr:`background_color` is a :class:`~kivy.properties.ColorProperty` and"
+" defaults to [1, 1, 1, 1]."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.background_image:1 of
+msgid "Background image of the bubble."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.background_image:5 of
+msgid ""
+":attr:`background_image` is a :class:`~kivy.properties.StringProperty` "
+"and defaults to 'atlas://data/images/defaulttheme/bubble'."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.border:1 of
+msgid ""
+"Border used for :class:`~kivy.graphics.vertex_instructions.BorderImage` "
+"graphics instruction. Used with the :attr:`background_image`. It should "
+"be used when using custom backgrounds."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.border:5 of
+msgid ""
+"It must be a list of 4 values: (bottom, right, top, left). Read the "
+"BorderImage instructions for more information about how to use it."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.border:10 of
+msgid ""
+":attr:`border` is a :class:`~kivy.properties.ListProperty` and defaults "
+"to (16, 16, 16, 16)"
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.border_auto_scale:1 of
+msgid ""
+"Specifies the :attr:`kivy.graphics.BorderImage.auto_scale` value on the "
+"background BorderImage."
+msgstr ""
+
+#: ../../docstring kivy.uix.bubble.BubbleContent.border_auto_scale:6 of
+msgid ""
+":attr:`border_auto_scale` is a :class:`~kivy.properties.OptionProperty` "
+"and defaults to 'both_lower'."
+msgstr ""
+

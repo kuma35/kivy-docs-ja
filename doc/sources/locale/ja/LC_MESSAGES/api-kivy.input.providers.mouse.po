@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../sources/api-kivy.input.providers.mouse.rst:3
+msgid "Mouse provider implementation"
+msgstr ""
+
+#: kivy.input.providers.mouse:2 of
+msgid ""
+"On linux systems, the mouse provider can be annoying when used with "
+"another multitouch provider (hidinput or mtdev). The Mouse can conflict "
+"with them: a single touch can generate one event from the mouse provider "
+"and another from the multitouch provider."
+msgstr ""
+
+#: kivy.input.providers.mouse:7 of
+msgid ""
+"To avoid this behavior, you can activate the \"disable_on_activity\" "
+"token in the mouse configuration. Then, if any touches are created by "
+"another provider, the mouse event will be discarded. Add this to your "
+"configuration::"
+msgstr ""
+
+#: kivy.input.providers.mouse:15 of
+msgid "Using multitouch interaction with the mouse"
+msgstr ""
+
+#: kivy.input.providers.mouse:19 of
+msgid ""
+"By default, the middle and right mouse buttons, as well as a combination "
+"of ctrl + left mouse button are used for multitouch emulation. If you "
+"want to use them for other purposes, you can disable this behavior by "
+"activating the \"disable_multitouch\" token::"
+msgstr ""
+
+#: kivy.input.providers.mouse:29 of
+msgid ""
+"You can now selectively control whether a click initiated as described "
+"above will emulate multi-touch. If the touch has been initiated in the "
+"above manner (e.g. right mouse button), a `multitouch_sim` value will be "
+"added to the touch's profile, and a `multitouch_sim` property will be "
+"added to the touch. By default, `multitouch_sim` is True and multitouch "
+"will be emulated for that touch. If, however, `multitouch_on_demand` is "
+"added to the config::"
+msgstr ""
+
+#: kivy.input.providers.mouse:39 of
+msgid ""
+"then `multitouch_sim` defaults to `False`. In that case, if "
+"`multitouch_sim` is set to True before the mouse is released (e.g. in "
+"on_touch_down/move), the touch will simulate a multi-touch event. For "
+"example::"
+msgstr ""
+
+#: kivy.input.providers.mouse:48 of
+msgid ""
+"Provider dispatches hover events by listening to properties/events in "
+":class:`~kivy.core.window.Window`. Dispatching can be disabled by setting"
+" :attr:`MouseMotionEventProvider.disable_hover` to ``True`` or by adding "
+"`disable_hover` in the config::"
+msgstr ""
+
+#: kivy.input.providers.mouse:56 of
+msgid ""
+"It's also possible to enable/disable hover events at runtime with "
+":attr:`MouseMotionEventProvider.disable_hover` property."
+msgstr ""
+
+#: kivy.input.providers.mouse:59 of
+msgid ""
+"Following is a list of the supported values for the "
+":attr:`~kivy.input.motionevent.MotionEvent.profile` property list."
+msgstr ""
+
+#: kivy.input.providers.mouse:63 of
+msgid "Profile value"
+msgstr ""
+
+#: kivy.input.providers.mouse:63 of
+msgid "Description"
+msgstr ""
+
+#: kivy.input.providers.mouse:65 of
+msgid "button"
+msgstr ""
+
+#: kivy.input.providers.mouse:65 of
+msgid ""
+"Mouse button (one of `left`, `right`, `middle`, `scrollup` or "
+"`scrolldown`). Accessed via the 'button' property."
+msgstr ""
+
+#: kivy.input.providers.mouse:67 of
+msgid "pos"
+msgstr ""
+
+#: kivy.input.providers.mouse:67 of
+msgid ""
+"2D position. Also reflected in the "
+":attr:`~kivy.input.motionevent.MotionEvent.x`, "
+":attr:`~kivy.input.motionevent.MotionEvent.y` and "
+":attr:`~kivy.input.motionevent.MotionEvent.pos` properties."
+msgstr ""
+
+#: kivy.input.providers.mouse:72 of
+msgid "multitouch_sim"
+msgstr ""
+
+#: kivy.input.providers.mouse:72 of
+msgid ""
+"Specifies whether multitouch is simulated or not. Accessed via the "
+"'multitouch_sim' property."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.input.provider.MotionEventProvider`"
+msgstr ""
+
+#: kivy.input.providers.mouse.MouseMotionEventProvider.disable_hover:1 of
+msgid "Disables dispatching of hover events if set to ``True``."
+msgstr ""
+
+#: kivy.input.providers.mouse.MouseMotionEventProvider.disable_hover:3 of
+msgid ""
+"Hover events are enabled by default (`disable_hover` is ``False``). See "
+"module documentation if you want to enable/disable hover events through "
+"config file."
+msgstr ""
+
+#: kivy.input.providers.mouse.MouseMotionEventProvider.start:1 of
+msgid "Start the mouse provider"
+msgstr ""
+
+#: kivy.input.providers.mouse.MouseMotionEventProvider.stop:1 of
+msgid "Stop the mouse provider"
+msgstr ""
+
+#: kivy.input.providers.mouse.MouseMotionEventProvider.update:1 of
+msgid "Update the mouse provider (pop event from the queue)"
+msgstr ""
+

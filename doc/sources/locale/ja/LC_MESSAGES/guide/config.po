@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kivy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-01-17 08:03+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,59 +19,59 @@ msgstr ""
 
 #: ../../sources/guide/config.rst:4
 msgid "Configure Kivy"
-msgstr ""
+msgstr "Configure Kivy"
 
 #: ../../sources/guide/config.rst:6
 msgid ""
 "The configuration file for kivy is named `config.ini`, and adheres to the"
 " `standard INI <http://en.wikipedia.org/wiki/INI_file>`_ format."
-msgstr ""
+msgstr "kivy の構成ファイルは `config.ini` という名前で、 `standard INI <http://en.wikipedia.org/wiki/INI_file>`_ 形式に準拠しています。 (訳注:「INIファイル」という日本語のwikiもあるけど、 英語版とは内容違う事あるので注意されたし)"
 
 #: ../../sources/guide/config.rst:10
 msgid "Locating the configuration file"
-msgstr ""
+msgstr "Locating the configuration file"
 
 #: ../../sources/guide/config.rst:12
 msgid ""
 "The location of the configuration file is controlled by the environment "
 "variable `KIVY_HOME`::"
-msgstr ""
+msgstr "構成ファイルの場所は、環境変数 `KIVY_HOME` によって制御されます::"
 
 #: ../../sources/guide/config.rst:17
 msgid "On desktop, this defaults to::"
-msgstr ""
+msgstr "デスクトップ版では以下がデフォルトです::"
 
 #: ../../sources/guide/config.rst:21
 msgid "Therefore, if your user is named \"tito\", the file will be here:"
-msgstr ""
+msgstr "それゆえ、 あなたのユーザー名が \"tito\" だとすると、このファイルは以下の場所にあります:"
 
 #: ../../sources/guide/config.rst:23
 msgid "Windows: ``C:\\Users\\tito\\.kivy\\config.ini``"
-msgstr ""
+msgstr "Windowsの場合: ``C:\\Users\\tito\\.kivy\\config.ini``"
 
 #: ../../sources/guide/config.rst:24
 msgid "macOS: ``/Users/tito/.kivy/config.ini``"
-msgstr ""
+msgstr "macOSの場合: ``/Users/tito/.kivy/config.ini``"
 
 #: ../../sources/guide/config.rst:25
 msgid "Linux: ``/home/tito/.kivy/config.ini``"
-msgstr ""
+msgstr "Linuxの場合: ``/home/tito/.kivy/config.ini``"
 
 #: ../../sources/guide/config.rst:27
 msgid "On Android, this defaults to::"
-msgstr ""
+msgstr "Androidでは以下がデフォルトです::"
 
 #: ../../sources/guide/config.rst:31
 msgid "If your app is named \"org.kivy.launcher\", the file will be here::"
-msgstr ""
+msgstr "あなたのアプリの名前が \"org.kivy.launcher\" の場合、このファイルは以下の場所にあります::"
 
 #: ../../sources/guide/config.rst:35
 msgid "On iOS, this defaults to::"
-msgstr ""
+msgstr "iOSでは以下がデフォルトです::"
 
 #: ../../sources/guide/config.rst:41
 msgid "Local configuration"
-msgstr ""
+msgstr "Local configuration"
 
 #: ../../sources/guide/config.rst:43
 msgid ""
@@ -79,7 +79,7 @@ msgid ""
 "applications or during testing of a separate part of Kivy for example "
 "input providers. To create a separate configuration file you can simply "
 "use these commands::"
-msgstr ""
+msgstr "特定のアプリケーションに対してのみ、 または、 入力プロバイダーなどの Kivy の部分テスト中に、構成を変更することが望ましい場合があります。 別の構成ファイルを作成するには、 単純に以下のコマンド群を使用するだけです::"
 
 #: ../../sources/guide/config.rst:53
 msgid ""
@@ -87,33 +87,33 @@ msgid ""
 "when you want to have separate environment for `garden`, kivy logs and "
 "other things, you'll need to change the ``KIVY_HOME`` environment "
 "variable in your application to get desired result::"
-msgstr ""
+msgstr "単一の ``.ini`` ファイルのローカル構成では不十分な場合。 例えば `garden` や kivy ログなどに別の環境を用意したい場合は、 あなたのアプリケーションの ``KIVY_HOME`` 環境変数を変更して、 あなたの意図する結果を得る必要があります::"
 
 #: ../../sources/guide/config.rst:61
 msgid "or before each run of the application change it manually in the console:"
-msgstr ""
+msgstr "または、 アプリケーションを実行するたびにコンソールで手動で変更します:"
 
 #: ../../sources/guide/config.rst:63
 msgid "Windows::"
-msgstr ""
+msgstr "Windows::"
 
 #: ../../sources/guide/config.rst:67
 msgid "Linux & OSX::"
-msgstr ""
+msgstr "Linux & OSX::"
 
 #: ../../sources/guide/config.rst:71
 msgid ""
 "After the change of ``KIVY_HOME``, the folder will behave exactly the "
 "same as the default ``.kivy/`` folder mentioned above."
-msgstr ""
+msgstr "``KIVY_HOME`` の変更後、  <folder> は上記のデフォルトの ``.kivy/`` フォルダとまったく同じように動作します。"
 
 #: ../../sources/guide/config.rst:75
 msgid "Understanding config tokens"
-msgstr ""
+msgstr "Understanding config tokens"
 
 #: ../../sources/guide/config.rst:77
 msgid ""
 "All the configuration tokens are explained in the :mod:`kivy.config` "
 "module."
-msgstr ""
+msgstr "すべての構成トークン(configuration tokens)は :mod:`kivy.config` モジュールで説明されています。"
 

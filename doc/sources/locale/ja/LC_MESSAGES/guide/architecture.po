@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kivy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-01-19 04:37+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../sources/guide/architecture.rst:4
 msgid "Architectural Overview"
-msgstr ""
+msgstr "Architectural Overview"
 
 #: ../../sources/guide/architecture.rst:6
 msgid ""
@@ -30,17 +30,17 @@ msgid ""
 "daunting for most users, this section explains the basic ideas of the "
 "implementation in more detail. You can skip this section and refer to it "
 "later, but we suggest at least skimming it for a rough overview."
-msgstr ""
+msgstr "ソフトウェア・エンジニアリングの観点からKivyをどのように設計したかを説明したいと思います。 これは、すべてがどのように連携するかを理解するための鍵です。 コードを見るだけで大まかなアイデアが得られる可能性がありますが、 そのアプローチはほとんどのユーザーにとって明らかに困難であるため、 このセクションでは実装の基本的なアイデアをより詳細に説明します。 このセクションをスキップして後で参照することもできますが、 大まかな概要を把握するために、少なくともざっと目を通しておくことをお勧めします。"
 
 #: ../../sources/guide/architecture.rst:15
 msgid ""
 "Kivy consists of several building blocks that we will explain shortly. "
 "Here is a graphical summary of the architecture:"
-msgstr ""
+msgstr "Kivy は、 私達がこれから簡潔に説明する、 いくつかの構成要素で構成されています。 以下はアーキテクチャの概要を図示したものです:"
 
 #: ../../sources/guide/architecture.rst:24
 msgid "Core Providers and Input Providers"
-msgstr ""
+msgstr "Core Providers and Input Providers"
 
 #: ../../sources/guide/architecture.rst:26
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 " one platform, we effectively reduce the size of the Kivy distribution "
 "and make packaging easier. This also makes it easier to port Kivy to "
 "other platforms. The Android port benefited greatly from this."
-msgstr ""
+msgstr "Kivy の内部構造を理解する鍵となるアイデアの 1 つは、 モジュール性と抽象化です。 ウィンドウを開く、 画像やテキストを表示する、 オーディオを再生する、 カメラから画像を取得する、スペルを修正する、 などの基本的なタスクを抽象化しようとします。 これらを *コア* タスクと呼びます。 これにより、API の使用と拡張が容易になります。 最も重要なことは、アプリが実行されているそれぞれのシナリオに対して、 (私たち呼び出す何かである)特定のプロバイダーを使用できるようにすることです。 たとえば macOS や Linux や *BSD Unix や Windows では、 コア・タスクごとに異なるネイティブ API があります。 これらの特定の API の 1 つを使用して、 一方でオペレーティング・システムと通信し、 もう一方で Kivy と通信する (中間通信層として機能する) コードの一部を、 *コア・プロバイダー* と呼んでいます。 各プラットフォームに特化したコア・プロバイダーを使用する利点は、 オペレーティング・システムによって公開されている機能を最大限に活用し、 可能な限り効率的に動作できることです。 それはまた、ユーザーに選択肢を提供します。 さらに、 プラットフォームに同梱されているライブラリを使用することで、Kivy ディストリビューションのサイズを効果的に縮小し、 パッケージ化を容易にします。 これにより、Kivy を他のプラットフォームに簡単に移植することもできます。 Android への移植では、 この仕組みにより大きな恩恵を受けました。"
 
 #: ../../sources/guide/architecture.rst:44
 msgid ""
@@ -72,11 +72,11 @@ msgid ""
 "for a new input device, you can simply provide a new class that reads "
 "your input data from your device and transforms them into Kivy basic "
 "events."
-msgstr ""
+msgstr "入力処理も同一の概念に従います。 *入力プロバイダー*  は、 Apple のトラックパッドや、 TUIOや、 マウス・エミュレーターなど、 特定の入力デバイスのサポートを追加するコードです。 新しい入力デバイスのサポートを追加する必要がある場合は、 デバイスから入力データを読み取り、 Kivy 基本イベントに変換する新しいクラスを提供するだけです。"
 
 #: ../../sources/guide/architecture.rst:53
 msgid "Graphics"
-msgstr ""
+msgstr "Graphics"
 
 #: ../../sources/guide/architecture.rst:55
 msgid ""
@@ -86,13 +86,13 @@ msgid ""
 "That's why we provide the graphics API that lets you draw things using "
 "simple metaphors that do not exist as such in OpenGL (e.g. Canvas, "
 "Rectangle, etc.)."
-msgstr ""
+msgstr "Kivy のグラフィックス API は、 OpenGL の抽象化です。 最も低いレベルでは、 Kivy は OpenGL を使用してハードウェア・アクセラレーションによる描画コマンドを発行します。  ただし、 OpenGL コードの記述は、 特に初心者にとっては少し混乱する可能性があります。 そのため、OpenGL には存在しない単純なメタファー (例えば CanvasやRectangle など) を使用してオブジェクトを描画できるグラフィックス API を提供しています。"
 
 #: ../../sources/guide/architecture.rst:62
 msgid ""
 "All of our widgets themselves use this graphics API, which is implemented"
 " on the C level for performance reasons."
-msgstr ""
+msgstr "すべてのウィジェットそれ自体は、 パフォーマンス上の理由から、 C言語レベルで実装されている、 このグラフィックス API を使用しています。"
 
 #: ../../sources/guide/architecture.rst:65
 msgid ""
@@ -100,7 +100,7 @@ msgid ""
 "optimize the drawing commands that your code issues. This is especially "
 "helpful if you're not an expert at tuning OpenGL. This makes your drawing"
 " code more efficient in many cases."
-msgstr ""
+msgstr "グラフィックス API のもう 1 つの利点は、 コードが発行する描画コマンドを自動的に最適化できることです。 これは、 あなたが OpenGL のチューニングに精通していない場合に特に役立ちます。 これにより、多くの場合、 描画コードがより効率的になります。"
 
 #: ../../sources/guide/architecture.rst:70
 msgid ""
@@ -108,81 +108,81 @@ msgid ""
 "version we target is OpenGL 2.0 ES (GLES2) on all devices, so if you want"
 " to stay cross-platform compatible, we advise you to only use the GLES2 "
 "functions."
-msgstr ""
+msgstr "もちろん、 必要に応じて生の OpenGL コマンドを使用することもできます。 対象となるバージョンは、 すべてのデバイスで OpenGL 2.0 ES (GLES2) であるため、 クロス・プラットフォームで互換性を維持したい場合は GLES2 関数のみを使用することをお勧めします。"
 
 #: ../../sources/guide/architecture.rst:76
 msgid "Core"
-msgstr ""
+msgstr "Core"
 
 #: ../../sources/guide/architecture.rst:78
 msgid "The code in the core package provides commonly used features, such as:"
-msgstr ""
+msgstr "コア・パッケージのコードは、 以下のような一般的に使用される機能を提供します:"
 
 #: ../../sources/guide/architecture.rst:82
 msgid "Clock"
-msgstr ""
+msgstr "Clock"
 
 #: ../../sources/guide/architecture.rst:81
 msgid ""
 "You can use the clock to schedule timer events. Both one-shot timers and "
 "periodic timers are supported."
-msgstr ""
+msgstr "clock を使用して、 タイマー・イベントをスケジュールできます。 1回限りのタイマー(one-shot timers)と周期的なタイマー(periodic timers)の両方がサポートされています。"
 
 #: ../../sources/guide/architecture.rst:86
 msgid "Cache"
-msgstr ""
+msgstr "Cache"
 
 #: ../../sources/guide/architecture.rst:85
 msgid ""
 "If you need to cache something that you use often, you can use our class "
 "for that instead of writing your own."
-msgstr ""
+msgstr "あなたが頻繁に使用する何かをキャッシュする必要がある場合は、 あなた独自のクラスを作成する代わりにこのクラスを使用できます。"
 
 #: ../../sources/guide/architecture.rst:91
 msgid "Gesture Detection"
-msgstr ""
+msgstr "Gesture Detection"
 
 #: ../../sources/guide/architecture.rst:89
 msgid ""
 "We ship a simple gesture recognizer that you can use to detect various "
 "kinds of strokes, such as circles or rectangles. You can train it to "
 "detect your own strokes."
-msgstr ""
+msgstr "円や四角形など、 さまざまな種類のストロークを検出するために使用できるシンプルなジェスチャ認識器(gesture recognizer)が付属しています。 あなた自身ののストロークを検出するようにトレーニング可能です。"
 
 #: ../../sources/guide/architecture.rst:95
 msgid "Kivy Language"
-msgstr ""
+msgstr "Kivy Language"
 
 #: ../../sources/guide/architecture.rst:94
 msgid ""
 "The kivy language is used to easily and efficiently describe user "
 "interfaces."
-msgstr ""
+msgstr "Kivy 言語は(kivy language)、ユーザー・インターフェイスを簡単かつ効率的に記述するために使用されます。"
 
 #: ../../sources/guide/architecture.rst:101
 msgid "Properties"
-msgstr ""
+msgstr "Properties"
 
 #: ../../sources/guide/architecture.rst:98
 msgid ""
 "These are not the normal properties that you may know from python. They "
 "are our own property classes that link your widget code with the user "
 "interface description."
-msgstr ""
+msgstr "これは、 Python で知られている通常のプロパティではありません。 これらは、 あなたのウィジェット・コードと、 ユーザー・インターフェイスの説明をリンクするKivy独自のプロパティ・クラスです。"
 
 #: ../../sources/guide/architecture.rst:104
 msgid "UIX (Widgets & Layouts)"
-msgstr ""
+msgstr "UIX (Widgets & Layouts)"
 
 #: ../../sources/guide/architecture.rst:106
 msgid ""
 "The UIX module contains commonly used widgets and layouts that you can "
 "reuse to quickly create a user interface."
-msgstr ""
+msgstr "UIXモジュールには、 ユーザー・インタフェースをすばやく作成するために再利用できる、 一般的に使用されるウィジェットとレイアウトが含まれています。"
 
 #: ../../sources/guide/architecture.rst:113
 msgid "Widgets"
-msgstr ""
+msgstr "Widgets"
 
 #: ../../sources/guide/architecture.rst:110
 msgid ""
@@ -190,11 +190,11 @@ msgid ""
 "provide some kind of functionality. They may or may not be visible. "
 "Examples would be a file browser, buttons, sliders, lists and so on. "
 "Widgets receive MotionEvents."
-msgstr ""
+msgstr "ウィジェットは、 何らかの機能を提供するためにプログラムに追加するユーザー・インターフェイス要素です。 それらは表示される場合と表示されない場合があります。 例としては、ファイル・ブラウザーやボタンやスライダーやリストなどがあります。 ウィジェットは MotionEvent を受け取ります。"
 
 #: ../../sources/guide/architecture.rst:121
 msgid "Layouts"
-msgstr ""
+msgstr "Layouts"
 
 #: ../../sources/guide/architecture.rst:116
 msgid ""
@@ -202,11 +202,11 @@ msgid ""
 " your widgets' positions yourself, but often it is more convenient to use"
 " one of our ready made layouts. Examples would be Grid Layouts or Box "
 "Layouts. You can also nest layouts."
-msgstr ""
+msgstr "ウィジェットを配置するには、 レイアウトを使用します。 もちろん、 ウィジェットの位置を自分で計算することもできますが、 多くの場合、既製のレイアウトの 1 つを使用する方が便利です。  例としては、 グリッド・レイアウトやボックス・レイアウトがあります。 レイアウトを入れ子にすることもできます。"
 
 #: ../../sources/guide/architecture.rst:124
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 #: ../../sources/guide/architecture.rst:126
 msgid ""
@@ -214,21 +214,21 @@ msgid ""
 "ons then you already know the basic idea behind our module classes. "
 "Modules can be used to inject functionality into Kivy programs, even if "
 "the original author did not include it."
-msgstr ""
+msgstr "あなたが最新の Web ブラウザーを使用し、 いくつかのアドオンでカスタマイズしたことがある場合、 あなたはモジュール・クラスの背後にある基本的な考え方を既に知っています。 元の作成者がモジュールをインクルードしていなくても、 モジュールを使用することでKivyプログラムに機能を挿入できます。"
 
 #: ../../sources/guide/architecture.rst:131
 msgid ""
 "An example would be a module that always shows the FPS of the current "
 "application and some graph depicting the FPS over time."
-msgstr ""
+msgstr "例として、 現在のアプリケーションの FPS を常に表示するモジュールと、 時間の経過に伴う FPS を示すグラフが挙げられます。"
 
 #: ../../sources/guide/architecture.rst:134
 msgid "You can also write your own modules."
-msgstr ""
+msgstr "あなた独自のモジュールを作成することもできます。"
 
 #: ../../sources/guide/architecture.rst:138
 msgid "Input Events (Touches)"
-msgstr ""
+msgstr "Input Events (Touches)"
 
 #: ../../sources/guide/architecture.rst:140
 msgid ""
@@ -239,7 +239,7 @@ msgid ""
 "easily find a 2D position for e.g. a tilt of your device. This kind of "
 "input is handled separately. In the following we describe the former "
 "types.)"
-msgstr ""
+msgstr "Kivy は、タッチやマウスや TUIO などのさまざまな入力タイプと入力ソースを抽象化します。 これらすべての入力タイプに共通しているのは、 2次元画面上の位置を個々の入力イベントに関連付けることができるということです。 (加速度計のような入力デバイスでは、 たとえばデバイスの傾きなど、 2次元位置を簡単に見つけることができないものもあります。 この種の入力は個別に処理されます。 以下では、 前者のタイプについて説明します。)"
 
 #: ../../sources/guide/architecture.rst:147
 msgid ""
@@ -250,30 +250,30 @@ msgid ""
 " your screen.) A touch instance, or object, can be in one of three "
 "states. When a touch enters one of these states, your program is informed"
 " that the event occurred. The three states a touch can be in are:"
-msgstr ""
+msgstr "これらの入力タイプはすべて Touch() クラスのインスタンスによって表されます。 (これは指のタッチだけでなく、 他のすべての入力タイプも同様に指すことに注意してください。 簡単にするために *タッチ* (Touch)と呼んでいます。 ユーザー・インターフェイスまたは画面に *タッチする* 何かを考えてみてください。 ) タッチ・インスタンスまたはオブジェクトは、 3 つの状態のいずれかになります。 タッチがこれらの状態のいずれかになると、 イベントが発生したことがプログラムに通知されます。 タッチが取り得る 3 つの状態は以下のとおりです:"
 
 #: ../../sources/guide/architecture.rst:157
 msgid "Down"
-msgstr ""
+msgstr "Down"
 
 #: ../../sources/guide/architecture.rst:157
 msgid "A touch is down only once, at the very moment where it first appears."
-msgstr ""
+msgstr "タッチは、最初に表れた瞬間に 1 回だけ Down されます。"
 
 #: ../../sources/guide/architecture.rst:161
 msgid "Move"
-msgstr ""
+msgstr "Move"
 
 #: ../../sources/guide/architecture.rst:160
 msgid ""
 "A touch can be in this state for a potentially unlimited time. A touch "
 "does not have to be in this state during its lifetime. A 'Move' happens "
 "whenever the 2D position of a touch changes."
-msgstr ""
+msgstr "タッチは潜在的に無制限の時間、 この状態になる可能性がありますが、 その生存期間全てでこの状態である必要はありません。 タッチの２次元位置が変わるたびに 'Move' が発生します。"
 
 #: ../../sources/guide/architecture.rst:170
 msgid "Up"
-msgstr ""
+msgstr "Up"
 
 #: ../../sources/guide/architecture.rst:164
 msgid ""
@@ -282,11 +282,11 @@ msgid ""
 "the screen for all eternity, but it is not guaranteed. If you know the "
 "input sources your users will be using, you will know whether or not you "
 "can rely on this state being entered."
-msgstr ""
+msgstr "タッチが Up するのは最大でも 1 回か、まったく無しです。 実際には、 画面上で指を永遠に保持する人はいないため、 ほぼ常に Up イベントを受け取りますが、それ保証されていません。  ユーザーが使用する入力ソースがわかっている場合は、 この状態に入ることを保証できるかどうかがわかります。"
 
 #: ../../sources/guide/architecture.rst:173
 msgid "Widgets and Event Dispatching"
-msgstr ""
+msgstr "Widgets and Event Dispatching"
 
 #: ../../sources/guide/architecture.rst:175
 msgid ""
@@ -299,8 +299,9 @@ msgid ""
 "none. There is exactly one *root widget* at the top of the tree that has "
 "no parent widget, and all other widgets are directly or indirectly "
 "children of this widget (which is why it's called the root)."
-msgstr ""
+msgstr "*ウィジェット* (widget)という用語は、 GUI プログラミングの文脈で、 ユーザーが操作するプログラムの一部を説明するためによく使用されます。 Kivy では、 ウィジェットは入力イベントを受け取るオブジェクトです。 必ずしも画面に表示する必要はありません。 すべてのウィジェットは、 *ウィジェット ツリー* (widget tree)(コンピューター学科でおなじみの木構造) に配置されます。 1 つのウィジェットは、 任意の数の子ウィジェットを持つことができます。 ツリーの最上部には親ウィジェットを持たない *ルート ウィジェット* (root widget)が 1 つだけあり、他のすべてのウィジェットはこのウィジェットの直接的または間接的な子です(これが根っこ(root)と呼ばれる理由です)。"
 
+# dispatch:(意味)(…へ)急派する、特派する、(…へ)発送する、さっさと済ます、処刑する、(…を)殺す
 #: ../../sources/guide/architecture.rst:185
 msgid ""
 "When new input data is available, Kivy sends out one event per touch. The"
@@ -309,7 +310,7 @@ msgid ""
 "event is dispatched (with the touch as the argument) to the root widget, "
 "which results in the root widget's corresponding on_touch_down, "
 "on_touch_move or on_touch_up event handler being called."
-msgstr ""
+msgstr "新しい入力データが利用可能になると、 Kivy はタッチごとに 1 つのイベントを送信します。 ウィジェット・ツリーのルート・ウィジェットが最初にイベントを受け取ります。 タッチの状態に応じて、 on_touch_down イベントまたは on_touch_move イベントまたは on_touch_up イベントが (タッチを引数として) ルート・ウィジェットに発送(dispatch)され、 ルート・ウィジェットの、対応する on_touch_down イベント・ハンドラーまたは on_touch_move イベント・ハンドラーまたは on_touch_up イベント・ハンドラーが呼び出されます。"
 
 #: ../../sources/guide/architecture.rst:193
 msgid ""
@@ -321,14 +322,14 @@ msgid ""
 "implementation of the respective event handler. This goes all the way up "
 "to the base Widget class, which -- in its touch event handlers -- does "
 "nothing but pass the touches to its children::"
-msgstr ""
+msgstr "ツリー内の(ルート・ウィジェットを含む)各ウィジェットは、イベントを消化(digest)するかパスするかを選択できます。 イベント・ハンドラーが True を返す場合、イベントが適切に消化(digest)され、処理されたことを意味します。 そのイベントでは、 それ以上の処理は行われません。 それ以外の場合、 イベント・ハンドラーは、 それぞれのイベント・ハンドラーのスーパークラスの実装を呼び出すことによって、 ウィジェットを自身の子に渡します。 これは、 基底となる Widget クラスにまで及びます。 Widget クラスは(タッチイベントハンドラで)タッチを子クラスに渡すだけです::"
 
 #: ../../sources/guide/architecture.rst:208
 msgid ""
 "This really is much easier than it first seems. An example of how this "
 "can be used to create nice applications quickly will be given in the "
 "following section."
-msgstr ""
+msgstr "これは、 ぱっと見よりもはるかに簡単です。 これを使用して優れたアプリケーションをすばやく作成する方法の例を、 次のセクションで示します。"
 
 #: ../../sources/guide/architecture.rst:212
 msgid ""
@@ -339,5 +340,5 @@ msgid ""
 "default, this checks the rectangular region on the screen that's "
 "described by the widget's pos (for position; x & y) and size (width & "
 "height), but you can override this behaviour in your own class."
-msgstr ""
+msgstr "ウィジェットがタッチを監視する画面上の *領域* (area)を制限したい場合がよくあります。 これを実現するには、ウィジェットの collide_point() メソッドを使用できます。 タッチの位置を渡すだけで、タッチが「監視領域」(watched area)内にある場合は True を返し、それ以外の場合は False を返します。 デフォルトでは、これはウィジェットの位置 (位置 x と y) とサイズ (幅と高さ) によって記述される画面上の長方形の領域をチェックしますが、 あなた独自のクラスでこの動作をオーバーライドできます。"
 

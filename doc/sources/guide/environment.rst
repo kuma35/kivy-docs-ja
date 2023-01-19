@@ -229,9 +229,10 @@ KIVY_EVENTLOOP
     Which async library should be used when the app is run in an asynchronous
     manner. See :mod:`kivy.app` for example usage.
 
-    ``'asyncio'``: When the app is run in an asynchronous manner and the standard
-        library asyncio package should be used. The default if not set.
-    ``'trio'``: When the app is run in an asynchronous manner and the `trio`
-        package should be used.
+    ``'asyncio'``
+        When the app is run in an asynchronous manner and the standard library asyncio package should be used. The default if not set.
+
+    ``'trio'``
+        When the app is run in an asynchronous manner and the `trio` package should be used.
 
     .. versionadded:: 2.0.0

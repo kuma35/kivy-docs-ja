@@ -7,11 +7,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: 2023-01-15 17:14+0900\n"
+"POT-Creation-Date: 2023-01-17 04:59+0900\n"
+"PO-Revision-Date: 2023-01-17 05:05+0900\n"
 "Last-Translator: kuma35\n"
-"Language-Team: Japanese\n"
 "Language: ja_JP\n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +46,9 @@ msgstr "Path control"
 msgid ""
 "You can control the default directories where config files, modules and "
 "kivy data are located."
-msgstr "あなたは、 構成ファイル(config files)や、モジュールや、kivyのデータが置かれる、 デフォルトのディレクトリを制御することができます。"
+msgstr ""
+"あなたは、 構成ファイル(config files)や、モジュールや、kivyのデータが置かれる、 "
+"デフォルトのディレクトリを制御することができます。"
 
 #: ../../sources/guide/environment.rst:28
 msgid "KIVY_DATA_DIR"
@@ -99,7 +102,10 @@ msgid ""
 "compiling kivy instead of the ones installed system-wide. To use the same"
 " libraries while running a kivy app, this path must be added at the start"
 " of the PATH environment variable."
-msgstr "setされている場合、 システム全体にインストールされているものの代わりに、 このパスの SDL2 ライブラリとヘッダーが kivy のコンパイル時に使用されます。 Kivy アプリの実行中に同じライブラリを使用するには、 このパスを PATH 環境変数の先頭に追加する必要があります。"
+msgstr ""
+"setされている場合、 システム全体にインストールされているものの代わりに、 このパスの SDL2 ライブラリとヘッダーが kivy "
+"のコンパイル時に使用されます。 Kivy アプリの実行中に同じライブラリを使用するには、 このパスを PATH "
+"環境変数の先頭に追加する必要があります。"
 
 #: ../../sources/guide/environment.rst:54
 msgid ""
@@ -155,7 +161,9 @@ msgid ""
 "line will not be parsed and used by Kivy. Ie, you can safely make a "
 "script or an app with your own arguments without requiring the `--` "
 "delimiter::"
-msgstr "'true' または '1' または 'yes' のいずれかを設定すると、 コマンドラインで渡された引数はパースされず、 Kivy によって使用されます。 つまり、 `--` 区切り文字を必要とせずに、 独自の引数を使用してスクリプトまたはアプリを安全に作成できます::"
+msgstr ""
+"'true' または '1' または 'yes' のいずれかを設定すると、 コマンドラインで渡された引数はパースされず、 Kivy "
+"によって使用されます。 つまり、 `--` 区切り文字を必要とせずに、 独自の引数を使用してスクリプトまたはアプリを安全に作成できます::"
 
 #: ../../sources/guide/environment.rst:98
 msgid "KCFG_section_key"
@@ -167,6 +175,8 @@ msgid ""
 "Config object. They are loaded only once when `kivy` is imported. The "
 "behavior can be disabled using `KIVY_NO_ENV_CONFIG`."
 msgstr ""
+"このような形式の環境変数名が検出された場合、 それは Config オブジェクトにマップされます。  それらは `kivy` "
+"がインポートされたときに一度だけロードされます。 この振る舞いは、 `KIVY_NO_ENV_CONFIG` を使用して無効にすることができます。"
 
 #: ../../sources/guide/environment.rst:104
 msgid "KIVY_NO_ENV_CONFIG"
@@ -177,6 +187,8 @@ msgid ""
 "If set, no environment key will be mapped to configuration object. If "
 "unset, any `KCFG_section_key=value` will be mapped to Config."
 msgstr ""
+"setされている場合、 環境変数キーは構成オブジェクトにマップされません。 setされていない場合(unset)、 すべての "
+"`KCFG_section_key=value` が Config にマップされます。"
 
 #: ../../sources/guide/environment.rst:107
 msgid "Restrict core to specific implementation"
@@ -188,6 +200,8 @@ msgid ""
 " platform. For testing or custom installation, you might want to restrict"
 " the selector to a specific implementation."
 msgstr ""
+":mod:`kivy.core` は、 あなたのプラットフォームで利用可能な最適な実装を選択しようとします。 "
+"テストまたはカスタム・インストールでは、セレクターを特定の実装に制限したい場合があります。"
 
 #: ../../sources/guide/environment.rst:116
 msgid "KIVY_WINDOW"
@@ -195,11 +209,11 @@ msgstr "KIVY_WINDOW"
 
 #: ../../sources/guide/environment.rst:114
 msgid "Implementation to use for creating the Window"
-msgstr ""
+msgstr "Window の作成に使用する実装"
 
 #: ../../sources/guide/environment.rst:116
 msgid "Values: sdl2, pygame, x11, egl_rpi"
-msgstr ""
+msgstr "値: sdl2, pygame, x11, egl_rpi"
 
 #: ../../sources/guide/environment.rst:121
 msgid "KIVY_TEXT"
@@ -207,11 +221,11 @@ msgstr "KIVY_TEXT"
 
 #: ../../sources/guide/environment.rst:119
 msgid "Implementation to use for rendering text"
-msgstr ""
+msgstr "テキストのレンダリングに使用する実装"
 
 #: ../../sources/guide/environment.rst:121
 msgid "Values: sdl2, pil, pygame, sdlttf"
-msgstr ""
+msgstr "値: sdl2, pil, pygame, sdlttf"
 
 #: ../../sources/guide/environment.rst:126
 msgid "KIVY_VIDEO"
@@ -219,11 +233,11 @@ msgstr "KIVY_VIDEO"
 
 #: ../../sources/guide/environment.rst:124
 msgid "Implementation to use for rendering video"
-msgstr ""
+msgstr "ビデオのレンダリングに使用する実装"
 
 #: ../../sources/guide/environment.rst:126
 msgid "Values: gstplayer, ffpyplayer, ffmpeg, null"
-msgstr ""
+msgstr "値: gstplayer, ffpyplayer, ffmpeg, null"
 
 #: ../../sources/guide/environment.rst:131
 msgid "KIVY_AUDIO"
@@ -231,11 +245,11 @@ msgstr "KIVY_AUDIO"
 
 #: ../../sources/guide/environment.rst:129
 msgid "Implementation to use for playing audio"
-msgstr ""
+msgstr "オーディオの演奏に使用する実装"
 
 #: ../../sources/guide/environment.rst:131
 msgid "Values: sdl2, gstplayer, ffpyplayer, pygame, avplayer"
-msgstr ""
+msgstr "値: sdl2, gstplayer, ffpyplayer, pygame, avplayer"
 
 #: ../../sources/guide/environment.rst:139
 msgid "KIVY_IMAGE"
@@ -243,15 +257,15 @@ msgstr "KIVY_IMAGE"
 
 #: ../../sources/guide/environment.rst:134
 msgid "Implementation to use for reading image"
-msgstr ""
+msgstr "画像のレンダリングに使用する実装"
 
 #: ../../sources/guide/environment.rst:136
 msgid "Values: sdl2, pil, pygame, imageio, tex, dds"
-msgstr ""
+msgstr "値: sdl2, pil, pygame, imageio, tex, dds"
 
 #: ../../sources/guide/environment.rst:139
 msgid "Removed GPL `gif` implementation"
-msgstr ""
+msgstr "GPL `gif` 実装は削除されました"
 
 #: ../../sources/guide/environment.rst:144
 msgid "KIVY_CAMERA"
@@ -259,11 +273,11 @@ msgstr "KIVY_CAMERA"
 
 #: ../../sources/guide/environment.rst:142
 msgid "Implementation to use for reading camera"
-msgstr ""
+msgstr "カメラの読み取りに使用する実装"
 
 #: ../../sources/guide/environment.rst:144
 msgid "Values: avfoundation, android, opencv"
-msgstr ""
+msgstr "値: avfoundation, android, opencv"
 
 #: ../../sources/guide/environment.rst:149
 msgid "KIVY_SPELLING"
@@ -271,11 +285,11 @@ msgstr "KIVY_SPELLING"
 
 #: ../../sources/guide/environment.rst:147
 msgid "Implementation to use for spelling"
-msgstr ""
+msgstr "スペルミス指摘(spelling)に使用する実装"
 
 #: ../../sources/guide/environment.rst:149
 msgid "Values: enchant, osxappkit"
-msgstr ""
+msgstr "値: enchant, osxappkit"
 
 #: ../../sources/guide/environment.rst:154
 msgid "KIVY_CLIPBOARD"
@@ -283,11 +297,11 @@ msgstr "KIVY_CLIPBOARD"
 
 #: ../../sources/guide/environment.rst:152
 msgid "Implementation to use for clipboard management"
-msgstr ""
+msgstr "クリップボード管理に使用する実装"
 
 #: ../../sources/guide/environment.rst:154
 msgid "Values: sdl2, pygame, dummy, android"
-msgstr ""
+msgstr "値: sdl2, pygame, dummy, android"
 
 #: ../../sources/guide/environment.rst:157
 msgid "Metrics"
@@ -299,7 +313,7 @@ msgstr "KIVY_DPI"
 
 #: ../../sources/guide/environment.rst:160
 msgid "If set, the value will be used for :attr:`Metrics.dpi`."
-msgstr ""
+msgstr "setされている場合、その値は :attr:`Metrics.dpi` で使われます。"
 
 #: ../../sources/guide/environment.rst:167
 msgid "KIVY_METRICS_DENSITY"
@@ -307,7 +321,7 @@ msgstr "KIVY_METRICS_DENSITY"
 
 #: ../../sources/guide/environment.rst:165
 msgid "If set, the value will be used for :attr:`Metrics.density`."
-msgstr ""
+msgstr "setされている場合、その値は :attr:`Metrics.density` で使われます。"
 
 #: ../../sources/guide/environment.rst:169
 msgid "KIVY_METRICS_FONTSCALE"
@@ -315,7 +329,7 @@ msgstr "KIVY_METRICS_FONTSCALE"
 
 #: ../../sources/guide/environment.rst:171
 msgid "If set, the value will be used for :attr:`Metrics.fontscale`."
-msgstr ""
+msgstr "setされている場合、その値は :attr:`Metrics.fontscale` で使われます。"
 
 #: ../../sources/guide/environment.rst:176
 msgid "Graphics"
@@ -327,7 +341,7 @@ msgstr "KIVY_GL_BACKEND"
 
 #: ../../sources/guide/environment.rst:179
 msgid "The OpenGL backend to use. See :mod:`~kivy.graphics.cgl`."
-msgstr ""
+msgstr "使用する OpenGL バックエンド。 :mod:`~kivy.graphics.cgl` 参照。"
 
 #: ../../sources/guide/environment.rst:182
 msgid "KIVY_GL_DEBUG"
@@ -335,7 +349,7 @@ msgstr "KIVY_GL_DEBUG"
 
 #: ../../sources/guide/environment.rst:182
 msgid "Whether to log OpenGL calls. See :mod:`~kivy.graphics.cgl`."
-msgstr ""
+msgstr "OpenGL 呼び出しのログをとるかどうか。 :mod:`~kivy.graphics.cgl` 参照。"
 
 #: ../../sources/guide/environment.rst:185
 msgid "KIVY_GRAPHICS"
@@ -343,7 +357,7 @@ msgstr "KIVY_GRAPHICS"
 
 #: ../../sources/guide/environment.rst:185
 msgid "Whether to use OpenGL ES2. See :mod:`~kivy.graphics.cgl`."
-msgstr ""
+msgstr "OpenGL ES2 を使用するかどうか。 :mod:`~kivy.graphics.cgl` 参照。"
 
 #: ../../sources/guide/environment.rst:192
 msgid "KIVY_GLES_LIMITS"
@@ -354,24 +368,26 @@ msgid ""
 "Whether the GLES2 restrictions are enforced (the default, or if set to "
 "1). If set to false, Kivy will not be truly GLES2 compatible."
 msgstr ""
+"GLES2 制限(GLES2 restrictions)が適用されるかどうか(デフォルト、または 1 に設定されている場合)。 false "
+"に設定すると、 Kivy は 真正の GLES2 互換ではなくなります。"
 
 #: ../../sources/guide/environment.rst:191
 msgid ""
 "Following is a list of the potential incompatibilities that result when "
 "set to true."
-msgstr ""
+msgstr "以下は、 true に設定した場合に生じる可能性のある非互換性のリストです。"
 
 #: ../../sources/guide/environment.rst:195
 msgid "Mesh indices"
-msgstr ""
+msgstr "メッシュ・インデックス"
 
 #: ../../sources/guide/environment.rst:195
 msgid "If true, the number of indices in a mesh is limited to 65535"
-msgstr ""
+msgstr "true の場合、メッシュ内のインデックスの数は 65535 に制限されます"
 
 #: ../../sources/guide/environment.rst:197
 msgid "Texture blit"
-msgstr ""
+msgstr "テクスチャ・ブリット(blit)"
 
 #: ../../sources/guide/environment.rst:197
 msgid ""
@@ -381,6 +397,10 @@ msgid ""
 "on Android, most of devices fail to do it. Ref: "
 "https://github.com/kivy/kivy/issues/1600"
 msgstr ""
+"テクスチャに転送(blit)する場合、 データ (カラーおよびバッファ) 形式は、 "
+"テクスチャの作成時に使用されたものと同じ形式である必要があります。 デスクトップでは、 "
+"さまざまな色の変換がドライバーによって正しく処理されますが、 Android では、ほとんどのデバイスが失敗します。 参照: "
+"https://github.com/kivy/kivy/issues/1600"
 
 #: ../../sources/guide/environment.rst:218
 msgid "KIVY_BCM_DISPMANX_ID"
@@ -391,6 +411,8 @@ msgid ""
 "Change the default Raspberry Pi display to use. The list of available "
 "value is accessible in `vc_dispmanx_types.h`. Default value is 0:"
 msgstr ""
+"使用するデフォルトの Raspberry Pi ディスプレイを変更します。 使用可能な値のリストは、 `vc_dispmanx_types.h` "
+"でアクセスできます。 デフォルト値は 0 です:"
 
 #: ../../sources/guide/environment.rst:212
 msgid "0: DISPMANX_ID_MAIN_LCD"
@@ -426,13 +448,13 @@ msgstr "KIVY_BCM_DISPMANX_LAYER"
 
 #: ../../sources/guide/environment.rst:221
 msgid "Change the default Raspberry Pi dispmanx layer. Default value is 0."
-msgstr ""
+msgstr "デフォルトの Raspberry Pi dispmanx レイヤーを変更します。 デフォルト値は 0 です。"
 
 #: ../../sources/guide/environment.rst:226
 msgid "Event Loop"
 msgstr "Event Loop"
 
-#: ../../sources/guide/environment.rst:237
+#: ../../sources/guide/environment.rst:238
 msgid "KIVY_EVENTLOOP"
 msgstr "KIVY_EVENTLOOP"
 
@@ -440,23 +462,25 @@ msgstr "KIVY_EVENTLOOP"
 msgid ""
 "Which async library should be used when the app is run in an asynchronous"
 " manner. See :mod:`kivy.app` for example usage."
-msgstr ""
-
-#: ../../sources/guide/environment.rst:232
-msgid ""
-"``'asyncio'``: When the app is run in an asynchronous manner and the "
-"standard"
-msgstr ""
+msgstr "アプリを非同期で実行する場合に使用する必要がある非同期ライブラリ。 使用例については :mod:`kivy.app` を参照してください。"
 
 #: ../../sources/guide/environment.rst:233
-msgid "library asyncio package should be used. The default if not set."
-msgstr ""
+msgid "``'asyncio'``"
+msgstr "``'asyncio'``"
 
-#: ../../sources/guide/environment.rst:235
-msgid "``'trio'``: When the app is run in an asynchronous manner and the `trio`"
-msgstr ""
+#: ../../sources/guide/environment.rst:233
+msgid ""
+"When the app is run in an asynchronous manner and the standard library "
+"asyncio package should be used. The default if not set."
+msgstr "アプリが非同期で実行される場合、 標準ライブラリの asyncio パッケージを使用する必要があります。 setしない場合のデフォルトです。"
 
-#: ../../sources/guide/environment.rst:235
-msgid "package should be used."
-msgstr ""
+#: ../../sources/guide/environment.rst:236
+msgid "``'trio'``"
+msgstr "``'trio'``"
+
+#: ../../sources/guide/environment.rst:236
+msgid ""
+"When the app is run in an asynchronous manner and the `trio` package "
+"should be used."
+msgstr "アプリが非同期で実行され、 `trio` パッケージを使用する必要がある場合。"
 

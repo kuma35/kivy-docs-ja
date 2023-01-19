@@ -1,0 +1,753 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/api-kivy.config.rst:3
+msgid "Configuration object"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:2
+msgid "The :class:`Config` object is an instance of a modified Python ConfigParser. See the `ConfigParser documentation <http://docs.python.org/library/configparser.html>`_ for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:6
+msgid "Kivy has a configuration file which determines the default settings. In order to change these settings, you can alter this file manually or use the Config object. Please see the :ref:`Configure Kivy` section for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:12
+msgid "Applying configurations"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:14
+msgid "Configuration options control the initialization of the :class:`~kivy.app.App`. In order to avoid situations where the config settings do not work or are not applied before window creation (like setting an initial window size), :meth:`Config.set <kivy.config.ConfigParser.set>` should be used before importing any other Kivy modules. Ideally, this means setting them right at the start of your main.py script."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:21
+msgid "Alternatively, you can save these settings permanently using :meth:`Config.set <ConfigParser.set>` then :meth:`Config.write <ConfigParser.write>`. In this case, you will need to restart the app for the changes to take effect. Note that this approach will effect all Kivy apps system wide."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:27
+msgid "Please note that no underscores (`_`) are allowed in the section name."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:30
+msgid "Usage of the Config object"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:32
+msgid "To read a configuration token from a particular section::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:38
+msgid "Change the configuration and save it::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:43
+msgid "For information on configuring your :class:`~kivy.app.App`, please see the :ref:`Application configuration` section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:46
+msgid "The ConfigParser should work correctly with utf-8 now. The values are converted from ascii to unicode only when needed. The method get() returns utf-8 strings."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:52
+msgid "Changing configuration with environment variables"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:54
+msgid "Since 1.11.0, it is now possible to change the configuration using environment variables. They take precedence on the loaded config.ini. The format is::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:60
+msgid "For example:"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:62
+msgid "KCFG_GRAPHICS_FULLSCREEN=auto ... KCFG_KIVY_LOG_LEVEL=warning ..."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:65
+msgid "Or in your file before any kivy import:"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:67
+msgid "import os os.environ[\"KCFG_KIVY_LOG_LEVEL\"] = \"warning\""
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:70
+msgid "If you don't want to map any environment variables, you can disable the behavior::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:79
+msgid "Available configuration tokens"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "kivy"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:89
+msgid "`default_font`: list"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:87
+msgid "Default fonts used for widgets displaying any text. It defaults to ['Roboto', 'data/fonts/Roboto-Regular.ttf', 'data/fonts/Roboto-Italic.ttf', 'data/fonts/Roboto-Bold.ttf', 'data/fonts/Roboto-BoldItalic.ttf']."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:93
+msgid "`desktop`: int, 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:92
+msgid "This option controls desktop OS specific features, such as enabling drag-able scroll-bar in scroll views, disabling of bubbles in TextInput etc. 0 is disabled, 1 is enabled."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:96
+msgid "`exit_on_escape`: int, 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:96
+msgid "Enables exiting kivy when escape is pressed. 0 is disabled, 1 is enabled."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:100
+msgid "`pause_on_minimize`: int, 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:99
+msgid "If set to `1`, the main loop is paused and the `on_pause` event is dispatched when the window is minimized. This option is intended for desktop use only. Defaults to `0`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:102
+msgid "`keyboard_layout`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:103
+msgid "Identifier of the layout to use."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:112
+msgid "`keyboard_mode`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:105
+msgid "Specifies the keyboard mode to use. If can be one of the following:"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:107
+msgid "'' - Let Kivy choose the best option for your current platform."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:108
+msgid "'system' - real keyboard."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:109
+msgid "'dock' - one virtual keyboard docked to a screen side."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:110
+msgid "'multi' - one virtual keyboard for every widget request."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:111
+msgid "'systemanddock' - virtual docked keyboard plus input from real keyboard."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:113
+msgid "'systemandmulti' - analogous."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:114
+msgid "`kivy_clock`: one of `default`, `interrupt`, `free_all`, `free_only`"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:115
+msgid "The clock type to use with kivy. See :mod:`kivy.clock`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:116
+msgid "`log_dir`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:117
+msgid "Path of log directory."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:124
+msgid "`log_enable`: int, 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:119
+msgid "Activate file logging. 0 is disabled, 1 is enabled."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:122
+msgid "Logging output can also be controlled by the environment variables ``KIVY_LOG_MODE``, ``KIVY_NO_FILELOG`` and ``KIVY_NO_CONSOLELOG``. More information is provided in the :mod:`kivy.logger` module."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:126
+msgid "`log_level`: string, one of |log_levels|"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:127
+msgid "Set the minimum log level to use."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:129
+msgid "`log_name`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:129
+msgid "Format string to use for the filename of log file."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:137
+msgid "`log_maxfiles`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:132
+msgid "Keep log_maxfiles recent logfiles while purging the log directory. Set 'log_maxfiles' to -1 to disable logfile purging (eg keep all logfiles)."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:136
+msgid "You end up with 'log_maxfiles + 1' logfiles because the logger adds a new one after purging."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:141
+msgid "`window_icon`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:140
+msgid "Path of the window icon. Use this if you want to replace the default pygame icon."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "postproc"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:146
+msgid "`double_tap_distance`: float"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:146
+msgid "Maximum distance allowed for a double tap, normalized inside the range 0 - 1000."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:148
+msgid "`double_tap_time`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:149
+msgid "Time allowed for the detection of double tap, in milliseconds."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:156
+msgid "`ignore`: list of tuples"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:151
+msgid "List of regions where new touches are ignored. This configuration token can be used to resolve hotspot problems with DIY hardware. The format of the list must be::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:157
+msgid "All the values must be inside the range 0 - 1."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:159
+msgid "`jitter_distance`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:159
+msgid "Maximum distance for jitter detection, normalized inside the range 0 - 1000."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:161
+msgid "`jitter_ignore_devices`: string, separated with commas"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:162
+msgid "List of devices to ignore from jitter detection."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:164
+msgid "`retain_distance`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:164
+msgid "If the touch moves more than is indicated by retain_distance, it will not be retained. Argument should be an int between 0 and 1000."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:166
+msgid "`retain_time`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:167
+msgid "Time allowed for a retain touch, in milliseconds."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:169
+msgid "`triple_tap_distance`: float"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:169
+msgid "Maximum distance allowed for a triple tap, normalized inside the range 0 - 1000."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:172
+msgid "`triple_tap_time`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:172
+msgid "Time allowed for the detection of triple tap, in milliseconds."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "graphics"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:176
+msgid "`borderless`: int, one of 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:176
+msgid "If set to `1`, removes the window border/decoration. Window resizing must also be disabled to hide the resizing border."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:181
+msgid "`custom_titlebar`: int, one of 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:179
+msgid "If set to `1`, removes the window border and allows user to set a Widget as a titlebar see :meth:`~kivy.core.window.WindowBase.set_custom_titlebar` for detailed usage"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:184
+msgid "`custom_titlebar_border`: int, defaults to 5"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:184
+msgid "sets the how many pixles off the border should be used as the rezising frame"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:190
+msgid "`window_state`: string , one of 'visible', 'hidden', 'maximized'"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:187
+msgid "or 'minimized'"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:189
+msgid "Sets the window state, defaults to 'visible'. This option is available only for the SDL2 window provider and it should be used on desktop OSes."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:192
+msgid "`fbo`: string, one of 'hardware', 'software' or 'force-hardware'"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:193
+msgid "Selects the FBO backend to use."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:200
+msgid "`fullscreen`: int or string, one of 0, 1, 'fake' or 'auto'"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:195
+msgid "Activate fullscreen. If set to `1`, a resolution of `width` times `height` pixels will be used. If set to `auto`, your current display's resolution will be used instead. This is most likely what you want. If you want to place the window in another display, use `fake`, or set the `borderless` option from the graphics section, then adjust `width`, `height`, `top` and `left`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:203
+msgid "`height`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:203
+msgid "Height of the :class:`~kivy.core.window.Window`, not used if `fullscreen` is set to `auto`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:205
+msgid "`left`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:206
+msgid "Left position of the :class:`~kivy.core.window.Window`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:211
+msgid "`maxfps`: int, defaults to 60"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:208
+msgid "Maximum FPS allowed."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:211
+msgid "Setting maxfps to 0 will lead to max CPU usage."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:221
+msgid "'multisamples': int, defaults to 2"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:214
+msgid "Sets the `MultiSample Anti-Aliasing (MSAA) <http://en.wikipedia.org/wiki/Multisample_anti-aliasing>`_ level. Increasing this value results in smoother graphics but at the cost of processing time."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:220
+msgid "This feature is limited by device hardware support and will have no effect on devices which do not support the level of MSAA requested."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:224
+msgid "`position`: string, one of 'auto' or 'custom'"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:224
+msgid "Position of the window on your display. If `auto` is used, you have no control of the initial position: `top` and `left` are ignored."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:226
+msgid "`show_cursor`: int, one of 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:227
+msgid "Set whether or not the cursor is shown on the window."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:228
+msgid "`top`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:229
+msgid "Top position of the :class:`~kivy.core.window.Window`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:231
+msgid "`resizable`: int, one of 0 or 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:231
+msgid "If 0, the window will have a fixed size. If 1, the window will be resizable."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:233
+msgid "`rotation`: int, one of 0, 90, 180 or 270"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:234
+msgid "Rotation of the :class:`~kivy.core.window.Window`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:236
+msgid "`width`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:236
+msgid "Width of the :class:`~kivy.core.window.Window`, not used if `fullscreen` is set to `auto`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:238
+msgid "`minimum_width`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:239
+msgid "Minimum width to restrict the window to. (sdl2 only)"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:240
+msgid "`minimum_height`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:241
+msgid "Minimum height to restrict the window to. (sdl2 only)"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:247
+msgid "`min_state_time`: float, defaults to .035"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:243
+msgid "Minimum time for widgets to display a given visual state. This attrib is currently used by widgets like :class:`~kivy.uix.dropdown.DropDown` & :class:`~kivy.uix.behaviors.buttonbehavior.ButtonBehavior` to make sure they display their current visual state for the given time."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:250
+msgid "`allow_screensaver`: int, one of 0 or 1, defaults to 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:250
+msgid "Allow the device to show a screen saver, or to go to sleep on mobile devices. Only works for the sdl2 window provider."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:256
+msgid "`vsync`: `none`, empty value, or integers"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:253
+msgid "Whether vsync is enabled, currently only used with sdl2 window. Possible values are `none` or empty value -- leaves it unchanged, ``0`` -- disables vsync, ``1`` or larger -- sets vsync interval, ``-1`` sets adaptive vsync. It falls back to 1 if setting to ``2+`` or ``-1`` failed. See ``SDL_GL_SetSwapInterval``."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:260
+msgid "`verify_gl_main_thread`: int, 1 or 0, defaults to 1"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:259
+msgid "Whether to check if code that changes any gl instructions is running outside the main thread and then raise an error."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "input"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:264
+msgid "You can create new input devices using this syntax::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:275
+msgid "Check the providers in :mod:`kivy.input.providers` for the syntax to use inside the configuration file."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "widgets"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:284
+msgid "`scroll_distance`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:281
+msgid "Default value of the :attr:`~kivy.uix.scrollview.ScrollView.scroll_distance` property used by the :class:`~kivy.uix.scrollview.ScrollView` widget. Check the widget documentation for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:294
+msgid "`scroll_friction`: float"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:287
+msgid "Default value of the :attr:`~kivy.uix.scrollview.ScrollView.scroll_friction` property used by the :class:`~kivy.uix.scrollview.ScrollView` widget. Check the widget documentation for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:292
+#: ../../../kivy/config.py:docstring of kivy.config:308
+#: ../../../kivy/config.py:docstring of kivy.config:318
+msgid "Please use :class:`~kivy.uix.scrollview.ScrollView.effect_cls` instead."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:300
+msgid "`scroll_timeout`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:297
+msgid "Default value of the :attr:`~kivy.uix.scrollview.ScrollView.scroll_timeout` property used by the  :class:`~kivy.uix.scrollview.ScrollView` widget. Check the widget documentation for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:310
+msgid "`scroll_stoptime`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:303
+msgid "Default value of the :attr:`~kivy.uix.scrollview.ScrollView.scroll_stoptime` property used by the :class:`~kivy.uix.scrollview.ScrollView` widget. Check the widget documentation for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:320
+msgid "`scroll_moves`: int"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:313
+msgid "Default value of the :attr:`~kivy.uix.scrollview.ScrollView.scroll_moves` property used by the :class:`~kivy.uix.scrollview.ScrollView` widget. Check the widget documentation for more information."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:0
+msgid "modules"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:324
+msgid "You can activate modules with this syntax::"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:328
+msgid "Anything after the = will be passed to the module as arguments. Check the specific module's documentation for a list of accepted arguments."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:332
+msgid "`implementation` has been added to the network section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:335
+msgid "`vsync` has been added to the graphics section. `verify_gl_main_thread` has been added to the graphics section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:339
+msgid "`min_state_time`  and `allow_screensaver` have been added to the `graphics` section. `kivy_clock` has been added to the kivy section. `default_font` has beed added to the kivy section. `useragent` has been added to the network section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:346
+msgid "`borderless` and `window_state` have been added to the graphics section. The `fake` setting of the `fullscreen` option has been deprecated, use the `borderless` option instead. `pause_on_minimize` has been added to the kivy section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:352
+msgid "`systemanddock` and `systemandmulti` has been added as possible values for `keyboard_mode` in the kivy section. `exit_on_escape` has been added to the kivy section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:357
+msgid "`resizable` has been added to graphics section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:360
+msgid "tuio no longer listens by default. Window icons are not copied to user directory anymore. You can still set a new window icon by using the ``window_icon`` config setting."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config:365
+msgid "`scroll_timeout`, `scroll_distance` and `scroll_friction` have been added. `list_friction`, `list_trigger_distance` and `list_friction_bound` have been removed. `keyboard_type` and `keyboard_layout` have been removed from the widget. `keyboard_mode` and `keyboard_layout` have been added to the kivy section."
+msgstr ""
+
+#: ../../docstring of kivy.config.Config:1
+msgid "The default Kivy configuration object. This is a :class:`ConfigParser` instance with the :attr:`~kivy.config.ConfigParser.name` set to 'kivy'."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`configparser.RawConfigParser`, :class:`builtins.object`"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:1
+msgid "Enhanced ConfigParser class that supports the addition of default sections and default values."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:4
+msgid "By default, the kivy ConfigParser instance, :attr:`~kivy.config.Config`, is named `'kivy'` and the ConfigParser instance used by the :meth:`App.build_settings <~kivy.app.App.build_settings>` method is named `'app'`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:0
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get_configparser:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:11
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get_configparser:5
+msgid "`name`: string"
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:11
+msgid "The name of the instance. See :attr:`name`. Defaults to `''`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser:13
+msgid "Each ConfigParser can now be :attr:`named <name>`. You can get the ConfigParser associated with a name using :meth:`get_configparser`. In addition, you can now control the config values with :class:`~kivy.properties.ConfigParserProperty`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.add_callback:1
+msgid "Add a callback to be called when a specific section or key has changed. If you don't specify a section or key, it will call the callback for all section/key changes."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.add_callback:5
+msgid "Callbacks will receive 3 arguments: the section, key and value."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.adddefaultsection:1
+msgid "Add a section if the section is missing."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get:1
+msgid "Get an option value for a given section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get:3
+msgid "If `vars' is provided, it must be a dictionary. The option is looked up in `vars' (if provided), `section', and in `DEFAULTSECT' in that order. If the key is not found and `fallback' is provided, it is used as a fallback value. `None' can be provided as a `fallback' value."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get:8
+msgid "If interpolation is enabled and the optional argument `raw' is False, all interpolations are expanded in the return values."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get:11
+msgid "Arguments `raw', `vars', and `fallback' are keyword only."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get:13
+msgid "The section DEFAULT is special."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get_configparser:1
+msgid "Returns the :class:`ConfigParser` instance whose name is `name`, or None if not found."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.get_configparser:6
+msgid "The name of the :class:`ConfigParser` instance to return."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.getdefault:1
+msgid "Get the value of an option in the specified section. If not found, it will return the default value."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.getdefaultint:1
+msgid "Get the value of an option in the specified section. If not found, it will return the default value. The value will always be returned as an integer."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.name:1
+msgid "The name associated with this ConfigParser instance, if not `''`. Defaults to `''`. It can be safely changed dynamically or set to `''`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.name:4
+msgid "When a ConfigParser is given a name, that config object can be retrieved using :meth:`get_configparser`. In addition, that config instance can also be used with a :class:`~kivy.properties.ConfigParserProperty` instance that set its `config` value to this name."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.name:10
+msgid "Setting more than one ConfigParser with the same name will raise a `ValueError`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.read:1
+msgid "Read only one filename. In contrast to the original ConfigParser of Python, this one is able to read only one file at a time. The last read file will be used for the :meth:`write` method."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.read:5
+msgid ":meth:`read` now calls the callbacks if read changed any values."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.remove_callback:1
+msgid "Removes a callback added with :meth:`add_callback`. :meth:`remove_callback` must be called with the same parameters as :meth:`add_callback`."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.remove_callback:5
+msgid "Raises a `ValueError` if not found."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.set:1
+msgid "Functions similarly to PythonConfigParser's set method, except that the value is implicitly converted to a string."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.setall:1
+msgid "Sets multiple key-value pairs in a section. keyvalues should be a dictionary containing the key-value pairs to be set."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.setdefault:1
+msgid "Set the default value for an option in the specified section."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.setdefaults:1
+msgid "Set multiple key-value defaults in a section. keyvalues should be a dictionary containing the new key-value defaults."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.update_config:1
+msgid "Upgrade the configuration based on a new default config file. Overwrite any existing values if overwrite is True."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.write:1
+msgid "Write the configuration to the last file opened using the :meth:`read` method."
+msgstr ""
+
+#: ../../../kivy/config.py:docstring of kivy.config.ConfigParser.write:4
+msgid "Return True if the write finished successfully, False otherwise."
+msgstr ""

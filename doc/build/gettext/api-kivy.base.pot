@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/api-kivy.base.rst:3
+msgid "Kivy Base"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base:2
+msgid "This module contains the Kivy core functionality and is not intended for end users. Feel free to look through it, but bare in mind that calling any of these methods directly may result in an unpredictable behavior as the calls access directly the event loop of an application."
+msgstr ""
+
+#: ../../docstring of kivy.base.EventLoop:1
+msgid "EventLoop instance"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.event.EventDispatcher`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase:1
+msgid "Main event loop. This loop handles the updating of input and dispatching events."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.add_event_listener:1
+msgid "Add a new event listener for getting touch events."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.add_input_provider:1
+msgid "Add a new input provider to listen for touch events."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.add_postproc_module:1
+msgid "Add a postproc input module (DoubleTap, TripleTap, DeJitter RetainTouch are defaults)."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.async_idle:1
+msgid "Identical to :meth:`idle`, but instead used when running within an async event loop."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.close:1
+msgid "Exit from the main loop and stop all configured input providers."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.dispatch_input:1
+msgid "Called by :meth:`EventLoopBase.idle()` to read events from input providers, pass events to postproc, and dispatch final events."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.ensure_window:1
+msgid "Ensure that we have a window."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.exit:1
+msgid "Close the main loop and close the window."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.idle:1
+msgid "This function is called after every frame. By default:"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.idle:3
+msgid "it \"ticks\" the clock to the next frame."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.idle:4
+msgid "it reads all input and dispatches events."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.idle:5
+msgid "it dispatches `on_update`, `on_draw` and `on_flip` events to the window."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.on_pause:1
+msgid "Event handler for `on_pause` which will be fired when the event loop is paused."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.on_start:1
+msgid "Event handler for `on_start` which will be fired right after all input providers have been started."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.on_stop:1
+msgid "Event handler for `on_stop` events which will be fired right after all input providers have been stopped."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.post_dispatch_input:1
+msgid "This function is called by :meth:`EventLoopBase.dispatch_input()` when we want to dispatch an input event. The event is dispatched to all listeners and if grabbed, it's dispatched to grabbed widgets."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.remove_android_splash:1
+msgid "Remove android presplash in SDL2 bootstrap."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.remove_event_listener:1
+msgid "Remove an event listener from the list."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.remove_input_provider:1
+msgid "Remove an input provider."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.remove_input_provider:3
+msgid "Provider will be also removed if it exist in auto-remove list."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.remove_postproc_module:1
+msgid "Remove a postproc module."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.run:1
+msgid "Main loop"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.set_window:1
+msgid "Set the window used for the event loop."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.start:1
+msgid "Must be called before :meth:`EventLoopBase.run()`. This starts all configured input providers."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.start:4
+msgid "Method can be called multiple times, but event loop will start only once."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.stop:1
+msgid "Stop all input providers and call callbacks registered using `EventLoop.add_stop_callback()`."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.stop:4
+msgid "Method can be called multiple times, but event loop will stop only once."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.EventLoopBase.touches:1
+msgid "Return the list of all touches currently in down or move states."
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`builtins.object`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionHandler:1
+msgid "Base handler that catches exceptions in :func:`runTouchApp`. You can subclass and extend it as follows::"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionHandler:11
+msgid "Then, all exceptions will be set to PASS, and logged to the console!"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionHandler.handle_exception:1
+msgid "Called by :class:`ExceptionManagerBase` to handle a exception."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionHandler.handle_exception:3
+msgid "Defaults to returning :attr:`ExceptionManager.RAISE` that re-raises the exception. Return :attr:`ExceptionManager.PASS` to indicate that the exception was handled and should be ignored."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionHandler.handle_exception:7
+msgid "This may be called multiple times with the same exception, if :attr:`ExceptionManager.RAISE` is returned as the exception bubbles through multiple kivy exception handling levels."
+msgstr ""
+
+#: ../../docstring of kivy.base.ExceptionManager:1
+msgid "The :class:`ExceptionManagerBase` instance that handles kivy exceptions."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionManagerBase:1
+msgid "ExceptionManager manages exceptions handlers."
+msgstr ""
+
+#: ../../docstring of kivy.base.ExceptionManagerBase.PASS:1
+msgid "The exception should be ignored as it was handled by the handler."
+msgstr ""
+
+#: ../../docstring of kivy.base.ExceptionManagerBase.RAISE:1
+msgid "The exception should be re-raised."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionManagerBase.add_handler:1
+msgid "Add a new exception handler to the stack."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionManagerBase.handle_exception:1
+msgid "Called when an exception occurred in the :func:`runTouchApp` main loop."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.ExceptionManagerBase.remove_handler:1
+msgid "Remove the exception handler from the stack."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.async_runTouchApp:1
+msgid "Identical to :func:`runTouchApp` but instead it is a coroutine that can be run in an existing async event loop."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.async_runTouchApp:4
+msgid "``async_lib`` is the async library to use. See :mod:`kivy.app` for details and example usage."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:1
+msgid "Static main function that starts the application loop. You can access some magic via the following arguments:"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:4
+#: ../../../kivy/base.py:docstring of kivy.base.stopTouchApp:3
+msgid "See :mod:`kivy.app` for example usage."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:10
+msgid "`<empty>`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:8
+msgid "To make dispatching work, you need at least one input listener. If not, application will leave. (MTWindow act as an input listener)"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:15
+msgid "`widget`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:13
+msgid "If you pass only a widget, a MTWindow will be created and your widget will be added to the window as the root widget."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:18
+msgid "`embedded`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:18
+msgid "No event dispatching is done. This will be your job."
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:23
+msgid "`widget + embedded`"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.runTouchApp:21
+msgid "No event dispatching is done. This will be your job but we try to get the window (must be created by you beforehand) and add the widget to it. Very useful for embedding Kivy in another toolkit. (like Qt, check kivy-designed)"
+msgstr ""
+
+#: ../../../kivy/base.py:docstring of kivy.base.stopTouchApp:1
+msgid "Stop the current application by leaving the main loop."
+msgstr ""

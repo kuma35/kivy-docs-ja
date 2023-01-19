@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/api-kivy.lib.ddsfile.rst:3
+msgid "DDS File library"
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:2
+msgid "This library can be used to parse and save DDS (`DirectDraw Surface <https://en.wikipedia.org/wiki/DirectDraw_Surface>`) files."
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:6
+msgid "The initial version was written by::"
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:10
+msgid "All the initial work credits go to him! Thank you :)"
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:12
+msgid "This version uses structs instead of ctypes."
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:16
+msgid "DDS Format"
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile:48
+msgid "This is an external library and Kivy does not provide any support for it. It might change in the future and we advise you don't rely on it in your code."
+msgstr ""
+
+#: ../../../kivy/lib/ddsfile.py:docstring of kivy.lib.ddsfile.DDSException:1
+msgid "Bases: :py:class:`Exception`"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`builtins.dict`"
+msgstr ""

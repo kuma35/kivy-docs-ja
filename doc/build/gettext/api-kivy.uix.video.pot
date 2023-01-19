@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/api-kivy.uix.video.rst:3
+msgid "Video"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video:2
+msgid "The :class:`Video` widget is used to display video files and streams. Depending on your Video core provider, platform, and plugins, you will be able to play different formats. For example, the pygame video provider only supports MPEG1 on Linux and OSX. GStreamer is more versatile, and can read many video containers and codecs such as MKV, OGV, AVI, MOV, FLV (if the correct gstreamer plugins are installed). Our :class:`~kivy.core.video.VideoBase` implementation is used under the hood."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video:11
+msgid "Video loading is asynchronous - many properties are not available until the video is loaded (when the texture is created)::"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video:26
+msgid "One can define a preview image which gets displayed until the video is started/loaded by passing ``preview`` to the constructor::"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video:34
+msgid "One can display the placeholder image when the video stops by reacting on eos::"
+msgstr ""
+
+#: ../../<autodoc>:1
+msgid "Bases: :class:`kivy.uix.image.Image`"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video:1
+msgid "Video class. See module documentation for more information."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.duration:1
+msgid "Duration of the video. The duration defaults to -1, and is set to a real duration when the video is loaded."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.duration:4
+msgid ":attr:`duration` is a :class:`~kivy.properties.NumericProperty` and defaults to -1."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.eos:1
+msgid "Boolean, indicates whether the video has finished playing or not (reached the end of the stream)."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.eos:4
+msgid ":attr:`eos` is a :class:`~kivy.properties.BooleanProperty` and defaults to False."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.loaded:1
+msgid "Boolean, indicates whether the video is loaded and ready for playback or not."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.loaded:6
+msgid ":attr:`loaded` is a :class:`~kivy.properties.BooleanProperty` and defaults to False."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.options:1
+msgid "Options to pass at Video core object creation."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.options:5
+msgid ":attr:`options` is an :class:`kivy.properties.ObjectProperty` and defaults to {}."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.play:1
+#: ../../docstring of kivy.uix.video.Video.play:18
+msgid "Use :attr:`state` instead."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.play:4
+msgid "Boolean, indicates whether the video is playing or not. You can start/stop the video by setting this property::"
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.play:15
+msgid ":attr:`play` is a :class:`~kivy.properties.BooleanProperty` and defaults to False."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.position:1
+msgid "Position of the video between 0 and :attr:`duration`. The position defaults to -1 and is set to a real position when the video is loaded."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.position:4
+msgid ":attr:`position` is a :class:`~kivy.properties.NumericProperty` and defaults to -1."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.preview:1
+msgid "Filename / source of a preview image displayed before video starts."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.preview:3
+msgid ":attr:`preview` is a :class:`~kivy.properties.StringProperty` and defaults to None."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.preview:6
+msgid "If set, it gets displayed until the video is loaded/started."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:2
+msgid "Change the position to a percentage (strictly, a proportion)"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:2
+msgid "of duration."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:6
+msgid "`percent`: float or int"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:6
+msgid "Position to seek as a proportion of the total duration, must be between 0-1."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:10
+msgid "`precise`: bool, defaults to True"
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:9
+msgid "Precise seeking is slower, but seeks to exact requested percent."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:13
+msgid "Calling seek() before the video is loaded has no effect."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.seek:17
+msgid "The `precise` keyword argument has been added."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.state:1
+msgid "String, indicates whether to play, pause, or stop the video::"
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.state:11
+msgid ":attr:`state` is an :class:`~kivy.properties.OptionProperty` and defaults to 'stop'."
+msgstr ""
+
+#: ../../../kivy/uix/video.py:docstring of kivy.uix.video.Video.unload:1
+msgid "Unload the video. The playback will be stopped."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.volume:1
+msgid "Volume of the video, in the range 0-1. 1 means full volume, 0 means mute."
+msgstr ""
+
+#: ../../docstring of kivy.uix.video.Video.volume:4
+msgid ":attr:`volume` is a :class:`~kivy.properties.NumericProperty` and defaults to 1."
+msgstr ""

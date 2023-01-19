@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/installation/installation-windows.rst:4
+msgid "Installation on Windows"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:6
+msgid "To install Kivy on Windows via ``pip``, please follow the main :ref:`installation guide<installation-canonical>`."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:9
+msgid "Installation components"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:11
+msgid "Following, are additional information linked to from some of the steps in the main :ref:`installation guide<installation-canonical>`, specific to Windows."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:17
+msgid "Installing Python"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:19
+msgid "To install Python on Windows, download it from the main `Python website <https://www.python.org/downloads/windows/>`_ and follow the installation steps. You can read about the individual installation options in the `Python guide <https://docs.python.org/3/using/windows.html#the-full-installer>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:24
+msgid "If you installed the `Python launcher <https://docs.python.org/3/using/windows.html#launcher>`_, you will be more easily able to install multiple Python versions side by side and select, which to run, at each invocation."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:32
+msgid "Source installation Dependencies"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:34
+msgid "To install Kivy from source, please follow the installation guide until you reach the :ref:`Kivy install step<kivy-source-install>` and then install the compiler below before continuing."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:37
+msgid "To install kivy from source, you need a compiler. On Windows, the *Visual Studio Build Tools* are required, and they are available for free. You can either:"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:40
+msgid "Download and install the complete *Visual Studio IDE*, which contains the build tools. This is the easiest approach and the IDE can be downloaded from `here <https://www.visualstudio.com/downloads/>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:42
+msgid "The IDE is very big, so you can also download just the smaller build tools, which are used from the command line. The current download (2019) can be found on `this page <https://visualstudio.microsoft.com/downloads/?q=build+tools>`_ under \"Tools for Visual Studio 2019\". More info about this topic can be found `in the Kivy wiki <https://github.com/kivy/kivy/wiki/Using-Visual-C---Build-Tools-instead-of-Visual-Studio-on-Windows>`_."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:47
+msgid "Now that the compiler is installed, continue to :ref:`install Kivy<kivy-source-install>`."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:50
+msgid "Making Python available anywhere"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:52
+msgid "There are two methods for launching Python when double clicking on your ``*.py`` files."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:55
+msgid "Double-click method"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:57
+msgid "If you only have one Python installed, and if you installed it using the default options, then ``*.py`` files are already associated with your Python. You can run them by double clicking them in the file manager, or by just executing their name in a console window (without having to prepend ``python``)."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:60
+msgid "Alternatively, if they are not assigned, you can do it the following way:"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:62
+msgid "Right click on the Python file (.py file extension) in the file manager."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:63
+msgid "From the context menu that appears, select *Open With*"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:64
+msgid "Browse your hard disk drive and find the ``python.exe`` file that you want to use (e.g. in the the virtual environment). Select it."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:66
+msgid "Select \"Always open the file with...\" if you don't want to repeat this procedure every time you double click a .py file."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:68
+msgid "You are done. Open the file."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:71
+msgid "Send-to method"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:73
+msgid "You can launch a .py file with Python using the *Send to* menu:"
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:75
+msgid "Browse to the ``python.exe`` you want to use. Right click on it and copy it."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:77
+msgid "Open Windows Explorer (the file explorer in Windows 8), and to go the address 'shell:sendto'. You should get the special Windows directory `SendTo`."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:79
+msgid "Paste the previously copied ``python.exe`` file **as a shortcut**."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:80
+msgid "Rename it to python <python-version>. E.g. ``python39``."
+msgstr ""
+
+#: ../../sources/installation/installation-windows.rst:82
+msgid "You can now execute your application by right clicking on the `.py` file -> \"Send To\" -> \"python <python-version>\"."
+msgstr ""

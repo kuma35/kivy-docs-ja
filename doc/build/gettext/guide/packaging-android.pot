@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/guide/packaging-android.rst:4
+msgid "Create a package for Android"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:7
+msgid "You can create a package for android using the `python-for-android <https://github.com/kivy/python-for-android>`_ project. This page explains how to download and use it directly on your own machine (see :ref:`Packaging your application into APK or AAB`) or use the :ref:`buildozer` tool to automate the entire process. You can also see :ref:`Packaging your application for Kivy Launcher` to run kivy programs without compiling them."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:15
+msgid "For new users, we recommend using :ref:`Buildozer` as the easiest way to make a full APK or AAB. You can also run your Kivy app without a compilation step with the :ref:`Kivy Launcher <Packaging your application for Kivy launcher>` app."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:20
+msgid "Kivy applications can be :ref:`released on an Android market <release_on_the_market>` such as the Play store, with a few extra steps to create a fully signed AAB (Android App Bundle)."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:24
+msgid "The Kivy project includes tools for accessing Android APIs to accomplish vibration, sensor access, texting etc. These, along with information on debugging on the device, are documented at the :doc:`main Android page </guide/android>`."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:32
+msgid "Buildozer"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:34
+msgid "Buildozer is a tool that automates the entire build process. It downloads and sets up all the prerequisites for python-for-android, including the android SDK and NDK, then builds an apk that can be automatically pushed to the device."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:39
+msgid "Buildozer currently works only in Linux and macOS (You can still use it on Windows via WSL), and can significantly simplify the apk build."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:42
+msgid "Please find the installation instructions `here <https://buildozer.readthedocs.io/en/latest/installation.html>`__"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:44
+msgid "Including the \"Targeting Android\" section."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:46
+msgid "Afterwards, navigate to your project directory and run::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:50
+msgid "This creates a `buildozer.spec` file controlling your build configuration. You should edit it appropriately with your app name etc. You can set variables to control most or all of the parameters passed to python-for-android."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:55
+msgid "Finally, plug in your android device and run::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:59
+msgid "to build, push and automatically run the apk on your device."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:61
+msgid "Buildozer has many available options and tools to help you, the steps above are just the simplest way to build and run your APK. The full documentation is available `here <http://buildozer.readthedocs.org/en/latest/>`_. You can also check the Buildozer README at `<https://github.com/kivy/buildozer>`_."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:70
+msgid "Packaging with python-for-android"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:72
+msgid "You can also package directly with python-for-android, which can give you more control but requires you to manually download parts of the Android toolchain."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:76
+msgid "See the `python-for-android documentation <https://python-for-android.readthedocs.io/en/latest/quickstart/>`__ for full details."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:84
+msgid "Packaging your application for the Kivy Launcher"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:86
+msgid "The Kivy launcher is an Android application that runs any Kivy examples stored on your SD Card. To install the Kivy launcher, you must:"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:90
+msgid "Go on Google Play Store and search for `Kivy Launcher` from `kivy org`"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:91
+msgid "Click on Install"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:92
+msgid "Select your phone... And you're done!"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:94
+msgid "If you don't have access to the Google Play Store on your phone/tablet, you can download and install the APK manually from https://github.com/kivy/kivy-launcher/releases"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:98
+msgid "Once the Kivy launcher is installed, you can put your Kivy applications in the Kivy directory in your external storage directory (often available at :code:`/sdcard` even in devices where this memory is internal), e.g. ::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:105
+msgid ":code:`<yourapplication>` should be a directory containing::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:112
+msgid "The file `android.txt` must contain::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:118
+msgid "These options are just a very basic configuration. If you create your own APK using the tools above, you can choose many other settings."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:122
+msgid "Installation of Examples"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:124
+msgid "Kivy comes with many examples, and these can be a great place to start trying the Kivy launcher. You can run them as below::"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:131
+msgid "/sdcard/kivy"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:133
+msgid "Run the launcher and select one of the Pictures, Showcase, Touchtracer, Cymunk or other demos..."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:139
+msgid "Release on the market"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:141
+msgid "If you have built your own APK with Buildozer or with python-for-android, you can create a release version that may be released on the Play store or other Android markets."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:145
+msgid "To do this, you must run Buildozer with the :code:`release` parameter (e.g. :code:`buildozer android release`), or if using python-for-android use the :code:`--release` option to build.py. This creates a release AAB in the :code:`bin` directory, which you must properly sign and zipalign. The procedure for doing this is described in the Android documentation at https://developer.android.com/studio/publish/app-signing.html#signing-manually - all the necessary tools come with the Android SDK."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:158
+msgid "Targeting Android"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:160
+msgid "Kivy is designed to operate identically across platforms and as a result, makes some clear design decisions. It includes its own set of widgets and by default, builds an APK or AAB with all the required core dependencies and libraries."
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:164
+msgid "It is possible to target specific Android features, both directly and in a (somewhat) cross-platform way. See the `Using Android APIs` section of the :doc:`Kivy on Android documentation </guide/android>` for more details."
+msgstr ""

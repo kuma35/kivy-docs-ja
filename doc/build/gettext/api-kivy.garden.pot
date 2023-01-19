@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010, The Kivy Authors
+# This file is distributed under the same license as the Kivy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kivy 2.2.0.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sources/api-kivy.garden.rst:3
+msgid "Garden"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:6
+msgid "Garden is a project to centralize addons for Kivy maintained by users. You can find more information at `Kivy Garden <http://kivy-garden.github.io/>`_. All the garden packages are centralized on the `kivy-garden Github <https://github.com/kivy-garden>`_ repository."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:13
+msgid "The garden flower widgets are contributed by regular users such as yourself. The kivy developers do not take any responsibility for the code hosted in the garden organization repositories - we do not actively monitor the flower repos. Please use at your own risk."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:19
+msgid "Update to garden structure"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:21
+msgid "Starting with the kivy 1.11.0 release, kivy has `shifted <https://github.com/kivy/kivy/wiki/Moving-kivy.garden.xxx-to-kivy_garden.xxx-and-kivy.deps.xxx-to-kivy_deps.xxx>`_ from using the garden legacy tool that installs flowers with `garden install flower` where the flower does not have a proper python package structure to flowers that can be installed with pip and uploaded to pypi. Kivy supports the legacy garden flowers side by side with the newer packages so the garden tool and legacy flowers will be able to be used indefinitely. But we will only provide support for the newer packages format in the future."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:30
+msgid "For garden package maintainers - for a guide how to migrate your garden package from the legacy structure `garden.flower` to the newer `flower` structure used with the pip, see `this guide <https://kivy-garden.github.io/#guideformigratingflowersfromlegacystructure>`_."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:35
+msgid "We hope most garden packages will be converted to the newer format to help with installation."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:39
+msgid "General Usage Guidelines"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:41
+msgid "To use a kivy garden flower, first check if the flower is in the legacy format. If the flower name is in the format of `garden.flower`, such as `garden.graph <https://github.com/kivy-garden/garden.graph>`_ it is a legacy flower. If it is just `flower` such as `graph <https://github.com/kivy-garden/graph>`_ it is in the present format. If it is in the legacy format see `Legacy garden tool instructions`_ for how to install and use it. Otherwise, continue with the guide below."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:49
+msgid "Garden flowers can now be installed with the `pip` tool like a normal python package. Given a flower that you want to install, lets use `graph <https://github.com/kivy-garden/graph>`_ as an example. You can install master directly from github with::"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:56
+msgid "Look under the repository's releases tab if you'd like to install a specific release or a pre-compiled wheel, if the flower has any. Then use the url with `pip`."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:60
+msgid "Or you can automatically install it using garden's pypi server with::"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:64
+msgid "To permanently add our garden server to your pip configuration so that you don't have to specify it with `--extra-index-url`, add::"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:71
+msgid "to your `pip.conf <https://pip.pypa.io/en/stable/user_guide/#config-file>`_."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:73
+msgid "If the flower maintainer has uploaded the flower to `pypi <https://pypi.org/>`_, you can just install it with `pip install kivy_garden.flower`."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:79
+msgid "Legacy garden tool instructions"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:81
+msgid "Garden is now distributed as a separate Python module, kivy-garden. You can install it with pip::"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:86
+msgid "The garden module does not initially include any packages. You can download them with the garden tool installed by the pip package::"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:110
+msgid "All the garden packages are installed by default in `~/.kivy/garden`."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:112
+msgid "In previous versions of Kivy, garden was a tool at kivy/tools/garden. This no longer exists, but the kivy-garden module provides exactly the same functionality."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:117
+msgid "Packaging"
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:119
+msgid "If you want to include garden packages in your application, you can add `--app` to the `install` command. This will create a `libs/garden` directory in your current directory which will be used by `kivy.garden`."
+msgstr ""
+
+#: ../../../kivy/garden/__init__.py:docstring of kivy.garden:123
+msgid "For example::"
+msgstr ""
+
+#: ../../docstring of kivy.garden.garden_system_dir:1
+msgid "system path where garden modules can be installed"
+msgstr ""

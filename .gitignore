@@ -20,6 +20,9 @@ build/*
 # doc/sources/examples/gallery.rst
 # doc/sources/examples/index.rst
 *.mo
+*.doctree
+doc/build/doctrees
+doc/build/doctrees_gettext
 
 examples/*/bin
 examples/*/.buildozer

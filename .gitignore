@@ -12,12 +12,15 @@ Kivy-*.dist-info
 *.DS_Store
 *.kpf
 build/*
-doc/build
-doc/autobuild.py-done*
-doc/sources/api-*.rst
-doc/sources/examples/gen__*.rst
-doc/sources/examples/gallery.rst
-doc/sources/examples/index.rst
+# by branch docs-ja
+# doc/build
+# doc/autobuild.py-done*
+# doc/sources/api-*.rst
+# doc/sources/examples/gen__*.rst
+# doc/sources/examples/gallery.rst
+# doc/sources/examples/index.rst
+*.mo
+
 examples/*/bin
 examples/*/.buildozer
 kivy/*.c

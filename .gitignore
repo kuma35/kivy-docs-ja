@@ -23,6 +23,7 @@ build/*
 *.doctree
 doc/build/doctrees
 doc/build/doctrees_gettext
+doc/build/html
 
 examples/*/bin
 examples/*/.buildozer

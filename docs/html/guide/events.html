@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:site" content="@kivyframework">
+    <meta name="color-scheme" content="dark light"> <!--tells web browser about which themes are supported -->
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Events and Properties &mdash; Kivy 2.2.0.dev0 ドキュメント</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fresh.css" type="text/css" />
+         
+          <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script> 
+            <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script> 
+            <script src="../_static/doctools.js"></script> 
+            <script src="../_static/sphinx_highlight.js"></script> 
+            <script src="../_static/translations.js"></script> 
+        
+        <script>
+            const currTheme = localStorage.getItem("theme");
+            if(currTheme){
+                document.documentElement.className = currTheme;
+            } else if(window.matchMedia){
+                document.documentElement.className = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark": "light";
+            } else { // neither localStorage or window.matchMedia exists
+                document.documentElement.className = "light"; //todo should dark theme be the fallback value instead ?
+            }
+        </script>
+        <script type="text/javascript" src="../_static/jquery-effects-core-and-slide.js"></script>
+        <script type="text/javascript" src="../_static/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../_static/kivy.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="top" title="Kivy 2.2.0.dev0 ドキュメント" href="../index.html" />
+    <link rel="up" title="Programming Guide" href="../guide-index.html" />
+    <link rel="next" title="Input management" href="inputs.html" />
+    <link rel="prev" title="Architectural Overview" href="architecture.html" /> 
+  </head>
+  <body>
+
+    <div id="topbar">
+        <div id="topwrapper">
+          <div id="toplogo">
+              <a href="https://kivy.org/">
+                  <img src="../_static/logo-kivy.png" alt="Kivy"/>
+              </a>
+          </div>
+          <div id="topmenu">
+              <ul class="navigation">
+                  <li><a class="nav-guides" href="../gettingstarted/intro.html">Guides</a></li>
+                  <li><a class="nav-garden" href="http://kivy-garden.github.io/">Garden</a></li>
+                  <li><a class="nav-api" href="../api-kivy.html">API Reference</a></li>
+                  <li><a class="nav-pdf" href="https://media.readthedocs.org/pdf/kivy/latest/kivy.pdf">PDF</a></li>
+                  <li><a class="nav-wiki" href="http://wiki.kivy.org">Wiki</a></li>
+                  <li id="li_themeToggleSwitch">
+                        <button id="themeToggleSwitch" type="button">
+                            <span class="vt-switch-check">
+                                <span class="vt-switch-icon">
+                                    <!--[-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="sun">
+                                        <path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path>
+                                        <path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path>
+                                        <path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path>
+                                        <path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path>
+                                        <path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path>
+                                        <path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path>
+                                        <path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                                        <path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path>
+                                        <path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="moon">
+                                        <path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path>
+                                    </svg>
+                                    <!--]-->
+                                </span>
+                            </span>
+                        </button>
+
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+<div id="contentall">
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>Version</h3>
+            <select id="version_selector"></select>
+            <h3>Quick search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+                <input type="text" class="text" name="q" />
+                <button type="submit">検索</button>
+            </form>
+          <!--
+          <h3><a href="../index.html">Events and Properties</a></h3>
+          <ul>
+<li><a class="reference internal" href="#">Events and Properties</a><ul>
+<li><a class="reference internal" href="#introduction-to-the-event-dispatcher">Introduction to the Event Dispatcher</a></li>
+<li><a class="reference internal" href="#main-loop">Main loop</a><ul>
+<li><a class="reference internal" href="#scheduling-a-repetitive-event">Scheduling a repetitive event</a></li>
+<li><a class="reference internal" href="#scheduling-a-one-time-event">Scheduling a one-time event</a></li>
+<li><a class="reference internal" href="#trigger-events">Trigger events</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#widget-events">Widget events</a></li>
+<li><a class="reference internal" href="#creating-custom-events">Creating custom events</a></li>
+<li><a class="reference internal" href="#attaching-callbacks">Attaching callbacks</a></li>
+<li><a class="reference internal" href="#introduction-to-properties">Introduction to Properties</a></li>
+<li><a class="reference internal" href="#declaration-of-a-property">Declaration of a Property</a></li>
+<li><a class="reference internal" href="#dispatching-a-property-event">Dispatching a Property event</a></li>
+<li><a class="reference internal" href="#compound-properties">複合プロパティ(Compound Properties)</a></li>
+</ul>
+</li>
+</ul>
+
+          <h3><a href="../index.html">Table Of Contents</a></h3>
+          -->
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Gallery of Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gallery.html">Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__3Drendering__main__py.html">3D Rotating Monkey Head</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__animation__animate__py.html">Widget animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__application__app_suite__py.html">Suite of Application Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__application__app_with_build__py.html">Application example using build() + return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__application__app_with_kv__py.html">Application built from a  .kv file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__application__app_with_kv_in_template1__py.html">Application from a .kv in a Template Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__camera__main__py.html">Camera Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__bezier__py.html">Bezier Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__canvas_stress__py.html">Canvas stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__circle__py.html">Circle Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__fbo_canvas__py.html">FBO Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__lines__py.html">Line (SmoothLine) Experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__lines_extended__py.html">Lines Extended Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__mesh__py.html">Mesh test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__multitexture__py.html">Multitexture Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__repeat_texture__py.html">Repeat Texture on Resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__rotation__py.html">Rotation Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__stencil_canvas__py.html">Stencil demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__tesselate__py.html">Tesselate Demonstration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__canvas__texture__py.html">Texture Wrapping and Coordinates Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__camera_puzzle__py.html">Shuffled Camera Feed Puzzle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__kivycatalog__main__py.html">Kivy Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__multistroke__main__py.html">Multistroke Recognition Database Demonstration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__pictures__main__py.html">Basic Picture Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__shadereditor__main__py.html">Live Shader Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__showcase__main__py.html">Showcase of Kivy Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gen__demo__touchtracer__main__py.html">Touch Tracer Line Drawing Demonstration</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/installation.html">Installing Kivy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/first_app.html">A first App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/rules.html">Kv Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/framework.html">Non-widget stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/layouts.html">Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/drawing.html">Drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/diving.html">Diving in</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide.html">Kivy Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy.html">Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contact.html">Contact Us</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-index.html">Programming Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic.html">Kivy Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html">Controlling the environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configure Kivy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Architectural Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Events and Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs.html">Input management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphics.html">Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lang.html">Kv language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other-frameworks.html">Integrating with other Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packaging.html">Packaging your application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">Package licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials-index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/pong.html">Pong Game Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/firstwidget.html">A Simple Paint App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/crashcourse.html">Crash Course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api-index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.html">Kivy framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy._metrics.html">Low level Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.animation.html">Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.app.html">Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.atlas.html">Atlas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.base.html">Kivy Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.cache.html">Cache manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.clock.html">Clock object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.compat.html">Compatibility module for Python 2.7 and &gt;= 3.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.config.html">Configuration object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.context.html">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.html">Core Abstraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.audio.html">Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.clipboard.html">Clipboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.gl.html">OpenGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.spelling.html">Spelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.text.markup.html">Text Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.text.text_layout.html">Text layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.video.html">Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.core.window.html">Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.deps.html">Kivy module for binary dependencies.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.effects.html">Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.effects.dampedscroll.html">Damped scroll effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.effects.kinetic.html">Kinetic effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.effects.opacityscroll.html">Opacity scroll effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.effects.scroll.html">Scroll effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.event.html">Event dispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.eventmanager.html">Event Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.factory.html">Factory object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.garden.html">Garden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.geometry.html">Geometry utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.gesture.html">Gesture recognition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.html">Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.boxshadow.html">BoxShadow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.cgl.html">CGL: standard C interface for OpenGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.compiler.html">Graphics compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.context.html">Context management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.context_instructions.html">Context instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.fbo.html">Framebuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.gl_instructions.html">GL instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.instructions.html">Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.opengl.html">OpenGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.opengl_utils.html">OpenGL utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.scissor_instructions.html">Scissor Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.shader.html">Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.stencil_instructions.html">Stencil instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.svg.html">SVG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.tesselator.html">Tesselator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.texture.html">Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.graphics.transformation.html">Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.html">Input management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.factory.html">Motion Event Factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.motionevent.html">Motion Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.html">Input Postprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.calibration.html">Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.dejitter.html">Dejitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.doubletap.html">Double Tap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.ignorelist.html">Ignore list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.retaintouch.html">Retain Touch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.postproc.tripletap.html">Triple Tap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.provider.html">Motion Event Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.html">Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.androidjoystick.html">Android Joystick Input Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.hidinput.html">Native support for HID input from the linux kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.leapfinger.html">Leap Motion - finger only</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.linuxwacom.html">Native support of Wacom tablet from linuxwacom driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.mactouch.html">Native support of MultitouchSupport framework for MacBook (MaxOSX platform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.mouse.html">Mouse provider implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.mtdev.html">Native support for Multitouch devices on Linux, using libmtdev.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.probesysfs.html">Auto Create Input Provider Config Entry for Available MT Hardware (linux only).</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.tuio.html">TUIO Input Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.providers.wm_common.html">Common definitions for a Windows provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.recorder.html">Input recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.input.shape.html">Motion Event Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.interactive.html">Interactive launcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lang.html">Kivy Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lang.builder.html">Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lang.parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lib.html">External libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lib.ddsfile.html">DDS File library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lib.gstplayer.html">GstPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.lib.mtdev.html">Python mtdev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.loader.html">Asynchronous data loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.logger.html">Kivy Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.metrics.html">Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.html">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.inspector.html">Inspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.joycursor.html">JoyCursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.keybinding.html">Keybinding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.monitor.html">Monitor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.recorder.html">Recorder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.screen.html">Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.touchring.html">Touchring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.modules.webdebugger.html">Web Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.multistroke.html">Multistroke gesture recognizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.network.html">Network support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.network.urlrequest.html">UrlRequest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.parser.html">Parser utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.resources.html">Resources management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.storage.dictstore.html">Dictionary store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.storage.jsonstore.html">JSON store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.storage.redisstore.html">Redis Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.support.html">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.tools.packaging.html">Packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.tools.packaging.pyinstaller_hooks.html">Pyinstaller hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.html">Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.accordion.html">Accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.actionbar.html">Action Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.anchorlayout.html">Anchor Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.html">Behaviors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.button.html">Button Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.codenavigation.html">Code Navigation Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.compoundselection.html">Compound Selection Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.cover.html">Cover Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.drag.html">Drag Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.emacs.html">Emacs Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.focus.html">Focus Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.knspace.html">Kivy Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.togglebutton.html">ToggleButton Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.behaviors.touchripple.html">Touch Ripple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.boxlayout.html">Box Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.bubble.html">Bubble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.button.html">Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.carousel.html">Carousel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.checkbox.html">CheckBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.codeinput.html">Code Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.colorpicker.html">Color Picker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.dropdown.html">Drop-Down List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.effectwidget.html">EffectWidget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.filechooser.html">FileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.floatlayout.html">Float Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.gesturesurface.html">Gesture Surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.gridlayout.html">Grid Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.label.html">Label</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.layout.html">Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.modalview.html">ModalView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.pagelayout.html">PageLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.popup.html">Popup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.progressbar.html">Progress Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recycleboxlayout.html">RecycleBoxLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recyclegridlayout.html">RecycleGridLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recyclelayout.html">RecycleLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recycleview.html">RecycleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recycleview.datamodel.html">RecycleView Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recycleview.layout.html">RecycleView Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.recycleview.views.html">RecycleView Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.relativelayout.html">Relative Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.rst.html">reStructuredText renderer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.sandbox.html">Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.scatter.html">Scatter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.scatterlayout.html">Scatter Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.screenmanager.html">Screen Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.scrollview.html">ScrollView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.slider.html">Slider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.spinner.html">Spinner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.splitter.html">Splitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.stacklayout.html">Stack Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.stencilview.html">Stencil View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.switch.html">Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.tabbedpanel.html">TabbedPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.textinput.html">Text Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.togglebutton.html">Toggle button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.treeview.html">Tree View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.video.html">Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.videoplayer.html">Video player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.vkeyboard.html">VKeyboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.uix.widget.html">Widget class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.utils.html">Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.vector.html">Vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.weakmethod.html">Weak Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-kivy.weakproxy.html">Weak Proxy</a></li>
+</ul>
+</li>
+</ul>
+
+          <!--
+          <h3>Related Topics</h3>
+          <ul>
+              <li>Previous: <a href="architecture.html" title="前の章へ">Architectural Overview</a></li>
+              <li>Next: <a href="inputs.html" title="次の章へ">Input management</a></li>
+          </ul>
+          -->
+        </div>
+      </div>
+  <div id="content">
+    <div class="wrapper">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            <div class="toc"><h2>Table Of Contents</h2><ul>
+<li><a class="reference internal" href="#">Events and Properties</a><ul>
+<li><a class="reference internal" href="#introduction-to-the-event-dispatcher">Introduction to the Event Dispatcher</a></li>
+<li><a class="reference internal" href="#main-loop">Main loop</a><ul>
+<li><a class="reference internal" href="#scheduling-a-repetitive-event">Scheduling a repetitive event</a></li>
+<li><a class="reference internal" href="#scheduling-a-one-time-event">Scheduling a one-time event</a></li>
+<li><a class="reference internal" href="#trigger-events">Trigger events</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#widget-events">Widget events</a></li>
+<li><a class="reference internal" href="#creating-custom-events">Creating custom events</a></li>
+<li><a class="reference internal" href="#attaching-callbacks">Attaching callbacks</a></li>
+<li><a class="reference internal" href="#introduction-to-properties">Introduction to Properties</a></li>
+<li><a class="reference internal" href="#declaration-of-a-property">Declaration of a Property</a></li>
+<li><a class="reference internal" href="#dispatching-a-property-event">Dispatching a Property event</a></li>
+<li><a class="reference internal" href="#compound-properties">複合プロパティ(Compound Properties)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+  <section id="events-and-properties">
+<span id="properties"></span><span id="events"></span><h1>Events and Properties<a class="headerlink" href="#events-and-properties" title="この見出しへのパーマリンク">¶</a></h1>
+<p>イベントは Kivy プログラミングの重要な部分です。 GUI 開発の経験がある人にとっては驚くべきことではないかもしれませんが、 初心者にとっては重要な概念です。 イベントがどのように働くか、 そして、 プログラムとイベントをどのように結びつける(bind)かを理解すると、 Kivy のあらゆる場所にイベントがあることが分かるでしょう。 これらは、 あなたが Kivy に求める振る舞いを簡単に構築できるようにします。</p>
+<p>以下の図は、Kivy フレームワークでイベントがどのように処理されるかを示しています。</p>
+<img alt="../_images/Events.png" src="../_images/Events.png" />
+<section id="introduction-to-the-event-dispatcher">
+<h2>Introduction to the Event Dispatcher<a class="headerlink" href="#introduction-to-the-event-dispatcher" title="この見出しへのパーマリンク">¶</a></h2>
+<p>フレームワークの最も重要な基底クラスの１つは <a class="reference internal" href="../api-kivy.event.html#kivy.event.EventDispatcher" title="kivy.event.EventDispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventDispatcher</span></code></a> クラスです。 このクラスを使用すると、 イベント・タイプを登録し、 関連部分(通常は他のイベント・ディスパッチャ)に発送(dispatch)できます。 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> や  <a class="reference internal" href="../api-kivy.animation.html#kivy.animation.Animation" title="kivy.animation.Animation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Animation</span></code></a> や <a class="reference internal" href="../api-kivy.clock.html#kivy.clock.Clock" title="kivy.clock.Clock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clock</span></code></a> クラスは、 イベント・ディスパッチャの例です。</p>
+<p>EventDispatcher オブジェクトは、イベントの生成と処理をメイン・ループに依存しています。</p>
+</section>
+<section id="main-loop">
+<h2>Main loop<a class="headerlink" href="#main-loop" title="この見出しへのパーマリンク">¶</a></h2>
+<p>上の図で概説したように、Kivy には「メイン・ループ」(main loop)があります。 このループは、 アプリケーションの存続期間中ずっと実行されており、 アプリケーションを終了(exit)するときにのみ終了(quit)します。</p>
+<p>ループ内では、その反復ごとに、 ユーザー入力またはハードウェア・センサーまたはその他のいくつかのソースからイベントが生成され、 フレームがディスプレイにレンダリングされます。</p>
+<p>あなたのアプリケーションには、 メイン・ループによって呼び出されるコールバック(詳細は後述)を指定します。 コールバックに時間がかかりすぎたり、 まったく終了(quit)しない場合、 メイン・ループが壊れ、あなたのアプリは適切に動作しなくなります。</p>
+<p>Kivy アプリケーションでは、 長い/無限 ループやスリープを避けなければなりません。 たとえば以下のコードは無限ループとスリープの両方を行います:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">animate_something</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">.10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>あなたがこれを実行すると、 プログラムはループを終了せず、 Kivy に必要な他のすべてのことを実行できなくなります。 その結果、 操作できない黒いウィンドウが表示されます。 代わりに、 あなたは、 あなたの <code class="docutils literal notranslate"><span class="pre">animate_something()</span></code> 関数が繰り返し呼び出されるように「スケジュール」(schedule)する必要があります。</p>
+<section id="scheduling-a-repetitive-event">
+<h3>Scheduling a repetitive event<a class="headerlink" href="#scheduling-a-repetitive-event" title="この見出しへのパーマリンク">¶</a></h3>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">schedule_interval()</span></code> を使用して、 1 秒あたり X 回、 関数またはメソッドを呼び出すことができます。 以下は、 my_callback という名前の関数を毎秒 30 回呼び出す例です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_callback</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My callback is called&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+<span class="n">event</span> <span class="o">=</span> <span class="n">Clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">30.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>あなたが以前にスケジュールしたイベントのスケジュール実行を解除するには、 複数の方法があります。 その１つは <a class="reference internal" href="../api-kivy.clock.html#kivy.clock.ClockEvent.cancel" title="kivy.clock.ClockEvent.cancel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cancel()</span></code></a> または <code class="xref py py-meth docutils literal notranslate"><span class="pre">unschedule()</span></code> を使用することです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">event</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>と:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Clock</span><span class="o">.</span><span class="n">unschedule</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>また、 あなたのコールバックでは戻り値として False を返すことができ、 そうすればそのイベントは自動的にスケジュール解除されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">my_callback</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">count</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last call of my callback, bye bye !&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My callback is called&#39;</span><span class="p">)</span>
+<span class="n">Clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">30.</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="scheduling-a-one-time-event">
+<h3>Scheduling a one-time event<a class="headerlink" href="#scheduling-a-one-time-event" title="この見出しへのパーマリンク">¶</a></h3>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">schedule_once()</span></code> を使用すると、 次のフレームや X 秒後など、「後で」関数を呼び出すことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_callback</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My callback is called !&#39;</span><span class="p">)</span>
+<span class="n">Clock</span><span class="o">.</span><span class="n">schedule_once</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>これは、セット後 1 秒で <code class="docutils literal notranslate"><span class="pre">my_callback</span></code> が呼び出されます。 2番目の引数は、 関数を呼び出す前に待機する時間(秒単位)です。 ただし、 2 番目の引数に特別な値を使用すると、他の結果を得ることができます:</p>
+<ul class="simple">
+<li><p>X が 0 より大きい場合(X &gt; 0)、 コールバックは X 秒で呼び出されます</p></li>
+<li><p>X が 0 の場合(X == 0)、コールバックは次のフレームの後に呼び出されます</p></li>
+<li><p>X が -1 の場合(X == -1)、コールバックは次のフレームの前に呼び出されます</p></li>
+</ul>
+<p>主に -1 は、 既にスケジュールされているイベントに参加していて、 次のフレームが発生する「前」に呼び出しをスケジュールする場合に使用されます。</p>
+<p>関数呼び出しを繰り返すための 2 つ目の方法は、 最初に <code class="xref py py-meth docutils literal notranslate"><span class="pre">schedule_once()</span></code> でコールバックを 1 回スケジュールし、 コールバック自体の中でこの関数の2回目の呼び出しを行うことです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_callback</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My callback is called !&#39;</span><span class="p">)</span>
+    <span class="n">Clock</span><span class="o">.</span><span class="n">schedule_once</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">Clock</span><span class="o">.</span><span class="n">schedule_once</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>メイン・ループは要求どおりにスケジュールを維持しようとはしますが、 スケジュールされたコールバックが正確に呼び出されるのが何時かについては不確実性があります。 アプリケーション内の別のコールバックやその他のタスクに予想よりも時間がかかることがあるため、 タイミングが少しずれることがあります。</p>
+</div>
+<p>反復的なコールバックの問題に対する後者の解決策では、 最後の反復が終了してから少なくとも 1 秒後に次の反復が呼び出されます。 ただし、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">schedule_interval()</span></code> では、コールバックは毎秒呼び出されます。</p>
+</section>
+<section id="trigger-events">
+<h3>Trigger events<a class="headerlink" href="#trigger-events" title="この見出しへのパーマリンク">¶</a></h3>
+<p>次のフレームで一度だけ呼び出されるように関数をスケジュールして、 重複した呼び出しを防ぎたい場合があります。 あなたは以下のようにしてこれを達成したくなるかもしれません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, schedule once.</span>
+<span class="n">event</span> <span class="o">=</span> <span class="n">Clock</span><span class="o">.</span><span class="n">schedule_once</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Then, in another place you will have to unschedule first</span>
+<span class="c1"># to avoid duplicate call. Then you can schedule again.</span>
+<span class="n">Clock</span><span class="o">.</span><span class="n">unschedule</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<span class="n">event</span> <span class="o">=</span> <span class="n">Clock</span><span class="o">.</span><span class="n">schedule_once</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>プログラミングによりトリガーさせるこの方法は、 イベントが既に完了している場合でも常に unschedule を呼び出すため、コストがかかります。 また、 毎回新しいイベントが作成されます。 代わりに trigger を使用してください:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trigger</span> <span class="o">=</span> <span class="n">Clock</span><span class="o">.</span><span class="n">create_trigger</span><span class="p">(</span><span class="n">my_callback</span><span class="p">)</span>
+<span class="c1"># later</span>
+<span class="n">trigger</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>あなたが trigger() を呼び出すたびに、 あなたのコールバックの1回きりの呼び出しがスケジュールされます。 すでにスケジュールされている場合は再スケジュールされません。</p>
+</section>
+</section>
+<section id="widget-events">
+<h2>Widget events<a class="headerlink" href="#widget-events" title="この見出しへのパーマリンク">¶</a></h2>
+<p>ウィジェットには、2 つのデフォルトのイベント・タイプがあります:</p>
+<ul class="simple">
+<li><p>プロパティ・イベント: あなたのウィジェットの位置またはサイズが変更されると、イベントが発生(event is fired)します。</p></li>
+<li><p>ウィジェット定義のイベント: たとえば Button が押される(pressed)か離される(released)と、 その Button に対してイベントが発生(fire)します。</p></li>
+</ul>
+<p>ウィジェット・タッチ・イベント がどのように管理(manage)および伝達(propagate)されるかについては、 <a class="reference internal" href="../api-kivy.uix.widget.html#widget-event-bubbling"><span class="std std-ref">Widget touch event bubbling</span></a> セクションを参照してください。</p>
+</section>
+<section id="creating-custom-events">
+<h2>Creating custom events<a class="headerlink" href="#creating-custom-events" title="この見出しへのパーマリンク">¶</a></h2>
+<p>カスタム・イベントでイベント・ディスパッチャを作成するには、 クラスにイベントの名前を登録してから、同一名称のメソッドを作成する必要があります。</p>
+<p>以下の例をご覧下さい:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyEventDispatcher</span><span class="p">(</span><span class="n">EventDispatcher</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_event_type</span><span class="p">(</span><span class="s1">&#39;on_test&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyEventDispatcher</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="c1"># when do_something is called, the &#39;on_test&#39; event will be</span>
+        <span class="c1"># dispatched with the value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="s1">&#39;on_test&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am dispatched&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="attaching-callbacks">
+<h2>Attaching callbacks<a class="headerlink" href="#attaching-callbacks" title="この見出しへのパーマリンク">¶</a></h2>
+<p>イベントを使用するには、 コールバックをイベントに結びつける(bind)必要があります。 イベントが発送(dispatch)されると、 その特定のイベントに関連するパラメーターを伴ってしてあなたのコールバックが呼び出されます。</p>
+<p>コールバックは任意の python 呼び出し可能オブジェクト(python callable)にすることができますが、 イベントが発行する引数を受け入れるようにする必要があります。 このため、 通常は <cite>args</cite> リスト内のすべての引数をキャッチする <cite>*args</cite> 引数を受け入れるのが最も安全です。</p>
+<p>例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_callback</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, I got an event!&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+
+
+<span class="n">ev</span> <span class="o">=</span> <span class="n">MyEventDispatcher</span><span class="p">()</span>
+<span class="n">ev</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">on_test</span><span class="o">=</span><span class="n">my_callback</span><span class="p">)</span>
+<span class="n">ev</span><span class="o">.</span><span class="n">do_something</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>コールバックを当てはめる(attach)方法の例については、 <a class="reference internal" href="../api-kivy.event.html#kivy.event.EventDispatcher.bind" title="kivy.event.EventDispatcher.bind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kivy.event.EventDispatcher.bind()</span></code></a> メソッドのドキュメントを参照してください。</p>
+</section>
+<section id="introduction-to-properties">
+<h2>Introduction to Properties<a class="headerlink" href="#introduction-to-properties" title="この見出しへのパーマリンク">¶</a></h2>
+<p>プロパティ(properties)は、 イベントを定義してそれらに結び付ける(bind)優れた方法です。 基本的に、あなたのオブジェクトの属性の変更時は、その属性を参照するすべてのプロパティ(properties)が自動的に更新されるようなイベントを生成します。</p>
+<p>あなたが処理したいデータのタイプを記述するさまざまな種類のプロパティ(properties)があります。</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.StringProperty" title="kivy.properties.StringProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">StringProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.NumericProperty" title="kivy.properties.NumericProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">NumericProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.BoundedNumericProperty" title="kivy.properties.BoundedNumericProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">BoundedNumericProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ObjectProperty" title="kivy.properties.ObjectProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.DictProperty" title="kivy.properties.DictProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">DictProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ListProperty" title="kivy.properties.ListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.OptionProperty" title="kivy.properties.OptionProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.AliasProperty" title="kivy.properties.AliasProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">AliasProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.BooleanProperty" title="kivy.properties.BooleanProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanProperty</span></code></a></p></li>
+<li><p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ReferenceListProperty" title="kivy.properties.ReferenceListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceListProperty</span></code></a></p></li>
+</ul>
+</section>
+<section id="declaration-of-a-property">
+<h2>Declaration of a Property<a class="headerlink" href="#declaration-of-a-property" title="この見出しへのパーマリンク">¶</a></h2>
+<p>プロパティを宣言するには、 クラス・レベルで宣言する必要があります。 あなあのオブジェクトが作成されると、 クラスは実際の属性をインスタンス化する作業を行います。 これらのプロパティは属性ではありません。 Kivyのプロパティとは、 あなたの属性に基づいてイベントを作成するためのメカニズムです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyWidget</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="n">StringProperty</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><cite>__init__</cite> をオーバーライドする場合、 <em>常に</em> <cite>**kwargs</cite> を受け入れ、 かつ、 <cite>super()</cite> を使用して親の <cite>__init__</cite> メソッドを呼び出し、 あなたのクラス・インスタンスを渡します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">MyWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dispatching-a-property-event">
+<h2>Dispatching a Property event<a class="headerlink" href="#dispatching-a-property-event" title="この見出しへのパーマリンク">¶</a></h2>
+<p>デフォルトでは、Kivy プロパティは <cite>on_&lt;property_name&gt;</cite> イベントを提供します。 このイベントは、 プロパティの値が変更されたときに呼び出されます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>プロパティの新しい値が現在の値と等しい場合、 <cite>on_&lt;property_name&gt;</cite> イベントは呼び出されません。</p>
+</div>
+<p>たとえば、 以下のコードについて考えてみましょう:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="k">class</span> <span class="nc">CustomBtn</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>     <span class="n">pressed</span> <span class="o">=</span> <span class="n">ListProperty</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>     <span class="k">def</span> <span class="nf">on_touch_down</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">touch</span><span class="p">):</span>
+<span class="linenos"> 6</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collide_point</span><span class="p">(</span><span class="o">*</span><span class="n">touch</span><span class="o">.</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos"> 7</span>             <span class="bp">self</span><span class="o">.</span><span class="n">pressed</span> <span class="o">=</span> <span class="n">touch</span><span class="o">.</span><span class="n">pos</span>
+<span class="linenos"> 8</span>             <span class="k">return</span> <span class="kc">True</span>
+<span class="linenos"> 9</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">CustomBtn</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">on_touch_down</span><span class="p">(</span><span class="n">touch</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>     <span class="k">def</span> <span class="nf">on_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="linenos">12</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pressed at </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>上記コードの 3 行目:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pressed</span> <span class="o">=</span> <span class="n">ListProperty</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ListProperty" title="kivy.properties.ListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a> タイプの <cite>pressed</cite> プロパティを定義し、 デフォルト値 <cite>[0, 0]</cite> を与えます。 この時点から、 このプロパティの値が変更されるたびに on_pressed イベントが呼び出されます。</p>
+<p>5行目にて:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_touch_down</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">touch</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collide_point</span><span class="p">(</span><span class="o">*</span><span class="n">touch</span><span class="o">.</span><span class="n">pos</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pressed</span> <span class="o">=</span> <span class="n">touch</span><span class="o">.</span><span class="n">pos</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">CustomBtn</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">on_touch_down</span><span class="p">(</span><span class="n">touch</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Widget クラスの <code class="xref py py-meth docutils literal notranslate"><span class="pre">on_touch_down()</span></code> メソッドをオーバーライドします。 ここでは、 <cite>touch</cite> とウィジェットとの衝突(collision)をチェックします。</p>
+<p>touchがウィジェット内にある場合は、 <cite>pressed</cite> の値を touch.pos に変更し、 True を返します。 これは、 touchを消費し、それ以上伝播させたくないことを示します。</p>
+<p>最後に、 touchがウィジェットの外にある場合は、<cite>super(...)</cite> を使用して元のイベント(original event)を呼び出し、 結果を返します。 これにより、 touch イベントの伝播が通常どおりに続行されます。</p>
+<p>最後に 11 行目:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pressed at </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>プロパティ値が変更されるたびにプロパティによって呼び出される <cite>on_pressed</cite> 関数を定義します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>この <cite>on_&lt;prop_name&gt;</cite> イベントは、 プロパティが定義されているクラス内で呼び出されます。 あるプロパティが定義されているクラスの外側で、 そのプロパティの変更を 監視(monitor)/観測(observe) するには、以下に示すようにそのプロパティに結び付ける(bind)必要があります。</p>
+</div>
+<p><strong>プロパティへの結び付け(bind)</strong></p>
+<p>アクセスできるのがウィジェット・インスタンスだけの場合、 プロパティへの変更を監視(monitor)する方法は？ あなたはプロパティに <em>結び付け</em> (bind)ます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your_widget_instance</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">property_name</span><span class="o">=</span><span class="n">function_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>たとえば、 以下のコードについて考えてみましょう:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="k">class</span> <span class="nc">RootWidget</span><span class="p">(</span><span class="n">BoxLayout</span><span class="p">):</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos"> 4</span>         <span class="nb">super</span><span class="p">(</span><span class="n">RootWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="linenos"> 5</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;btn 1&#39;</span><span class="p">))</span>
+<span class="linenos"> 6</span>         <span class="n">cb</span> <span class="o">=</span> <span class="n">CustomBtn</span><span class="p">()</span>
+<span class="linenos"> 7</span>         <span class="n">cb</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">pressed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_pressed</span><span class="p">)</span>
+<span class="linenos"> 8</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="linenos"> 9</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;btn 2&#39;</span><span class="p">))</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>     <span class="k">def</span> <span class="nf">btn_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="linenos">12</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pos: printed from root widget: </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=.</span><span class="n">pos</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>このコードをそのまま実行すると、 コンソールに 2 つの print ステートメントが表示されます。  1 つは <cite>CustomBtn</cite> クラス内で呼び出される <cite>on_pressed</cite> イベントからのもので、 もう 1 つはプロパティ変更に結び付け(bind)した <cite>btn_pressed</cite> 関数からのものです。</p>
+<p>両方の関数が呼び出される理由は単純です。 結び付け(binding)はオーバーライドを意味しません。 これらの機能の両方を持つことは冗長であり、 通常、 プロパティの変更を リッスン(listening)/反応(reacting) する方法の 1 つだけを使用する必要があります。</p>
+<p><cite>on_&lt;property_name&gt;</cite> イベントまたはプロパティに結び付け(bind)られた関数に渡されるパラメータにも注意する必要があります。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">btn_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>最初のパラメータは、 この関数が定義されているクラスのインスタンスである <cite>self</cite> です。 以下のようにインライン関数を使用できます:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="n">cb</span> <span class="o">=</span> <span class="n">CustomBtn</span><span class="p">()</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span> <span class="k">def</span> <span class="nf">_local_func</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="linenos">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pos: printed from root widget: </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span> <span class="n">cb</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">pressed</span><span class="o">=</span><span class="n">_local_func</span><span class="p">)</span>
+<span class="linenos">7</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>最初のパラメーターは、 プロパティが定義されているクラスの「インスタンス」(instance)になります。</p>
+<p>2 番目のパラメーターは、 プロパティの新しい値である「値」(value)です。</p>
+<p>上記のスニペットから導き出された完全な例を以下に示します。 あなたは、 これをエディターにコピー・アンド・ペーストして実験するのに使えます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="linenos"> 2</span> <span class="kn">from</span> <span class="nn">kivy.uix.widget</span> <span class="kn">import</span> <span class="n">Widget</span>
+<span class="linenos"> 3</span> <span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+<span class="linenos"> 4</span> <span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
+<span class="linenos"> 5</span> <span class="kn">from</span> <span class="nn">kivy.properties</span> <span class="kn">import</span> <span class="n">ListProperty</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span> <span class="k">class</span> <span class="nc">RootWidget</span><span class="p">(</span><span class="n">BoxLayout</span><span class="p">):</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos">10</span>         <span class="nb">super</span><span class="p">(</span><span class="n">RootWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="linenos">11</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;btn 1&#39;</span><span class="p">))</span>
+<span class="linenos">12</span>         <span class="n">cb</span> <span class="o">=</span> <span class="n">CustomBtn</span><span class="p">()</span>
+<span class="linenos">13</span>         <span class="n">cb</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">pressed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_pressed</span><span class="p">)</span>
+<span class="linenos">14</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+<span class="linenos">15</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;btn 2&#39;</span><span class="p">))</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>     <span class="k">def</span> <span class="nf">btn_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="linenos">18</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pos: printed from root widget: </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span> <span class="k">class</span> <span class="nc">CustomBtn</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>     <span class="n">pressed</span> <span class="o">=</span> <span class="n">ListProperty</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>     <span class="k">def</span> <span class="nf">on_touch_down</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">touch</span><span class="p">):</span>
+<span class="linenos">25</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collide_point</span><span class="p">(</span><span class="o">*</span><span class="n">touch</span><span class="o">.</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos">26</span>             <span class="bp">self</span><span class="o">.</span><span class="n">pressed</span> <span class="o">=</span> <span class="n">touch</span><span class="o">.</span><span class="n">pos</span>
+<span class="linenos">27</span>             <span class="c1"># we consumed the touch. return False here to propagate</span>
+<span class="linenos">28</span>             <span class="c1"># the touch further to the children.</span>
+<span class="linenos">29</span>             <span class="k">return</span> <span class="kc">True</span>
+<span class="linenos">30</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">CustomBtn</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">on_touch_down</span><span class="p">(</span><span class="n">touch</span><span class="p">)</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span>     <span class="k">def</span> <span class="nf">on_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="linenos">33</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pressed at </span><span class="si">{pos}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span> <span class="k">class</span> <span class="nc">TestApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>     <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">38</span>         <span class="k">return</span> <span class="n">RootWidget</span><span class="p">()</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">42</span>     <span class="n">TestApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>上記のコードを実行すると、 以下の出力が得られます:</p>
+<img alt="../_images/property_events_binding.png" src="../_images/property_events_binding.png" />
+<p>CustomBtn には視覚的な表現がないため、 黒く表示されます。 黒い領域を タッチ/クリック すると、 コンソールに出力が表示されます。</p>
+</section>
+<section id="compound-properties">
+<h2>複合プロパティ(Compound Properties)<a class="headerlink" href="#compound-properties" title="この見出しへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="../api-kivy.properties.html#kivy.properties.AliasProperty" title="kivy.properties.AliasProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">AliasProperty</span></code></a> を定義するとき、 通常はゲッター(getter)関数とセッター(setter)関数を自分で定義します。 ここで、 <cite>bind</cite> 引数を使用してゲッター関数とセッター関数がいつ呼び出されるかを定義するのはあなた次第です。</p>
+<p>以下のコードについて考えてみましょう。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> <span class="n">cursor_pos</span> <span class="o">=</span> <span class="n">AliasProperty</span><span class="p">(</span><span class="n">_get_cursor_pos</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+<span class="linenos"> 2</span>                            <span class="n">bind</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;cursor&#39;</span><span class="p">,</span> <span class="s1">&#39;padding&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span>
+<span class="linenos"> 3</span>                                  <span class="s1">&#39;focus&#39;</span><span class="p">,</span> <span class="s1">&#39;scroll_x&#39;</span><span class="p">,</span> <span class="s1">&#39;scroll_y&#39;</span><span class="p">,</span>
+<span class="linenos"> 4</span>                                  <span class="s1">&#39;line_height&#39;</span><span class="p">,</span> <span class="s1">&#39;line_spacing&#39;</span><span class="p">),</span>
+<span class="linenos"> 5</span>                            <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="sd">&#39;&#39;&#39;Current position of the cursor, in (x, y).</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd"> :attr:`cursor_pos` is an :class:`~kivy.properties.AliasProperty`,</span>
+<span class="linenos"> 9</span><span class="sd"> read-only.</span>
+<span class="linenos">10</span><span class="sd"> &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>ここで、 <cite>cursor_pos</cite> は <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.AliasProperty" title="kivy.properties.AliasProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">AliasProperty</span></code></a> クラスであり、 ゲッターを <cite>_get_cursor_pos</cite> にセットし、 セッターを None に設定して使用します。 これは、これが読み取り専用のプロパティであることを意味します。</p>
+<p>最後の bind 引数は、 <cite>bind=</cite> 引数で使用されるプロパティのいずれかが変更されたときに <cite>on_cursor_pos</cite> イベントが発送(dispatch)されることを定義します。</p>
+</section>
+</section>
+
+
+            <div class="footerlinks">
+            <table>
+                <tr>
+                    <td class="leftlink">
+                  <a href="architecture.html" title="前の章へ">&laquo; Architectural Overview</a></li>
+                  </td>
+                  <td class="rightlink">
+                  <a href="inputs.html" title="次の章へ">Input management &raquo;</a>
+                      </td>
+                  </tr>
+              </table>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  </div>
+</div>
+<!-- Piwik -->
+<script>
+  var selector = $("#version_selector");
+
+  selector.on('change', function() {
+    // replace the version part of the url with the selected version
+    document.location.pathname = document.location.pathname.replace(
+      /^(\/.*?\/).*?(\/.*)/,
+     '$1' + this.value + '$2'
+    );
+  });
+
+  var url = "/doc/versions.json";
+
+  $.getJSON(url, function(versions) {
+    versions.forEach(function(version){
+      var current = window.location.pathname.split('/')[2]
+      selector.append(
+        $("<option " + (version == current ? "selected" : "") + "/>").val(version).html(version)
+      );
+    });
+  });
+</script>
+<!-- End Piwik Tracking Code -->
+    <!--
+    <div class="footer">
+      &copy; Copyright 2010, The Kivy Authors.
+      最終更新: 1月 23, 2023
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.1.3.
+</div>
+-->
+  </body>
+</html>

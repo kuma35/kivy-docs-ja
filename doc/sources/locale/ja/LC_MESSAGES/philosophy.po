@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kivy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-01-26 16:05+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../sources/philosophy.rst:4
 msgid "Philosophy"
-msgstr ""
+msgstr "哲学"
 
 #: ../../sources/philosophy.rst:6
 msgid ""
 "In case you are wondering what Kivy is all about and what sets it apart "
 "from other solutions, this document is for you."
-msgstr ""
+msgstr "Kivy とは何か、 Kivy が他のソリューションと何が違うのか、 あなたが疑問に思っている場合は、 このドキュメントが役に立つでしょう。"
 
 #: ../../sources/philosophy.rst:11
 msgid "Why bother?"
-msgstr ""
+msgstr "なぜ、 わざわざ Kivy を使うのか"
 
 #: ../../sources/philosophy.rst:13
 msgid ""
@@ -38,11 +38,11 @@ msgid ""
 "Qt and Flash, to name just two good choices for application development. "
 "Many of these numerous solutions already support Multi-Touch, so what is "
 "it that makes Kivy special and worth using?"
-msgstr ""
+msgstr "あなたはなぜ Kivy を使いたいのですか？  既に多くの優れたツールキット (またはフレームワーク、またはプラットフォーム) が入手できます -- 無料で。 アプリケーション開発に適した 2 つの選択肢を挙げると、Qt と Flash があります。 これらの多数のソリューションの多くは、 すでにマルチタッチをサポートしています。 それなのに Kivy を特別に使用する価値のあるものにしているのは何でしょうか？"
 
 #: ../../sources/philosophy.rst:21
 msgid "Fresh"
-msgstr ""
+msgstr "Fresh"
 
 #: ../../sources/philosophy.rst:22
 msgid ""
@@ -55,11 +55,11 @@ msgid ""
 "approach to using a computer into the corset of existing models (say "
 "single-pointer mouse interaction). We want to let it flourish and let you"
 " explore the possibilities. *This* is what really sets Kivy apart."
-msgstr ""
+msgstr "Kivy は今日と明日のために作られています。 マルチタッチなどの斬新な入力方法がますます重要になっています。 私達は、 特にこの種の相互作用(interaction)のために、 ゼロから Kivy を作成しました。 これは、人間とコンピューターの相互作用に関して多くのことを再考することができたことを意味しますが、 (「時代遅れ」という意味でははなく「十分に確立された」という意味で)古めのツールキットは、 多くの場合負担となる遺産を抱えています。 私達は、 コンピュータを使用するこの新しいアプローチを、 (シングル・ポインター・マウス・インタラクションなどの)既存モデルのコルセットに押し込もうとしているわけではありません。 私達は新しいアプローチを活躍させ、 あなたに可能性を探らせたいと思っています。 *これ* が、 Kivyを際立たせるものです。"
 
 #: ../../sources/philosophy.rst:34
 msgid "Fast"
-msgstr ""
+msgstr "Fast"
 
 #: ../../sources/philosophy.rst:36
 msgid ""
@@ -72,11 +72,11 @@ msgid ""
 "graphics cards surpasses that of today's CPUs by far for some tasks and "
 "algorithms, especially drawing.  That's why we try to let the GPU do as "
 "much of the work as possible, thus increasing performance considerably."
-msgstr ""
+msgstr "Kivyは速いです。 これは *アプリケーション開発速度* と *アプリケーション実行速度* の両方に当てはまります。 私達はさまざまな方法で Kivy を最適化しました。 私達は  *C言語レベル* でタイム・クリティカルな機能を実装し、 既存コンパイラのパワーを活用します。 さらに重要なことは、 *インテリジェント・アルゴリズム* を使用して、 コストのかかる操作を最小限に抑えることです。 また、 私達はコンテキスト内で意味がある場合はいつでも *GPU* を使用します。 今日のグラフィックス・カードの計算能力は、 一部のタスクやアルゴリズム、 特に描画では、 今日の CPU の計算能力をはるかに上回っています。 そのため、 私達は可能な限り多くの作業を GPU に任せて、 パフォーマンスを大幅に向上させようと試みます。"
 
 #: ../../sources/philosophy.rst:48
 msgid "Flexible"
-msgstr ""
+msgstr "Flexible"
 
 #: ../../sources/philosophy.rst:50
 msgid ""
@@ -94,11 +94,11 @@ msgid ""
 " as trackpads and mice. On Linux and *BSD, you can use HID kernel input "
 "events. In addition to that, we support TUIO (Tangible User Interface "
 "Objects) and a number of other input sources."
-msgstr ""
+msgstr "Kivy は柔軟です。 これは、 iOS 搭載や Android 搭載の、 スマートフォンやタブレットなど、 *さまざまなデバイス* で実行できることを意味します。 *すべての主要なオペレーティング・システム*  (Windows, Linux, macOS, *BSD)  をサポートしています。 柔軟性があるということは、 Kivy の 速いペースの開発により、 *新しいテクノロジーにすばやく適応できる* ことも意味します。  新しい外部デバイスとソフトウェア・プロトコルのサポートを追加したことは一度ならずあり、 それはリリース前であることもあります。  最後に、 Kivy は、 多数の異なるサードパーティ・ソリューションと組み合わせて使用できるという点でも柔軟性があります。 たとえば、 Windows では WM_TOUCH をサポートしています。 つまり、 Windows 7 のペン＆タッチ・ドライバーを搭載したデバイスは、 Kivy で「そのまま動作」します。  macOS では、 トラックパッドやマウスなど、 Apple のマルチタッチ対応デバイスを使用できます。 Linux および *BSD では、 HID カーネル入力イベントを使用できます。 それに加えて、 TUIO (Tangible User Interface Objects) や、 その他の多くの入力ソースをサポートしています。"
 
 #: ../../sources/philosophy.rst:66
 msgid "Focused"
-msgstr ""
+msgstr "Focused"
 
 #: ../../sources/philosophy.rst:68
 msgid ""
@@ -111,11 +111,11 @@ msgid ""
 "allowing you to focus on the essence of your application is more "
 "important than forcing you to fiddle with compiler settings. We took that"
 " burden off your shoulders."
-msgstr ""
+msgstr "Kivy はあなたの開発に集中できます。 数行のコードで簡単なアプリケーションを作成できます。 Kivy プログラムは、 *Python* プログラミング言語を使用して作成されます。 Python* プログラミング言語は、 非常に用途が広く強力ですが、 使いやすいです。  さらに、 洗練されたユーザー・ンターフェイスを作成するために、 独自の記述言語である *Kivy Language* を作成しました。  この言語を使用すると、 アプリケーションの要素をすばやく セットアップ・接続・配置 できます。 アプリケーションの本質に集中できるようにすることは、 コンパイラの設定をいじることを強制することよりも重要であると私達は感じています。 その肩の荷を下ろしのが Kivy です。"
 
 #: ../../sources/philosophy.rst:79
 msgid "Funded"
-msgstr ""
+msgstr "Funded"
 
 #: ../../sources/philosophy.rst:81
 msgid ""
@@ -123,16 +123,16 @@ msgid ""
 "community-influenced, professionally developed and commercially backed "
 "solution. Some of our core developers develop Kivy for a living. Kivy is "
 "here to stay. It's not a small, vanishing student project."
-msgstr ""
+msgstr "Kivy は、 その分野の専門家によって積極的に開発されています。  Kivy は、コミュニティの影響を受け、 専門的に開発され、 商業的に支援されたソリューションです。 私たちのコア開発者の何人かは、 生計を立てるために Kivy を開発しています。 Kivy はそこにあります(Kivy is here to stay)。 これは小さく消えゆく学生プロジェクトではありません。"
 
 #: ../../sources/philosophy.rst:88
 msgid "Free"
-msgstr ""
+msgstr "Free"
 
 #: ../../sources/philosophy.rst:89
 msgid ""
 "Kivy is free to use. You don't have to pay for it. You don't even have to"
 " pay for it if you're making money out of selling an application that "
 "uses Kivy."
-msgstr ""
+msgstr "Kivy は無料で使用できます。 あなたは Kivy に支払いを行う必要はありません。 Kivy を使用するアプリケーションを販売してお金を稼いでいても、 Kivy に支払う必要さえありません。"
 

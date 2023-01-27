@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"POT-Creation-Date: 2023-01-28 01:41+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,7 +133,19 @@ msgid "Installation of Examples"
 msgstr ""
 
 #: ../../sources/guide/packaging-android.rst:124
-msgid "Kivy comes with many examples, and these can be a great place to start trying the Kivy launcher. You can run them as below::"
+msgid "Kivy comes with many examples, and these can be a great place to start trying the Kivy launcher. You can run them as below:"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:127
+msgid "Download the `Kivy demos for Android <https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/kivy/kivydemo-for-android.zip>`_"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:128
+msgid "Unzip the contents and go to the folder `kivydemo-for-android`"
+msgstr ""
+
+#: ../../sources/guide/packaging-android.rst:129
+msgid "Copy all the the subfolders here to"
 msgstr ""
 
 #: ../../sources/guide/packaging-android.rst:131

@@ -167,7 +167,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide.html">Kivy Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../philosophy.html">Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy.html">哲学</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contribute.html">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contact.html">Contact Us</a></li>
@@ -436,17 +436,10 @@
 </section>
 <section id="windows-pyinstaller">
 <h2>Windows (PyInstaller)<a class="headerlink" href="#windows-pyinstaller" title="この見出しへのパーマリンク">¶</a></h2>
-<p>To access some Windows API features, Kivy uses the <a class="reference external" href="https://pypi.python.org/pypi/pypiwin32">pypiwin32</a> package. This
-package is released under the
-<a class="reference external" href="https://opensource.org/licenses/Python-2.0">PSF license</a>.</p>
+<p>いくつかの Windows API 機能にアクセスするために、 Kivy は <a class="reference external" href="https://pypi.python.org/pypi/pypiwin32">pypiwin32</a> パッケージを使用します。 このパッケージは、 <a class="reference external" href="https://opensource.org/licenses/Python-2.0">PSF license</a> の下でリリースされています。</p>
 <section id="visual-studio-redistributables">
 <h3>Visual Studio Redistributables<a class="headerlink" href="#visual-studio-redistributables" title="この見出しへのパーマリンク">¶</a></h3>
-<p>Python compiled with Visual Studio (official) includes files from Microsoft and
-you are only allowed to redistribute them under specific conditions listed in
-the CRTlicense. You need to include the names of the files and a reworded
-version of <a class="reference external" href="https://hg.python.org/sandbox/2.7/file/tip/Tools/msi/crtlicense.txt">Py2 CRT license</a> or <a class="reference external" href="https://hg.python.org/cpython/file/tip/Tools/msi/exe/crtlicense.txt">Py3 CRT license</a> (depending which interpreter you use) and
-present these to the end-user of your application in order to satisfy their
-requirements.</p>
+<p>Visual Studio (official) でコンパイルされた Python には、 Microsoft のファイルが含まれており、 CRTlicense に記載されている特定の条件下でのみ再配布することが許可されています。 ファイルの名前と <a class="reference external" href="https://hg.python.org/sandbox/2.7/file/tip/Tools/msi/crtlicense.txt">Py2 CRT license</a> または <a class="reference external" href="https://hg.python.org/cpython/file/tip/Tools/msi/exe/crtlicense.txt">Py3 CRT license</a> (使用するインタープリターに応じて) の言い換えバージョンを含め、 アプリケーションのエンドユーザーの要件を満たすためにこれらを提示する必要があります。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://msdn.microsoft.com/en-us/library/8kche8ah(v=vs.90).aspx">List of redistributables</a></p></li>
 </ul>
@@ -458,44 +451,26 @@ requirements.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>Please add the attributions for other libraries that you
-<em>don't use directly</em> but are present after packaging with e.g. PyInstaller
-on Windows.</p>
+<p>「あなたは直接使用しない」が、 パッケージ化後に存在する、 たとえば Windows 上の PyInstalle などの、 他のライブラリの属性を追加してください。</p>
 </div>
 </section>
 </section>
 <section id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="この見出しへのパーマリンク">¶</a></h2>
-<p>Linux has many distributions which means there's no correct guide for all of
-the distributions. This applies to the RPi too. However, it can be
-simplified in two ways depending on how you create a package (also with
-PyInstaller): with or without including binaries.</p>
-<p>If the binaries are included, you should check every file (e.g. <cite>.so</cite>) that's
-not your source and find the license it belongs to. According to that license,
-you'll probably need to put an attribution into your application or possibly
-more, depending on the requirements of that license.</p>
-<p>If the binaries are not included (which allows packaging your app as e.g. a
-<cite>.deb</cite> package), there's a <a class="reference internal" href="#avoid">situation bad for your user</a>. It's up to you to decide whether you
-satisfy the conditions of other licenses and, for example, include copyright
-attributions into your app or not.</p>
+<p>Linux には多くのディストリビューションがあるため、 すべてのディストリビューションに対応する正確なガイドはありません。 これは RPi にも当てはまります。 ただし、 パッケージの作成方法 (PyInstaller 使用も含む) に応じて、 バイナリを含めるか含めないかの 2 つの方法に単純化されます。</p>
+<p>バイナリが含まれている場合は、 ソースではないすべてのファイル (<cite>.so</cite> など) を確認し、 それが属するライセンスを見つける必要があります。 ライセンスにより、 そのライセンスの要件に応じて、 おそらくあなたのアプリケーションにその帰属を表示する必要があります。</p>
+<p>バイナリが含まれていない場合 (たとえばあなたは <cite>.deb</cite> パッケージとしてアプリをパッケージ化できます)、 <a class="reference internal" href="#avoid">situation bad for your user</a> があります。  他のライセンスの条件を満たしているかどうか、 たとえばアプリに著作権の帰属を含めるかどうかは、 あなた次第です。</p>
 </section>
 <section id="android">
 <h2>Android<a class="headerlink" href="#android" title="この見出しへのパーマリンク">¶</a></h2>
-<p>As APK or AAB are just an archive of files: you can extract files from them and (as in
-Windows redistributables) check all the files.</p>
-<p><code class="docutils literal notranslate"><span class="pre">private.tar</span></code> contains all the included files. Most
-of them are related to Kivy, Python or your source, but those that aren't need
-checking.</p>
+<p>APK または AAB は単なるファイルのアーカイブであるため、 それらからファイルを抽出し、 (Windows の再配布可能ファイルのように) すべてのファイルを確認できます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">private.tar</span></code> は、 インクルードされているすべてのファイルを含んでいます。 それらのほとんどは、 KivyまたはPythonまたはあなたのソース・コードに関連していますが、 確認する必要がないものです。</p>
 <p><strong>apk:</strong> <code class="docutils literal notranslate"><span class="pre">APK/assets/private.tar</span></code></p>
 <p><strong>aab:</strong> <code class="docutils literal notranslate"><span class="pre">AAB/base/assets/private.tar</span></code></p>
-<p>There are other included libraries, included either by Kivy directly or through
-SDL2, that are located in <code class="docutils literal notranslate"><span class="pre">APK/lib/*</span></code> or <code class="docutils literal notranslate"><span class="pre">AAB/base/lib/*</span></code>. Most of them are related
-to dependencies or are produced by python-for-android and are part of its source
-(and licensing).</p>
+<p><code class="docutils literal notranslate"><span class="pre">APK/lib/*</span></code> または <code class="docutils literal notranslate"><span class="pre">AAB/base/lib/*</span></code> にある、 Kivy によって直接または SDL2 を介して含まれる他のライブラリが含まれています。 そのほとんどは依存関係に関連しているか、 python-for-androidによって生成され、 そのソース（とライセンス）の一部となっています。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p><code class="docutils literal notranslate"><span class="pre">libpybundle.so</span></code> is actually a <code class="docutils literal notranslate"><span class="pre">tarball</span></code> that contains python <code class="docutils literal notranslate"><span class="pre">modules</span></code> and <code class="docutils literal notranslate"><span class="pre">site-packages</span></code>.
-You'll probably want to inspect it for licensing purposes via <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">libpybundle.so</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">libpybundle.so</span></code> は、実際には Python の <code class="docutils literal notranslate"><span class="pre">modules</span></code> と <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> を含む <code class="docutils literal notranslate"><span class="pre">tarball</span></code> です。  あなたは、 おそらくライセンス目的で <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">libpybundle.so</span></code> を介して検査したいと思うでしょう。</p>
 </div>
 </section>
 <section id="macos">
@@ -508,17 +483,8 @@ You'll probably want to inspect it for licensing purposes via <code class="docut
 </section>
 <section id="avoiding-binaries">
 <span id="avoid"></span><h2>Avoiding binaries<a class="headerlink" href="#avoiding-binaries" title="この見出しへのパーマリンク">¶</a></h2>
-<p>There might be a way how to avoid this licensing process by avoiding creating
-a distribution with third-party stuff completely. With Python you can create
-a module, which is only your code with <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> + <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> that only
-lists required dependencies.</p>
-<p>This way, you can still distribute your app - your <em>code</em> - and you might not
-need to care about other licenses. The combination of your code and the
-dependencies could be specified as a &quot;usage&quot; rather than a &quot;distribution&quot;. The
-responsibility of satisfying licenses, however, most likely transfers to your
-user, who needs to assemble the environment to even run the module. If you care
-about your users, you might want to slow down a little and read more about the
-<a class="reference external" href="http://programmers.stackexchange.com/a/234295">consequences</a>.</p>
+<p>サードパーティのものを含むディストリビューションを完全に作成しないようにすることで、 このライセンス処理を回避する方法があるかもしれません。 Python を使用すると、 必要な依存関係のみをリストする <code class="docutils literal notranslate"><span class="pre">__main__.py</span></code> + <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> を使用したコードのみであるモジュールを作成できます。</p>
+<p>このようにすると、 あなたのアプリ (<em>あなたのコード</em>) を依然として配布でき、 他のライセンスを気にする必要がない場合があります。 あなたのコードと依存関係の組み合わせは、「配布」(distribution)ではなく「利用」(usage)として指定できます。 ただし、 ほとんどの場合、 モジュールを実行するために実行環境を構築するユーザーが、 ライセンスを満たす責任を負う事になります。 あなたがユーザーのことを気にかけているなら、 少しペースを落として <a class="reference external" href="http://programmers.stackexchange.com/a/234295">consequences</a> についてもっと読んだ方がいいかもしれません。</p>
 </section>
 </section>
 
@@ -569,7 +535,7 @@ about your users, you might want to slow down a little and read more about the
     <!--
     <div class="footer">
       &copy; Copyright 2010, The Kivy Authors.
-      最終更新: 1月 26, 2023
+      最終更新: 2月 03, 2023
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.1.3.
 </div>
 -->

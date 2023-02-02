@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kivy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-02-03 03:09+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../sources/guide/licensing.rst:2
 msgid "Package licensing"
-msgstr ""
+msgstr "Package licensing"
 
 #: ../../sources/guide/licensing.rst:4
 msgid ""
@@ -27,7 +27,7 @@ msgid ""
 " and contributors take no responsibility for any lack of knowledge, "
 "information or advice presented here. The guide is merely informative and"
 " is meant to protect inexperienced users."
-msgstr ""
+msgstr "これは法的に権威のあるガイドではありません!  Kivyの組織と著者と貢献者は、 ここに記載されている知識または情報またはアドバイスの欠如について一切責任を負いません。 このガイドは単なる参考情報であり、 経験の浅いユーザーを保護することを目的としています。"
 
 #: ../../sources/guide/licensing.rst:9
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 "copyright notices of other included software, but binaries are something "
 "else. When a binary (.exe, .app, .apk, ...) is created, it includes Kivy,"
 " its dependencies and other packages that your application uses."
-msgstr ""
+msgstr "あなたのコードだけなら、 含まれている他のソフトウェアのライセンス情報や著作権表示を含める必要はないかもしれませんが、 バイナリになると別です。 バイナリ (.exe、.app、.apk、...) が作成されると、 Kivyやその依存関係、およびアプリケーションが使用するその他のパッケージが含まれます。"
 
 #: ../../sources/guide/licensing.rst:14
 msgid ""
@@ -45,11 +45,11 @@ msgid ""
 "your source (.dll, .pyd, .so, ...) and include the appropriate copyright "
 "notices if required by the license the files belong to. This way you may "
 "satisfy licensing requirements of the Kivy deps."
-msgstr ""
+msgstr "それらの一部は、 あなたアプリのどこかに著作権表示を含める必要がある方法でライセンスされています(またはそれ以上の事が必要です)。 バイナリを配布する前に、 あなたのソースコードでない全ての作成済みファイル (.dll, .pyd, .so, ...) を確認し、ファイルが属するライセンスにおいて必要な場合、適切な著作権表示を含めてください。 このようにすることで、 あなたは Kivy deps のライセンス要件を満たすことができます。"
 
 #: ../../sources/guide/licensing.rst:22
 msgid "Dependencies"
-msgstr ""
+msgstr "Dependencies"
 
 #: ../../sources/guide/licensing.rst:24
 msgid ""
@@ -57,33 +57,33 @@ msgid ""
 "Kivy supports. You therefore need to comply to their licenses, which "
 "mostly requires only pasting a copyright notice in your app and not "
 "pretending you wrote the code."
-msgstr ""
+msgstr "すべての依存関係は、 Kivy がサポートする各プラットフォームにて、少なくともその一部が使用されます。 したがって、 ライセンスに準拠する必要があります。 ほとんどの場合、 あなたのアプリに著作権表示を貼り付けるだけで、 コードを書いたふりをする必要はありません。"
 
 #: ../../sources/guide/licensing.rst:34
 msgid "|dcutil|_"
-msgstr ""
+msgstr "|dcutil|_"
 
 #: ../../sources/guide/licensing.rst:35
 msgid "`pygments https://github.com/pygments/pygments/blob/master/LICENSE`_"
-msgstr ""
+msgstr "`pygments https://github.com/pygments/pygments/blob/master/LICENSE`_"
 
 #: ../../sources/guide/licensing.rst:36
 msgid "`sdl2 <https://www.libsdl.org/license.php>`_"
-msgstr ""
+msgstr "`sdl2 <https://www.libsdl.org/license.php>`_"
 
 #: ../../sources/guide/licensing.rst:37
 msgid "`glew <http://glew.sourceforge.net/glew.txt>`_"
-msgstr ""
+msgstr "`glew <http://glew.sourceforge.net/glew.txt>`_"
 
 #: ../../sources/guide/licensing.rst:38
 msgid ""
 "`gstreamer <https://github.com/GStreamer/gstreamer/blob/master/COPYING>`_"
 " (if used)"
-msgstr ""
+msgstr "`gstreamer <https://github.com/GStreamer/gstreamer/blob/master/COPYING>`_ (if used)"
 
 #: ../../sources/guide/licensing.rst:40
 msgid "image & audio libraries(e.g. |mixer|_)"
-msgstr ""
+msgstr "image & audio libraries(e.g. |mixer|_)"
 
 #: ../../sources/guide/licensing.rst:42
 msgid ""
@@ -91,22 +91,22 @@ msgid ""
 "begin with ``lib``). The ``LICENSE*`` files that belong to them should be"
 " included by PyInstaller, but are not included by python-for-android and "
 "you need to find them."
-msgstr ""
+msgstr "あなたは、 おそらく画像(image)ライブラリと音声(audio)ライブラリを手動でチェックする必要があるでしょう(ほとんどのライブラリは ``lib`` で始まります)。 それらに属する ``LICENSE*`` ファイルは PyInstaller に含まれているはずですが、 python-for-android には含まれていないため、 あなたはそれらを見つける必要があります。"
 
 #: ../../sources/guide/licensing.rst:48
 msgid "Windows (PyInstaller)"
-msgstr ""
+msgstr "Windows (PyInstaller)"
 
 #: ../../sources/guide/licensing.rst:53
 msgid ""
 "To access some Windows API features, Kivy uses the |win32|_ package. This"
 " package is released under the `PSF license "
 "<https://opensource.org/licenses/Python-2.0>`_."
-msgstr ""
+msgstr "いくつかの Windows API 機能にアクセスするために、 Kivy は |win32|_ パッケージを使用します。 このパッケージは、 `PSF license <https://opensource.org/licenses/Python-2.0>`_ の下でリリースされています。"
 
 #: ../../sources/guide/licensing.rst:58
 msgid "Visual Studio Redistributables"
-msgstr ""
+msgstr "Visual Studio Redistributables"
 
 #: ../../sources/guide/licensing.rst:67
 msgid ""
@@ -116,30 +116,30 @@ msgid ""
 " files and a reworded version of |py2crt|_ or |py3crt|_ (depending which "
 "interpreter you use) and present these to the end-user of your "
 "application in order to satisfy their requirements."
-msgstr ""
+msgstr "Visual Studio (official) でコンパイルされた Python には、 Microsoft のファイルが含まれており、 CRTlicense に記載されている特定の条件下でのみ再配布することが許可されています。 ファイルの名前と |py2crt|_ または |py3crt|_ (使用するインタープリターに応じて) の言い換えバージョンを含め、 アプリケーションのエンドユーザーの要件を満たすためにこれらを提示する必要があります。"
 
 #: ../../sources/guide/licensing.rst:74
 msgid "|redist|_"
-msgstr ""
+msgstr "|redist|_"
 
 #: ../../sources/guide/licensing.rst:77
 msgid "Other libraries"
-msgstr ""
+msgstr "Other libraries"
 
 #: ../../sources/guide/licensing.rst:79
 msgid "`zlib <https://github.com/madler/zlib/blob/master/README>`_"
-msgstr ""
+msgstr "`zlib <https://github.com/madler/zlib/blob/master/README>`_"
 
 #: ../../sources/guide/licensing.rst:81
 msgid ""
 "Please add the attributions for other libraries that you *don't use "
 "directly* but are present after packaging with e.g. PyInstaller on "
 "Windows."
-msgstr ""
+msgstr "「あなたは直接使用しない」が、 パッケージ化後に存在する、 たとえば Windows 上の PyInstalle などの、 他のライブラリの属性を追加してください。 "
 
 #: ../../sources/guide/licensing.rst:86
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../sources/guide/licensing.rst:91
 msgid ""
@@ -147,7 +147,7 @@ msgid ""
 " of the distributions. This applies to the RPi too. However, it can be "
 "simplified in two ways depending on how you create a package (also with "
 "PyInstaller): with or without including binaries."
-msgstr ""
+msgstr "Linux には多くのディストリビューションがあるため、 すべてのディストリビューションに対応する正確なガイドはありません。 これは RPi にも当てはまります。 ただし、 パッケージの作成方法 (PyInstaller 使用も含む) に応じて、 バイナリを含めるか含めないかの 2 つの方法に単純化されます。"
 
 #: ../../sources/guide/licensing.rst:96
 msgid ""
@@ -156,7 +156,7 @@ msgid ""
 "that license, you'll probably need to put an attribution into your "
 "application or possibly more, depending on the requirements of that "
 "license."
-msgstr ""
+msgstr "バイナリが含まれている場合は、 ソースではないすべてのファイル (`.so` など) を確認し、 それが属するライセンスを見つける必要があります。 ライセンスにより、 そのライセンスの要件に応じて、 おそらくあなたのアプリケーションにその帰属を表示する必要があります。"
 
 #: ../../sources/guide/licensing.rst:101
 msgid ""
@@ -164,31 +164,31 @@ msgid ""
 " a `.deb` package), there's a |badsit|_. It's up to you to decide whether"
 " you satisfy the conditions of other licenses and, for example, include "
 "copyright attributions into your app or not."
-msgstr ""
+msgstr "バイナリが含まれていない場合 (たとえばあなたは `.deb` パッケージとしてアプリをパッケージ化できます)、 |badsit|_ があります。  他のライセンスの条件を満たしているかどうか、 たとえばアプリに著作権の帰属を含めるかどうかは、 あなた次第です。"
 
 #: ../../sources/guide/licensing.rst:107
 msgid "Android"
-msgstr ""
+msgstr "Android"
 
 #: ../../sources/guide/licensing.rst:109
 msgid ""
 "As APK or AAB are just an archive of files: you can extract files from "
 "them and (as in Windows redistributables) check all the files."
-msgstr ""
+msgstr "APK または AAB は単なるファイルのアーカイブであるため、 それらからファイルを抽出し、 (Windows の再配布可能ファイルのように) すべてのファイルを確認できます。"
 
 #: ../../sources/guide/licensing.rst:112
 msgid ""
 "``private.tar`` contains all the included files. Most of them are related"
 " to Kivy, Python or your source, but those that aren't need checking."
-msgstr ""
+msgstr "``private.tar`` は、 インクルードされているすべてのファイルを含んでいます。 それらのほとんどは、 KivyまたはPythonまたはあなたのソース・コードに関連していますが、 確認する必要がないものです。"
 
 #: ../../sources/guide/licensing.rst:116
 msgid "**apk:** ``APK/assets/private.tar``"
-msgstr ""
+msgstr "**apk:** ``APK/assets/private.tar``"
 
 #: ../../sources/guide/licensing.rst:118
 msgid "**aab:** ``AAB/base/assets/private.tar``"
-msgstr ""
+msgstr "**aab:** ``AAB/base/assets/private.tar``"
 
 #: ../../sources/guide/licensing.rst:120
 msgid ""
@@ -196,30 +196,30 @@ msgid ""
 "through SDL2, that are located in ``APK/lib/*`` or ``AAB/base/lib/*``. "
 "Most of them are related to dependencies or are produced by python-for-"
 "android and are part of its source (and licensing)."
-msgstr ""
+msgstr "``APK/lib/*`` または ``AAB/base/lib/*`` にある、 Kivy によって直接または SDL2 を介して含まれる他のライブラリが含まれています。 そのほとんどは依存関係に関連しているか、 python-for-androidによって生成され、 そのソース（とライセンス）の一部となっています。"
 
 #: ../../sources/guide/licensing.rst:126
 msgid ""
 "``libpybundle.so`` is actually a ``tarball`` that contains python "
 "``modules`` and ``site-packages``. You'll probably want to inspect it for"
 " licensing purposes via ``tar -xvf libpybundle.so``."
-msgstr ""
+msgstr "``libpybundle.so`` は、実際には Python の ``modules`` と ``site-packages`` を含む ``tarball`` です。  あなたは、 おそらくライセンス目的で ``tar -xvf libpybundle.so`` を介して検査したいと思うでしょう。"
 
 #: ../../sources/guide/licensing.rst:130
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../sources/guide/licensing.rst:132 ../../sources/guide/licensing.rst:137
 msgid "Missing."
-msgstr ""
+msgstr "Missing."
 
 #: ../../sources/guide/licensing.rst:135
 msgid "iOS"
-msgstr ""
+msgstr "iOS"
 
 #: ../../sources/guide/licensing.rst:142
 msgid "Avoiding binaries"
-msgstr ""
+msgstr "Avoiding binaries"
 
 #: ../../sources/guide/licensing.rst:147
 msgid ""
@@ -227,7 +227,7 @@ msgid ""
 "creating a distribution with third-party stuff completely. With Python "
 "you can create a module, which is only your code with ``__main__.py`` + "
 "``setup.py`` that only lists required dependencies."
-msgstr ""
+msgstr "サードパーティのものを含むディストリビューションを完全に作成しないようにすることで、 このライセンス処理を回避する方法があるかもしれません。 Python を使用すると、 必要な依存関係のみをリストする ``__main__.py`` + ``setup.py`` を使用したコードのみであるモジュールを作成できます。"
 
 #: ../../sources/guide/licensing.rst:152
 msgid ""
@@ -238,5 +238,5 @@ msgid ""
 "most likely transfers to your user, who needs to assemble the environment"
 " to even run the module. If you care about your users, you might want to "
 "slow down a little and read more about the |cons|_."
-msgstr ""
+msgstr "このようにすると、 あなたのアプリ (*あなたのコード*) を依然として配布でき、 他のライセンスを気にする必要がない場合があります。 あなたのコードと依存関係の組み合わせは、「配布」(distribution)ではなく「利用」(usage)として指定できます。 ただし、 ほとんどの場合、 モジュールを実行するために実行環境を構築するユーザーが、 ライセンスを満たす責任を負う事になります。 あなたがユーザーのことを気にかけているなら、 少しペースを落として |cons|_ についてもっと読んだ方がいいかもしれません。"
 

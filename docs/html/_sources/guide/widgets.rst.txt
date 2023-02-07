@@ -313,7 +313,7 @@ understand the effect it has on the widget positions.
 Adding a Background to a Layout
 -------------------------------
 
-One of the frequently asked questions about layouts is:::
+One of the frequently asked questions about layouts is:
 
     "How to add a background image/color/video/... to a Layout"
 
@@ -625,6 +625,7 @@ As we are overriding the rule of the class GridLayout, any use of this
 class in our app will display that image.
 
 How about an **Animated background**?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can set the drawing instructions like Rectangle/BorderImage/Ellipse/... to
 use a particular texture::
@@ -632,67 +633,70 @@ use a particular texture::
     Rectangle:
         texture: reference to a texture
 
-We use this to display an animated background::
+We use this to display an animated background
 
-    from kivy.app import App
-    from kivy.uix.floatlayout import FloatLayout
-    from kivy.uix.gridlayout import GridLayout
-    from kivy.uix.image import Image
-    from kivy.properties import ObjectProperty
-    from kivy.lang import Builder
+    .. code-block:: python
+       :linenos:
 
-
-    Builder.load_string('''
-    <CustomLayout>
-        canvas.before:
-            BorderImage:
-                # BorderImage behaves like the CSS BorderImage
-                border: 10, 10, 10, 10
-                texture: self.background_image.texture
-                pos: self.pos
-                size: self.size
-
-    <RootWidget>
-        CustomLayout:
-            size_hint: .9, .9
-            pos_hint: {'center_x': .5, 'center_y': .5}
-            rows:1
-            Label:
-                text: "I don't suffer from insanity, I enjoy every minute of it"
-                text_size: self.width-20, self.height-20
-                valign: 'top'
-            Label:
-                text: "When I was born I was so surprised; I didn't speak for a year and a half."
-                text_size: self.width-20, self.height-20
-                valign: 'middle'
-                halign: 'center'
-            Label:
-                text: "A consultant is someone who takes a subject you understand and makes it sound confusing"
-                text_size: self.width-20, self.height-20
-                valign: 'bottom'
-                halign: 'justify'
-    ''')
+       from kivy.app import App
+       from kivy.uix.floatlayout import FloatLayout
+       from kivy.uix.gridlayout import GridLayout
+       from kivy.uix.image import Image
+       from kivy.properties import ObjectProperty
+       from kivy.lang import Builder
 
 
-    class CustomLayout(GridLayout):
+       Builder.load_string('''
+       <CustomLayout>
+           canvas.before:
+               BorderImage:
+                   # BorderImage behaves like the CSS BorderImage
+                   border: 10, 10, 10, 10
+                   texture: self.background_image.texture
+                   pos: self.pos
+                   size: self.size
 
-        background_image = ObjectProperty(
-            Image(
-                source='../examples/widgets/sequenced_images/data/images/button_white_animated.zip',
-                anim_delay=.1))
+       <RootWidget>
+           CustomLayout:
+               size_hint: .9, .9
+               pos_hint: {'center_x': .5, 'center_y': .5}
+               rows:1
+               Label:
+                   text: "I don't suffer from insanity, I enjoy every minute of it"
+                   text_size: self.width-20, self.height-20
+                   valign: 'top'
+               Label:
+                   text: "When I was born I was so surprised; I didn't speak for a year and a half."
+                   text_size: self.width-20, self.height-20
+                   valign: 'middle'
+                   halign: 'center'
+               Label:
+                   text: "A consultant is someone who takes a subject you understand and makes it sound confusing"
+                   text_size: self.width-20, self.height-20
+                   valign: 'bottom'
+                   halign: 'justify'
+       ''')
 
 
-    class RootWidget(FloatLayout):
-        pass
+       class CustomLayout(GridLayout):
+
+           background_image = ObjectProperty(
+               Image(
+                   source='../examples/widgets/sequenced_images/data/images/button_white_animated.zip',
+                   anim_delay=.1))
 
 
-    class MainApp(App):
+       class RootWidget(FloatLayout):
+           pass
 
-        def build(self):
-            return RootWidget()
 
-    if __name__ == '__main__':
-        MainApp().run()
+       class MainApp(App):
+
+           def build(self):
+               return RootWidget()
+
+       if __name__ == '__main__':
+           MainApp().run()
 
 To try to understand what is happening here, start from line 13::
 

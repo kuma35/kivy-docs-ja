@@ -108,6 +108,7 @@
 <li><a class="reference internal" href="#organize-with-layouts">Organize with Layouts</a></li>
 <li><a class="reference internal" href="#adding-a-background-to-a-layout">Adding a Background to a Layout</a><ul>
 <li><a class="reference internal" href="#add-a-color-to-the-background-of-a-custom-layouts-rule-class">Add a color to the background of a <strong>custom layouts rule/class</strong></a></li>
+<li><a class="reference internal" href="#how-about-an-animated-background">How about an <strong>Animated background</strong>?</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#nesting-layouts">Nesting Layouts</a></li>
@@ -168,7 +169,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide.html">Kivy Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../philosophy.html">Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy.html">哲学</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contribute.html">Contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contact.html">Contact Us</a></li>
@@ -404,6 +405,7 @@
 <li><a class="reference internal" href="#organize-with-layouts">Organize with Layouts</a></li>
 <li><a class="reference internal" href="#adding-a-background-to-a-layout">Adding a Background to a Layout</a><ul>
 <li><a class="reference internal" href="#add-a-color-to-the-background-of-a-custom-layouts-rule-class">Add a color to the background of a <strong>custom layouts rule/class</strong></a></li>
+<li><a class="reference internal" href="#how-about-an-animated-background">How about an <strong>Animated background</strong>?</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#nesting-layouts">Nesting Layouts</a></li>
@@ -418,67 +420,47 @@
 <span id="id1"></span><h1>Widgets<a class="headerlink" href="#widgets" title="この見出しへのパーマリンク">¶</a></h1>
 <section id="introduction-to-widget">
 <h2>Introduction to Widget<a class="headerlink" href="#introduction-to-widget" title="この見出しへのパーマリンク">¶</a></h2>
-<p>A <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> is the base building block of GUI interfaces in Kivy.
-It provides a <a class="reference internal" href="../api-kivy.graphics.html#kivy.graphics.Canvas" title="kivy.graphics.Canvas"><code class="xref py py-class docutils literal notranslate"><span class="pre">Canvas</span></code></a> that can be used to draw on screen. It receives events
-and reacts to them. For a in-depth explanation about the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> class,
-look at the module documentation.</p>
+<p>ウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)は Kivy の GUI インターフェイスの基本構成要素です。 それは画面に描画するために使用できる <a class="reference internal" href="../api-kivy.graphics.html#kivy.graphics.Canvas" title="kivy.graphics.Canvas"><code class="xref py py-class docutils literal notranslate"><span class="pre">Canvas</span></code></a> を提供します。 それはイベントを受け取り、それに反応します。 ウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)クラスについての詳細な説明については、 当該モジュールのドキュメントを参照してください。</p>
 </section>
 <section id="manipulating-the-widget-tree">
 <h2>Manipulating the Widget tree<a class="headerlink" href="#manipulating-the-widget-tree" title="この見出しへのパーマリンク">¶</a></h2>
-<p>Widgets in Kivy are organized in trees. Your
-application has a <cite>root widget</cite>, which usually has <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> that can have
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> of their own. Children of a widget are represented as the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>
-attribute, a Kivy <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ListProperty" title="kivy.properties.ListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a>.</p>
-<p>The widget tree can be manipulated with the following methods:</p>
+<p>Kivy のウィジェットはツリー構成になっています。 アプリケーションには「ルート・ウィジェット」(<cite>root widget</cite>)があり、 通常は、 それぞれ独自の子(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)を持つことのできる子(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)を持っています。 ウィジェットの子は Kivy の <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ListProperty" title="kivy.properties.ListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a> 型である <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> 属性として表されます。</p>
+<p>ウィジェット・ツリーは、 以下のメソッドで操作できます:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.add_widget" title="kivy.uix.widget.Widget.add_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_widget()</span></code></a>: add a widget as a child</p></li>
-<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.remove_widget" title="kivy.uix.widget.Widget.remove_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">remove_widget()</span></code></a>: remove a widget from the
-children list</p></li>
-<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.clear_widgets" title="kivy.uix.widget.Widget.clear_widgets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_widgets()</span></code></a>: remove all children from a
-widget</p></li>
+<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.add_widget" title="kivy.uix.widget.Widget.add_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_widget()</span></code></a>: あるウィジェットを子として追加します</p></li>
+<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.remove_widget" title="kivy.uix.widget.Widget.remove_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">remove_widget()</span></code></a>: 子供達リストからあるウィジェットを削除します</p></li>
+<li><p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.clear_widgets" title="kivy.uix.widget.Widget.clear_widgets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_widgets()</span></code></a>: あるウィジェットの全ての子を削除します。</p></li>
 </ul>
-<p>For example, if you want to add a button inside a BoxLayout, you can do:</p>
+<p>たとえば、 あなたが BoxLayout 内にボタンを追加する場合は、 以下のようにします:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layout</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;My first button&#39;</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The button is added to layout: the button's parent property will be set to layout;
-the layout will have the button added to its children list. To remove the button
-from the layout:</p>
+<p>これでボタンがlayoutに追加されます。 つまりボタンのparent(親)プロパティをlayoutに設定し、 layoutの子供達リストにボタンが追加されます。 layoutからボタンを削除するには以下のようにします:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layout</span><span class="o">.</span><span class="n">remove_widget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>With removal, the button's parent property will be set to None, and the layout
-will have button removed from its children list.</p>
-<p>If you want to clear all the children inside a widget, use
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.clear_widgets" title="kivy.uix.widget.Widget.clear_widgets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_widgets()</span></code></a> method:</p>
+<p>削除すると、 ボタンのparent(親)プロパティが None に設定され、 layoutの子供達リストからボタンが削除されます。</p>
+<p>ウィジェット内のすべての子をクリアしたい場合は <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.clear_widgets" title="kivy.uix.widget.Widget.clear_widgets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_widgets()</span></code></a> メソッドを使用します:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layout</span><span class="o">.</span><span class="n">clear_widgets</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Never manipulate the children list yourself, unless you really know what you
-are doing. The widget tree is associated with a graphic tree. For example, if you
-add a widget into the children list without adding its canvas to the
-graphics tree, the widget will be a child, yes, but nothing will be drawn
-on the screen. Moreover, you might have issues on further calls of
-add_widget, remove_widget and clear_widgets.</p>
+<p>自分が何をしているのか本当によくわかっていない限り、 自分で子供達リスト(children list)を操作しないでください。 ウィジェット・ツリーはグラフィック・ツリーに関連付けられています。 たとえば、あなたがあるウィジェットを子供達に追加する時にそのcanvasをグラフィックス・ツリーに追加しないでいると、ウィジェットは子になりますが、 画面には何も描画されません。 さらに、 その後の add_widget や remove_widget や clear_widgets の呼び出しで問題が発生する可能性があります。</p>
 </div>
 </section>
 <section id="traversing-the-tree">
 <h2>Traversing the Tree<a class="headerlink" href="#traversing-the-tree" title="この見出しへのパーマリンク">¶</a></h2>
-<p>The Widget class instance's <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> list property
-contains all the children. You can easily traverse the tree by doing:</p>
+<p>Widget クラスのインスタンスの <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> リスト・プロパティは、すべての子を含んでいます。 以下のようにして、 ツリーを簡単に縦走(traverse)できます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">BoxLayout</span><span class="p">()</span>
 <span class="c1"># ... add widgets to root ...</span>
 <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>However, this must be used carefully. If you intend to modify the children list
-with one of the methods shown in the previous section, you must use a copy of
-the list like this:</p>
+<p>ただし、 これは慎重に使用する必要があります。 前のセクションで示したいずれかの方法で子供達リストを変更する場合は、 以下のようにリストのコピーを使用する必要があります:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">[:]:</span>
     <span class="c1"># manipulate the tree. For example here, remove all widgets that have a</span>
     <span class="c1"># width &lt; 100</span>
@@ -486,62 +468,32 @@ the list like this:</p>
         <span class="n">root</span><span class="o">.</span><span class="n">remove_widget</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Widgets don't influence the size/pos of their children by default. The
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a> attribute is the absolute position in screen co-ordinates (unless, you
-use the <a class="reference internal" href="../api-kivy.uix.relativelayout.html#module-kivy.uix.relativelayout" title="kivy.uix.relativelayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">relativelayout</span></code></a>. More on that later) and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>, is an absolute size.</p>
+<p>デフォルトでは、 ウィジェットは子の サイズ(size)/位置(pos) に影響を与えません。  <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a> 属性は画面座標の絶対位置(あなたが <a class="reference internal" href="../api-kivy.uix.relativelayout.html#module-kivy.uix.relativelayout" title="kivy.uix.relativelayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">relativelayout</span></code></a> を使用しない場合。 これについては後述します)であり、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a> は絶対サイズです。</p>
 </section>
 <section id="widgets-z-index">
 <h2>Widgets Z Index<a class="headerlink" href="#widgets-z-index" title="この見出しへのパーマリンク">¶</a></h2>
-<p>The order of widget drawing is based on the widget's position in
-the widget tree. The <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.add_widget" title="kivy.uix.widget.Widget.add_widget"><code class="xref py py-attr docutils literal notranslate"><span class="pre">add_widget</span></code></a>
-method takes an <cite>index</cite> parameter which can be used to specify its position in
-the widget tree:</p>
+<p>ウィジェットの描画順序は、 ウィジェット・ツリー内のウィジェットの位置に基づきます。 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.add_widget" title="kivy.uix.widget.Widget.add_widget"><code class="xref py py-attr docutils literal notranslate"><span class="pre">add_widget</span></code></a> メソッドは、 ウィジェット ツリーでの位置を指定するために使用できる <cite>index</cite> パラメータを指定可能です:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The lower indexed widgets will be drawn above those with a higher index. Keep
-in mind that the default for <cite>index</cite> is 0, so widgets added later
-are drawn on top of the others unless specified otherwise.</p>
+<p>index値の小さいウィジェットは、 index値の大きいウィジェットより上に描画されます。  index のデフォルトは 0 であるため、 特に指定しない限り、 後で追加されたウィジェットは他のウィジェットより上に描画されることに注意してください。</p>
 </section>
 <section id="organize-with-layouts">
 <h2>Organize with Layouts<a class="headerlink" href="#organize-with-layouts" title="この見出しへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a> is a special kind of widget that controls the size and position of
-its children. There are different kinds of layouts, allowing for different
-automatic organization of their children. Layouts use <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a>
-properties to determine the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a> of their <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>.</p>
+<p>レイアウト(<a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a>)は子供達のサイズと位置を制御する特別な種類のウィジェットです。 さまざまな種類のレイアウトがあり、 子供達のさまざまな自動編成を可能にします。 レイアウト(Layout) は <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> と <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> プロパティを使用して、 子供達(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)のサイズ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>)と位置(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a>)を決定します。</p>
 <img alt="../_images/boxlayout.gif" src="../_images/boxlayout.gif" />
 <img alt="../_images/gridlayout.gif" src="../_images/gridlayout.gif" />
 <img alt="../_images/stacklayout.gif" src="../_images/stacklayout.gif" />
 <img alt="../_images/anchorlayout.gif" src="../_images/anchorlayout.gif" />
 <img alt="../_images/floatlayout.gif" src="../_images/floatlayout.gif" />
-<p><strong>BoxLayout</strong>:
-Arranges widgets in an adjacent manner (either vertically or horizontally) manner,
-to fill all the space. The size_hint property of children can be used to change
-proportions allowed to each child, or set fixed size for some of them.</p>
-<p><strong>GridLayout</strong>:
-Arranges widgets in a grid. You must specify at least one dimension of the
-grid so kivy can compute the size of the elements and how to arrange them.</p>
-<p><strong>StackLayout</strong>:
-Arranges widgets adjacent to one another, but with a set size in one of the
-dimensions, without trying to make them fit within the entire space. This is
-useful to display children of the same predefined size.</p>
-<p><strong>AnchorLayout</strong>:
-A simple layout only caring about children positions. It allows putting the
-children at a position relative to a border of the layout.
-<cite>size_hint</cite> is not honored.</p>
-<p><strong>FloatLayout</strong>:
-Allows placing children with arbitrary locations and size, either absolute or
-relative to the layout size. Default size_hint (1, 1) will make every child
-the same size as the whole layout, so you probably want to change this value
-if you have more than one child. You can set size_hint to (None, None) to use
-absolute size with <cite>size</cite>. This widget honors <cite>pos_hint</cite> also, which as a dict
-setting position relative to layout position.</p>
-<p><strong>RelativeLayout</strong>:
-Behaves just like FloatLayout, except children positions are relative to layout
-position, not the screen.</p>
-<p>Examine the documentation of the individual layouts for a more in-depth
-understanding.</p>
-<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a>:</p>
+<p><strong>BoxLayout</strong>: ウィジェットを(垂直または水平に)隣接させる作法で、すべてのスペースを埋めます。 子供達の size_hint プロパティを使用して、各子供に許可される比率を変更したり、 一部の子に固定サイズを設定したりできます。</p>
+<p><strong>GridLayout</strong>: ウィジェットを格子状に配置します。 Kivyが要素のサイズとそれらの配置方法を計算できるように、 格子の(幅・高さ)寸法のずれか１つ以上を指定する必要があります。</p>
+<p><strong>StackLayout</strong>: ウィジェットを互いに隣接させて配置しますが、 スペース全体に収まるようにせずに、 (幅・高さ)いずれかの寸法の１つをサイズ指定します。 これは、定義済みの同じサイズの子供達を表示するのに便利です。</p>
+<p><strong>AnchorLayout</strong>:  子供達の位置のみを考慮した単純なレイアウト。 子供達をレイアウトの枠から相対的な位置に配置できます。 <cite>size_hint</cite> は無視されます。</p>
+<p><strong>FloatLayout</strong>: レイアウト・サイズに対して絶対的または相対的に、 任意の位置とサイズで子供達を配置できます。 デフォルトの size_hint (1, 1) では、すべての子供達がレイアウト全体と同じサイズになるため、 複数の子供達がいる場合は、 この値を変更することをお勧めします。 size_hint を (None, None) に設定すると、<cite>size</cite> で絶対サイズを使用できます。 このウィジェットは、 レイアウト位置に関連する辞書型位置設定(dict setting position)として <cite>pos_hint</cite> も尊重します。</p>
+<p><strong>RelativeLayout</strong>: FloatLayout のように振る舞いますが、 子供達の位置は画面(screen)ではなくレイアウト(layout)の位置に相対的です。</p>
+<p>個々のレイアウトのドキュメントを調べて、 より深く理解するようにしてください。</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> と <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a>:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../api-kivy.uix.floatlayout.html#module-kivy.uix.floatlayout" title="kivy.uix.floatlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">floatlayout</span></code></a></p></li>
 <li><p><a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a></p></li>
@@ -550,14 +502,9 @@ understanding.</p>
 <li><p><a class="reference internal" href="../api-kivy.uix.relativelayout.html#module-kivy.uix.relativelayout" title="kivy.uix.relativelayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">relativelayout</span></code></a></p></li>
 <li><p><a class="reference internal" href="../api-kivy.uix.anchorlayout.html#module-kivy.uix.anchorlayout" title="kivy.uix.anchorlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">anchorlayout</span></code></a></p></li>
 </ul>
-<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> is a <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ReferenceListProperty" title="kivy.properties.ReferenceListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceListProperty</span></code></a> of
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a>. It accepts values from <cite>0</cite> to <cite>1</cite> or <cite>None</cite>
-and defaults to <cite>(1, 1)</cite>. This signifies that if the widget is in a layout,
-the layout will allocate it as much place as possible in both directions
-(relative to the layouts size).</p>
-<p>Setting <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> to (0.5, 0.8), for example, will make the widget 50% the
-width and 80% the height of available size for the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> inside a <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a>.</p>
-<p>Consider the following example:</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> は、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> と <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> の <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ReferenceListProperty" title="kivy.properties.ReferenceListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceListProperty</span></code></a> です。 各値として <cite>0</cite> 〜 <cite>1</cite> または <cite>None</cite> を受け入れ、 デフォルトは <cite>(1, 1)</cite> です。 これは、 ウィジェットがレイアウト内にある場合、 レイアウトが可能な限り多くの場所を縦横両方向に(レイアウト・サイズに対して)割り当てることを意味します。</p>
+<p>たとえば、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> を (0.5, 0.8) に設定すると、 レイアウト(<a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a>)内のウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)で使用可能なサイズの、 幅が 50%、高さが 80% になります。</p>
+<p>以下の例について考えてみましょう:</p>
 <div class="highlight-kv notranslate"><div class="highlight"><pre><span></span><span class="nc">BoxLayout</span><span class="p">:</span>
     <span class="nc">Button</span><span class="p">:</span>
         <span class="na">text</span><span class="p">:</span> <span class="s1">&#39;Button 1&#39;</span>
@@ -566,57 +513,33 @@ width and 80% the height of available size for the <a class="reference internal"
         <span class="na">size_hint</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>Now load kivy catalog by typing the following, but replacing $KIVYDIR
-with the directory of your installation (discoverable via
-<code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path.dirname(kivy.__file__)</span></code>):</p>
+<p>これから以下のように入力してkivyカタログをロードしますが、 $KIVYDIR をあなたがインストールしたディレクトリに置き換えてください(<code class="xref py py-mod docutils literal notranslate"><span class="pre">os.path.dirname(kivy.__file__)</span></code> で検出可能です)(訳注:手元の Kivy 2.1.0 では &lt;venv dir&gt;/share/kivy-examples/demo/kivycatalog でした):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $KIVYDIR/examples/demo/kivycatalog
 python main.py
 </pre></div>
 </div>
-<p>A new window will appear. Click in the area below the 'Welcome' <a class="reference internal" href="../api-kivy.uix.spinner.html#kivy.uix.spinner.Spinner" title="kivy.uix.spinner.Spinner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spinner</span></code></a> on the
-left and replace the text there with your kv code from above.</p>
+<p>新しいウィンドウが表示されます。 左側の 'Welcome' スピナー(<a class="reference internal" href="../api-kivy.uix.spinner.html#kivy.uix.spinner.Spinner" title="kivy.uix.spinner.Spinner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spinner</span></code></a>)の下にある領域をクリックし、 そこのテキストを上記 kv コードで置き換えます。</p>
 <img alt="../_images/size_hint%5BB%5D.jpg" src="../_images/size_hint%5BB%5D.jpg" />
-<p>As you can see from the image above, the <cite>Button</cite> takes up 100% of the layout
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>.</p>
-<p>Changing the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a>/<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> to .5 will make the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> take 50%
-of the <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a> <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a>/<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.height" title="kivy.uix.widget.Widget.height"><code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code></a>.</p>
+<p>上の画像からわかるように、<cite>Button</cite> はレイアウト・サイズ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>)の 100% を占めています。</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> / <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> を 0.5 に変更すると、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> は <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a> の <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> / <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.height" title="kivy.uix.widget.Widget.height"><code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code></a> の 50% を占めるようになります。</p>
 <img alt="../_images/size_hint%5Bb_%5D.jpg" src="../_images/size_hint%5Bb_%5D.jpg" />
-<p>You can see here that, although we specify <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> both
-to be .5, only <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> seems to be honored. That is because <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a>
-controls the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> when <a class="reference internal" href="../api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">orientation</span></code></a> is <cite>vertical</cite> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a>
-when <a class="reference internal" href="../api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">orientation</span></code></a> is 'horizontal'. The controlled dimension's size is calculated depending
-upon the total no. of <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> in the <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a>. In this example, one child has
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> controlled (.5/.5 = 1). Thus, the widget takes 100% of the parent
-layout's height.</p>
-<p>Let's add another <a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a> to the <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a> and see what happens.</p>
+<p>ここでは、あなたは <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> と <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> の両方を 0.5 に指定していますが、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> だけが受け入れられているように見えます。 これは、 <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a> が、 向き(<a class="reference internal" href="../api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">orientation</span></code></a>)が <cite>vertical</cite> (縦)の場合は <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> を制御し、 向き(<a class="reference internal" href="../api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout.orientation" title="kivy.uix.boxlayout.BoxLayout.orientation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">orientation</span></code></a>)が 'horizontal' (横)の場合は <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> を制御するためです。 管理寸法のサイズ(controlled dimension's size)は、 子(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)の <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a> の総数に応じて計算されます。 この例では、 1 つの子の <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> が制御されています (0.5/0.5 = 1)。 したがって、 ウィジェットは親レイアウトの高さの 100% を使用します。</p>
+<p>別のボタン(<a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a>)をレイアウト(<a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a>)に追加して、何が起こるか見てみましょう。</p>
 <img alt="../_images/size_hint%5Bbb%5D.jpg" src="../_images/size_hint%5Bbb%5D.jpg" />
-<p><a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a> by its very nature divides the available space between its
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a> equally. In our example, the proportion is 50-50, because we have two
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>. Let's use size_hint on one of the children and see the results.</p>
+<p><a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a> は、その性質上、使用可能なスペースをその子供達(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)の間で均等に分割します。 この例では、 子供(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)が 2 人いるため、比率は 50 対 50 です。 子供の内の 1 人で size_hint を使用して、 その結果を見てみましょう。</p>
 <img alt="../_images/size_hint%5BoB%5D.jpg" src="../_images/size_hint%5BoB%5D.jpg" />
-<p>If a child specifies <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a>, this specifies how much space the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>
-will take out of the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a> given to it by the <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a>. In our example, the
-first <a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a> specifies .5 for <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a>. The space for the widget is
-calculated like so:</p>
+<p>ある子供が <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> を指定した場合、 これは、 そのウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)が <a class="reference internal" href="../api-kivy.uix.boxlayout.html#module-kivy.uix.boxlayout" title="kivy.uix.boxlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">boxlayout</span></code></a> によって指定されたサイズ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>)からどれだけのスペースを取るかを指定します。 この例では、 最初のボタン(<a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a>)で <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a> に 0.5 を指定しています。 よってウィジェットのスペースは以下のように計算されます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first</span> <span class="n">child</span><span class="s1">&#39;s size_hint divided by</span>
 <span class="n">first</span> <span class="n">child</span><span class="s1">&#39;s size_hint + second child&#39;</span><span class="n">s</span> <span class="n">size_hint</span> <span class="o">+</span> <span class="o">...</span><span class="n">n</span><span class="p">(</span><span class="n">no</span> <span class="n">of</span> <span class="n">children</span><span class="p">)</span>
 
 <span class="mf">.5</span><span class="o">/</span><span class="p">(</span><span class="mf">.5</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">.333</span><span class="o">...</span>
 </pre></div>
 </div>
-<p>The rest of the BoxLayout's <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> is divided among the rest of the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>.
-In our example, this means the second <a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a> takes up 66.66% of the <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a>
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a>.</p>
-<p>Experiment with <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> to get comfortable with it.</p>
-<p>If you want to control the absolute <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a> of a <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>, you can set
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a>/<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> or both to <cite>None</cite> so that the widget's <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> and or
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.height" title="kivy.uix.widget.Widget.height"><code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code></a> attributes will be honored.</p>
-<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> is a dict, which defaults to empty. As for <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a>, layouts honor
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> differently, but generally you can add values to any of the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a>
-attributes (<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.x" title="kivy.uix.widget.Widget.x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.y" title="kivy.uix.widget.Widget.y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">y</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.right" title="kivy.uix.widget.Widget.right"><code class="xref py py-attr docutils literal notranslate"><span class="pre">right</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.top" title="kivy.uix.widget.Widget.top"><code class="xref py py-attr docutils literal notranslate"><span class="pre">top</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.center_x" title="kivy.uix.widget.Widget.center_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center_x</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.center_y" title="kivy.uix.widget.Widget.center_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center_y</span></code></a>) to have the
-<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> positioned relative to its <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.parent" title="kivy.uix.widget.Widget.parent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parent</span></code></a>.</p>
-<p>Let's experiment with the following code in kivycatalog to understand <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a>
-visually:</p>
+<p>BoxLayout の残りの <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> は 残りの子供達(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.children" title="kivy.uix.widget.Widget.children"><code class="xref py py-attr docutils literal notranslate"><span class="pre">children</span></code></a>)に分割されます。 この例では、 2 番目の <a class="reference internal" href="../api-kivy.uix.button.html#kivy.uix.button.Button" title="kivy.uix.button.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a> が <a class="reference internal" href="../api-kivy.uix.layout.html#module-kivy.uix.layout" title="kivy.uix.layout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">layout</span></code></a> の <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> の66.66%を占めることを意味します。</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> を試してみて、 それに慣れてください。</p>
+<p>ウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)の絶対サイズ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>)を制御したい場合は、 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_x" title="kivy.uix.widget.Widget.size_hint_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_x</span></code></a>/<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_y" title="kivy.uix.widget.Widget.size_hint_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint_y</span></code></a> またはその両方を <cite>None</cite> に設定して、ウィジェットの幅(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.width" title="kivy.uix.widget.Widget.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a>)や高さ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.height" title="kivy.uix.widget.Widget.height"><code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code></a>)の属性が尊重されるようにします。</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> は辞書(dict)であり、デフォルトは空です。 <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> に関しては、 レイアウトは異なる方法で <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> を尊重するけれども、 一般的には、 あなたは位置(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a>)属性のいずれか(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.x" title="kivy.uix.widget.Widget.x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.y" title="kivy.uix.widget.Widget.y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">y</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.right" title="kivy.uix.widget.Widget.right"><code class="xref py py-attr docutils literal notranslate"><span class="pre">right</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.top" title="kivy.uix.widget.Widget.top"><code class="xref py py-attr docutils literal notranslate"><span class="pre">top</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.center_x" title="kivy.uix.widget.Widget.center_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center_x</span></code></a>, <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.center_y" title="kivy.uix.widget.Widget.center_y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center_y</span></code></a>)に値を追加して、 ウィジェット(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="kivy.uix.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a>)をその親(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.parent" title="kivy.uix.widget.Widget.parent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parent</span></code></a>)に対して相対的に配置することができます。</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> を視覚的に理解するために、 kivycatalog で以下のコードを試してみましょう:</p>
 <div class="highlight-kv notranslate"><div class="highlight"><pre><span></span><span class="nc">FloatLayout</span><span class="p">:</span>
     <span class="nc">Button</span><span class="p">:</span>
         <span class="na">text</span><span class="p">:</span> <span class="s2">&quot;We Will&quot;</span>
@@ -633,21 +556,18 @@ visually:</p>
         <span class="na">size_hint</span><span class="p">:</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.2</span>
 </pre></div>
 </div>
-<p>This gives us:</p>
+<p>これは以下の結果を得ます:</p>
 <img alt="../_images/pos_hint.jpg" src="../_images/pos_hint.jpg" />
-<p>As with <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a>, you should experiment with <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> to
-understand the effect it has on the widget positions.</p>
+<p><a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint" title="kivy.uix.widget.Widget.size_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size_hint</span></code></a> と同様に、 ウィジェットの位置に与える影響を理解するために <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos_hint" title="kivy.uix.widget.Widget.pos_hint"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos_hint</span></code></a> も試してみてください。</p>
 </section>
 <section id="adding-a-background-to-a-layout">
 <span id="adding-widget-background"></span><h2>Adding a Background to a Layout<a class="headerlink" href="#adding-a-background-to-a-layout" title="この見出しへのパーマリンク">¶</a></h2>
-<p>One of the frequently asked questions about layouts is::</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;How to add a background image/color/video/... to a Layout&quot;</span>
-</pre></div>
-</div>
-<p>Layouts by their nature have no visual representation: they have no canvas
-instructions by default. However you can add canvas instructions to a layout
-instance easily, as with adding a colored background:</p>
-<p>In Python:</p>
+<p>レイアウトに関するよくある質問(FAQ)の 1 つは、 以下のとおりです:</p>
+<blockquote>
+<div><p>「背景画像/背景色/背景動画/... をレイアウトに追加する方法は？」</p>
+</div></blockquote>
+<p>レイアウトには、その性質上、視覚的な表現がありません。 つまり、デフォルトでは、キャンバス(canvas)の指定はありません。 ただし、 色付きの背景を追加する場合と同様に、 キャンバス(canvas)の指定をレイアウト・インスタンスに簡単に追加できます:</p>
+<p>Python で書いてみる:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.graphics</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">Rectangle</span>
 
 <span class="k">with</span> <span class="n">layout_instance</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">before</span><span class="p">:</span>
@@ -656,10 +576,7 @@ instance easily, as with adding a colored background:</p>
                            <span class="n">pos</span><span class="o">=</span><span class="n">layout_instance</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Unfortunately, this will only draw a rectangle at the layout's initial position
-and size. To make sure the rect is drawn inside the layout, when the layout
-size/pos changes, we need to listen to any changes and update the rectangles
-size and pos. We can do that as follows:</p>
+<p>残念ながら、 これはレイアウトの初期位置とサイズで四角形を描画するだけです。 四角形がレイアウト内に確実に描画されるようにするには、 レイアウトの サイズ/位置 が変更されたときに、 変更をリッスンして四角形のサイズと位置を更新する必要があります。 以下のような Python コードにします:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">layout_instance</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">before</span><span class="p">:</span>
     <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># green; colors range from 0-1 instead of 0-255</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">layout_instance</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
@@ -673,7 +590,7 @@ size and pos. We can do that as follows:</p>
 <span class="n">layout_instance</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">update_rect</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">update_rect</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In kv:</p>
+<p>kv 言語では以下のようにします:</p>
 <div class="highlight-kv notranslate"><div class="highlight"><pre><span></span><span class="nc">FloatLayout</span><span class="p">:</span>
     <span class="nc">canvas.before</span><span class="p">:</span>
         <span class="nc">Color</span><span class="p">:</span>
@@ -684,11 +601,9 @@ size and pos. We can do that as follows:</p>
             <span class="na">size</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
 </pre></div>
 </div>
-<p>The kv declaration sets an implicit binding: the last two kv lines ensure that
-the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a> and <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a> values of the rectangle will update when the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a> of the
-<a class="reference internal" href="../api-kivy.uix.floatlayout.html#module-kivy.uix.floatlayout" title="kivy.uix.floatlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">floatlayout</span></code></a> changes.</p>
-<p>Now we put the snippets above into the shell of Kivy App.</p>
-<p>Pure Python way:</p>
+<p>kv 宣言は、 暗黙のバインディングを設定します。 最後の 2行は <a class="reference internal" href="../api-kivy.uix.floatlayout.html#module-kivy.uix.floatlayout" title="kivy.uix.floatlayout"><code class="xref py py-mod docutils literal notranslate"><span class="pre">floatlayout</span></code></a> の位置(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a>)が変更されたときに、 四角形の位置(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.pos" title="kivy.uix.widget.Widget.pos"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pos</span></code></a>)とサイズ(<a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.widget.Widget.size" title="kivy.uix.widget.Widget.size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code></a>)の値が更新されることを保証します。</p>
+<p>上記スニペットを Kivy App のシェルに組み込みます。</p>
+<p>Python のみで記述する場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.graphics</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">Rectangle</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
@@ -728,7 +643,7 @@ the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.wid
     <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Using the kv Language:</p>
+<p>kv 言語を使う場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
 
@@ -757,14 +672,12 @@ the <a class="reference internal" href="../api-kivy.uix.widget.html#kivy.uix.wid
     <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Both of the Apps should look something like this:</p>
+<p>両方のアプリとも以下のようになります:</p>
 <img alt="../_images/layout_background.png" src="../_images/layout_background.png" />
 <section id="add-a-color-to-the-background-of-a-custom-layouts-rule-class">
 <h3>Add a color to the background of a <strong>custom layouts rule/class</strong><a class="headerlink" href="#add-a-color-to-the-background-of-a-custom-layouts-rule-class" title="この見出しへのパーマリンク">¶</a></h3>
-<p>The way we add background to the layout's instance can quickly become
-cumbersome if we need to use multiple layouts. To help with this, you can
-subclass the Layout and create your own layout that adds a background.</p>
-<p>Using Python:</p>
+<p>複数のレイアウトを使用する必要がある場合、 レイアウトのインスタンスに背景を追加する方法はすぐに面倒になります。 そのために、 レイアウトをサブクラス化し、 背景を追加するあなた独自のレイアウトを作成できます。</p>
+<p>Python で書いた場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.graphics</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">Rectangle</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
@@ -818,7 +731,7 @@ subclass the Layout and create your own layout that adds a background.</p>
     <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Using the kv Language:</p>
+<p>kv 言語を使う場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.boxlayout</span> <span class="kn">import</span> <span class="n">BoxLayout</span>
@@ -864,13 +777,10 @@ subclass the Layout and create your own layout that adds a background.</p>
     <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Both of the Apps should look something like this:</p>
+<p>両方のアプリとも以下のようになります:</p>
 <img alt="../_images/custom_layout_background.png" src="../_images/custom_layout_background.png" />
-<p>Defining the background in the custom layout class, assures that it will be used
-in every instance of CustomLayout.</p>
-<p>Now, to add an image or color to the background of a built-in Kivy layout,
-<strong>globally</strong>, we need to override the kv rule for the layout in question.
-Consider GridLayout:</p>
+<p>カスタム・レイアウト・クラスで背景を定義すると、 それが CustomLayout のすべてのインスタンスで使用されることが保証されます。</p>
+<p>ここで、 組み込みの Kivy レイアウトの背景に画像または色を <strong>グローバルに</strong> 追加するには、 当該のレイアウトの kv ルールをオーバーライドする必要があります。 なので GridLayout を検討してみましょう:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">GridLayout</span><span class="o">&gt;</span>
     <span class="n">canvas</span><span class="o">.</span><span class="n">before</span><span class="p">:</span>
         <span class="n">Color</span><span class="p">:</span>
@@ -881,7 +791,7 @@ Consider GridLayout:</p>
             <span class="n">size</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
 </pre></div>
 </div>
-<p>Then, when we put this snippet into a Kivy app:</p>
+<p>それから、 このスニペットを Kivy アプリに組み込みます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
 <span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
@@ -931,120 +841,106 @@ Consider GridLayout:</p>
     <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The result should look something like this:</p>
+<p>そうすると結果は以下のようになります:</p>
 <img alt="../_images/global_background.png" src="../_images/global_background.png" />
-<p>As we are overriding the rule of the class GridLayout, any use of this
-class in our app will display that image.</p>
-<p>How about an <strong>Animated background</strong>?</p>
-<p>You can set the drawing instructions like Rectangle/BorderImage/Ellipse/... to
-use a particular texture:</p>
+<p>GridLayout クラスのルールをオーバーライドしているため、 私達のアプリでこのクラスを使用すると、 その画像(image)が表示されます。</p>
+</section>
+<section id="how-about-an-animated-background">
+<h3>How about an <strong>Animated background</strong>?<a class="headerlink" href="#how-about-an-animated-background" title="この見出しへのパーマリンク">¶</a></h3>
+<p>RectangleやBorderImageやEllipseなどの描画命令を設定して、 特定のテクスチャを使用できます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rectangle</span><span class="p">:</span>
     <span class="n">texture</span><span class="p">:</span> <span class="n">reference</span> <span class="n">to</span> <span class="n">a</span> <span class="n">texture</span>
 </pre></div>
 </div>
-<p>We use this to display an animated background:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
-<span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
-<span class="kn">from</span> <span class="nn">kivy.uix.gridlayout</span> <span class="kn">import</span> <span class="n">GridLayout</span>
-<span class="kn">from</span> <span class="nn">kivy.uix.image</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">kivy.properties</span> <span class="kn">import</span> <span class="n">ObjectProperty</span>
-<span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
-
-
-<span class="n">Builder</span><span class="o">.</span><span class="n">load_string</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">&lt;CustomLayout&gt;</span>
-<span class="s1">    canvas.before:</span>
-<span class="s1">        BorderImage:</span>
-<span class="s1">            # BorderImage behaves like the CSS BorderImage</span>
-<span class="s1">            border: 10, 10, 10, 10</span>
-<span class="s1">            texture: self.background_image.texture</span>
-<span class="s1">            pos: self.pos</span>
-<span class="s1">            size: self.size</span>
-
-<span class="s1">&lt;RootWidget&gt;</span>
-<span class="s1">    CustomLayout:</span>
-<span class="s1">        size_hint: .9, .9</span>
-<span class="s1">        pos_hint: {&#39;center_x&#39;: .5, &#39;center_y&#39;: .5}</span>
-<span class="s1">        rows:1</span>
-<span class="s1">        Label:</span>
-<span class="s1">            text: &quot;I don&#39;t suffer from insanity, I enjoy every minute of it&quot;</span>
-<span class="s1">            text_size: self.width-20, self.height-20</span>
-<span class="s1">            valign: &#39;top&#39;</span>
-<span class="s1">        Label:</span>
-<span class="s1">            text: &quot;When I was born I was so surprised; I didn&#39;t speak for a year and a half.&quot;</span>
-<span class="s1">            text_size: self.width-20, self.height-20</span>
-<span class="s1">            valign: &#39;middle&#39;</span>
-<span class="s1">            halign: &#39;center&#39;</span>
-<span class="s1">        Label:</span>
-<span class="s1">            text: &quot;A consultant is someone who takes a subject you understand and makes it sound confusing&quot;</span>
-<span class="s1">            text_size: self.width-20, self.height-20</span>
-<span class="s1">            valign: &#39;bottom&#39;</span>
-<span class="s1">            halign: &#39;justify&#39;</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">CustomLayout</span><span class="p">(</span><span class="n">GridLayout</span><span class="p">):</span>
-
-    <span class="n">background_image</span> <span class="o">=</span> <span class="n">ObjectProperty</span><span class="p">(</span>
-        <span class="n">Image</span><span class="p">(</span>
-            <span class="n">source</span><span class="o">=</span><span class="s1">&#39;../examples/widgets/sequenced_images/data/images/button_white_animated.zip&#39;</span><span class="p">,</span>
-            <span class="n">anim_delay</span><span class="o">=</span><span class="mf">.1</span><span class="p">))</span>
-
-
-<span class="k">class</span> <span class="nc">RootWidget</span><span class="p">(</span><span class="n">FloatLayout</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-
-<span class="k">class</span> <span class="nc">MainApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">RootWidget</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<p>これを使用して、 アニメーションの背景(animated background)を表示します</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">kivy.uix.floatlayout</span> <span class="kn">import</span> <span class="n">FloatLayout</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">kivy.uix.gridlayout</span> <span class="kn">import</span> <span class="n">GridLayout</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">kivy.uix.image</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">kivy.properties</span> <span class="kn">import</span> <span class="n">ObjectProperty</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="n">Builder</span><span class="o">.</span><span class="n">load_string</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="linenos">10</span><span class="s1">&lt;CustomLayout&gt;</span>
+<span class="linenos">11</span><span class="s1">    canvas.before:</span>
+<span class="linenos">12</span><span class="s1">        BorderImage:</span>
+<span class="linenos">13</span><span class="s1">            # BorderImage behaves like the CSS BorderImage</span>
+<span class="linenos">14</span><span class="s1">            border: 10, 10, 10, 10</span>
+<span class="linenos">15</span><span class="s1">            texture: self.background_image.texture</span>
+<span class="linenos">16</span><span class="s1">            pos: self.pos</span>
+<span class="linenos">17</span><span class="s1">            size: self.size</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="s1">&lt;RootWidget&gt;</span>
+<span class="linenos">20</span><span class="s1">    CustomLayout:</span>
+<span class="linenos">21</span><span class="s1">        size_hint: .9, .9</span>
+<span class="linenos">22</span><span class="s1">        pos_hint: {&#39;center_x&#39;: .5, &#39;center_y&#39;: .5}</span>
+<span class="linenos">23</span><span class="s1">        rows:1</span>
+<span class="linenos">24</span><span class="s1">        Label:</span>
+<span class="linenos">25</span><span class="s1">            text: &quot;I don&#39;t suffer from insanity, I enjoy every minute of it&quot;</span>
+<span class="linenos">26</span><span class="s1">            text_size: self.width-20, self.height-20</span>
+<span class="linenos">27</span><span class="s1">            valign: &#39;top&#39;</span>
+<span class="linenos">28</span><span class="s1">        Label:</span>
+<span class="linenos">29</span><span class="s1">            text: &quot;When I was born I was so surprised; I didn&#39;t speak for a year and a half.&quot;</span>
+<span class="linenos">30</span><span class="s1">            text_size: self.width-20, self.height-20</span>
+<span class="linenos">31</span><span class="s1">            valign: &#39;middle&#39;</span>
+<span class="linenos">32</span><span class="s1">            halign: &#39;center&#39;</span>
+<span class="linenos">33</span><span class="s1">        Label:</span>
+<span class="linenos">34</span><span class="s1">            text: &quot;A consultant is someone who takes a subject you understand and makes it sound confusing&quot;</span>
+<span class="linenos">35</span><span class="s1">            text_size: self.width-20, self.height-20</span>
+<span class="linenos">36</span><span class="s1">            valign: &#39;bottom&#39;</span>
+<span class="linenos">37</span><span class="s1">            halign: &#39;justify&#39;</span>
+<span class="linenos">38</span><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="k">class</span> <span class="nc">CustomLayout</span><span class="p">(</span><span class="n">GridLayout</span><span class="p">):</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span>    <span class="n">background_image</span> <span class="o">=</span> <span class="n">ObjectProperty</span><span class="p">(</span>
+<span class="linenos">44</span>        <span class="n">Image</span><span class="p">(</span>
+<span class="linenos">45</span>            <span class="n">source</span><span class="o">=</span><span class="s1">&#39;../examples/widgets/sequenced_images/data/images/button_white_animated.zip&#39;</span><span class="p">,</span>
+<span class="linenos">46</span>            <span class="n">anim_delay</span><span class="o">=</span><span class="mf">.1</span><span class="p">))</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="k">class</span> <span class="nc">RootWidget</span><span class="p">(</span><span class="n">FloatLayout</span><span class="p">):</span>
+<span class="linenos">50</span>    <span class="k">pass</span>
+<span class="linenos">51</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span><span class="k">class</span> <span class="nc">MainApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">56</span>        <span class="k">return</span> <span class="n">RootWidget</span><span class="p">()</span>
+<span class="linenos">57</span>
+<span class="linenos">58</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">59</span>    <span class="n">MainApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>To try to understand what is happening here, start from line 13:</p>
+</div></blockquote>
+<p>ここで何が起こっているのかを理解するには、 15 行目をご覧下さい:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">texture</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">background_image</span><span class="o">.</span><span class="n">texture</span>
 </pre></div>
 </div>
-<p>This specifies that the <cite>texture</cite> property of <cite>BorderImage</cite> will be updated
-whenever the <cite>texture</cite> property of <cite>background_image</cite> updates. We define the
-background_image property at line 40:</p>
+<p>これは、 <cite>background_image</cite> の <cite>texture</cite> プロパティが更新されるたびに、 <cite>BorderImage</cite> の <cite>texture</cite> プロパティを更新することを指定します。 43 行目で background_image プロパティを定義しています:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">background_image</span> <span class="o">=</span> <span class="n">ObjectProperty</span><span class="p">(</span><span class="o">...</span>
 </pre></div>
 </div>
-<p>This sets up <cite>background_image</cite> as an <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ObjectProperty" title="kivy.properties.ObjectProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectProperty</span></code></a> in which we add an <a class="reference internal" href="../api-kivy.uix.image.html#kivy.uix.image.Image" title="kivy.uix.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>
-widget. An image widget has a <cite>texture</cite> property; where you see
-<cite>self.background_image.texture</cite>, this sets a reference, <cite>texture</cite>, to this property.
-The <a class="reference internal" href="../api-kivy.uix.image.html#kivy.uix.image.Image" title="kivy.uix.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> widget supports animation: the texture of the image is updated whenever
-the animation changes, and the texture of BorderImage instruction is updated in
-the process.</p>
-<p>You can also just blit custom data to the texture. For details, look at the
-documentation of <a class="reference internal" href="../api-kivy.graphics.texture.html#kivy.graphics.texture.Texture" title="kivy.graphics.texture.Texture"><code class="xref py py-class docutils literal notranslate"><span class="pre">Texture</span></code></a>.</p>
+<p>これにより、 画像(<a class="reference internal" href="../api-kivy.uix.image.html#kivy.uix.image.Image" title="kivy.uix.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>)ウィジェットを追加する <a class="reference internal" href="../api-kivy.properties.html#kivy.properties.ObjectProperty" title="kivy.properties.ObjectProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectProperty</span></code></a> として <cite>background_image</cite> が設定されます。 画像ウィジェットは <cite>texture</cite> プロパティを持っていて、  <cite>self.background_image.texture</cite> が表示されている場所では、 このプロパティへの参照である <cite>texture</cite> が設定されます。 画像ウィジェットはアニメーションをサポートします。 つまり、 アニメーションが変更されるたびに画像のテクスチャが更新され、 その過程で BorderImage 命令のテクスチャが更新されます。</p>
+<p>カスタム・データをテクスチャに転送(blit)することもできます。 詳しくは <a class="reference internal" href="../api-kivy.graphics.texture.html#kivy.graphics.texture.Texture" title="kivy.graphics.texture.Texture"><code class="xref py py-class docutils literal notranslate"><span class="pre">Texture</span></code></a> のドキュメントを見てください。</p>
 </section>
 </section>
 <section id="nesting-layouts">
 <h2>Nesting Layouts<a class="headerlink" href="#nesting-layouts" title="この見出しへのパーマリンク">¶</a></h2>
-<p>Yes! It is quite fun to see how extensible the process can be.</p>
+<p>レイアウトを入れ子にできますか？ ええ、もちろん！  どこまで入れ子にできるか見てみるのはとても楽しいです。</p>
 </section>
 <section id="size-and-position-metrics">
 <h2>Size and position metrics<a class="headerlink" href="#size-and-position-metrics" title="この見出しへのパーマリンク">¶</a></h2>
-<p>Kivy's default unit for length is the pixel, all sizes and positions are
-expressed in it by default. You can express them in other units, which is
-useful to achieve better consistency across devices (they get converted to the
-size in pixels automatically).</p>
-<p>Available units are <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.pt" title="kivy.metrics.pt"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pt</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.mm" title="kivy.metrics.mm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mm</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.cm" title="kivy.metrics.cm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cm</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.inch" title="kivy.metrics.inch"><code class="xref py py-attr docutils literal notranslate"><span class="pre">inch</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.dp" title="kivy.metrics.dp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dp</span></code></a> and <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.sp" title="kivy.metrics.sp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sp</span></code></a>. You can learn about
-their usage in the <a class="reference internal" href="../api-kivy.metrics.html#module-kivy.metrics" title="kivy.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">metrics</span></code></a> documentation.</p>
-<p>You can also experiment with the <a class="reference internal" href="../api-kivy.modules.screen.html#module-kivy.modules.screen" title="kivy.modules.screen"><code class="xref py py-mod docutils literal notranslate"><span class="pre">screen</span></code></a> usage to simulate various devices
-screens for your application.</p>
+<p>Kivy の長さのデフォルト単位はピクセル(pixel)で、すべてのサイズと位置はデフォルトではピクセルで表されます。 他の単位で表現することもできます。 これはデバイス間で一貫性を保つのに役立ちます(それらはピクセル単位のサイズに自動的に変換されます)。</p>
+<p>使用可能な単位は <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.pt" title="kivy.metrics.pt"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pt</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.mm" title="kivy.metrics.mm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mm</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.cm" title="kivy.metrics.cm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cm</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.inch" title="kivy.metrics.inch"><code class="xref py py-attr docutils literal notranslate"><span class="pre">inch</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.dp" title="kivy.metrics.dp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dp</span></code></a>, <a class="reference internal" href="../api-kivy.metrics.html#kivy.metrics.sp" title="kivy.metrics.sp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sp</span></code></a> です。 あなたは <a class="reference internal" href="../api-kivy.metrics.html#module-kivy.metrics" title="kivy.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">metrics</span></code></a> のドキュメンテーションでこれらの使用法を知ることができます。</p>
+<p><a class="reference internal" href="../api-kivy.modules.screen.html#module-kivy.modules.screen" title="kivy.modules.screen"><code class="xref py py-mod docutils literal notranslate"><span class="pre">screen</span></code></a> モジュールを使用して、 あなたのアプリケーションの、 さまざまなデバイスでの画面をシミュレートすることもできます。</p>
 </section>
 <section id="screen-separation-with-screen-manager">
 <h2>Screen Separation with Screen Manager<a class="headerlink" href="#screen-separation-with-screen-manager" title="この見出しへのパーマリンク">¶</a></h2>
-<p>If your application is composed of various screens, you likely want an easy
-way to navigate from one <a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.Screen" title="kivy.uix.screenmanager.Screen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Screen</span></code></a> to another. Fortunately, there is the
-<a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.ScreenManager" title="kivy.uix.screenmanager.ScreenManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScreenManager</span></code></a> class, that allows you to define screens separately, and to set
-the <a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.TransitionBase" title="kivy.uix.screenmanager.TransitionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransitionBase</span></code></a> from one to another.</p>
+<p>あなたのアプリケーションがさまざまな画面(screen)で構成されている場合、 ある画面(<a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.Screen" title="kivy.uix.screenmanager.Screen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Screen</span></code></a>)から別の画面に簡単に移動できる方法が必要になる可能性があります。 幸いなことに、 <a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.ScreenManager" title="kivy.uix.screenmanager.ScreenManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScreenManager</span></code></a> クラスがあり、これを使用すると、 画面を個別に定義し、 ある画面から別の画面への遷移(<a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.uix.screenmanager.TransitionBase" title="kivy.uix.screenmanager.TransitionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransitionBase</span></code></a>)を設定できます。</p>
 </section>
 </section>
 
@@ -1095,7 +991,7 @@ the <a class="reference internal" href="../api-kivy.uix.screenmanager.html#kivy.
     <!--
     <div class="footer">
       &copy; Copyright 2010, The Kivy Authors.
-      最終更新: 1月 22, 2023
+      最終更新: 2月 08, 2023
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.1.3.
 </div>
 -->

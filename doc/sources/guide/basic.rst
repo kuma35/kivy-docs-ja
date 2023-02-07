@@ -36,23 +36,26 @@ Creating a kivy application is as simple as:
 - instantiating this class, and calling its :meth:`~kivy.app.App.run`
   method.
 
-Here is an example of a minimal application::
+Here is an example of a minimal application
 
-    import kivy
-    kivy.require('2.1.0') # replace with your current kivy version !
+    .. code-block:: python
+       :linenos:
 
-    from kivy.app import App
-    from kivy.uix.label import Label
+       import kivy
+       kivy.require('2.1.0') # replace with your current kivy version !
 
-
-    class MyApp(App):
-
-        def build(self):
-            return Label(text='Hello world')
+       from kivy.app import App
+       from kivy.uix.label import Label
 
 
-    if __name__ == '__main__':
-        MyApp().run()
+       class MyApp(App):
+
+           def build(self):
+               return Label(text='Hello world')
+
+
+       if __name__ == '__main__':
+           MyApp().run()
 
 You can save this to a text file, `main.py` for example, and run it.
 
@@ -144,6 +147,7 @@ Customize the application
 Lets extend this application a bit, say a simple UserName/Password page.
 
 .. code-block:: python
+   :linenos:
 
     from kivy.app import App
     from kivy.uix.gridlayout import GridLayout

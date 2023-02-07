@@ -7,11 +7,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: 2023-01-15 09:04+0900\n"
+"POT-Creation-Date: 2023-02-07 00:37+0900\n"
+"PO-Revision-Date: 2023-02-07 00:50+0900\n"
 "Last-Translator: kuma35\n"
-"Language-Team: Japanese\n"
 "Language: ja_JP\n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +32,10 @@ msgid ""
 "more. They are not all required, but depending on the platform you're "
 "working on, they can be a pain to install. To ease your development "
 "process, we provide pre-packaged binaries for Windows, macOS and Linux."
-msgstr "Kivy は、SDL2やgstreamerやPILやCairoなどの多くのライブラリに依存しています。 すべてが必須というわけではありませんが、 使用しているプラットフォームによってはインストールが面倒な場合があり、 開発プロセスを容易にするために、 WindowsやmacOSやLinux 用の事前にパッケージ化されたバイナリを提供しています。"
+msgstr ""
+"Kivy は、SDL2やgstreamerやPILやCairoなどの多くのライブラリに依存しています。 すべてが必須というわけではありませんが、 "
+"使用しているプラットフォームによってはインストールが面倒な場合があり、 開発プロセスを容易にするために、 WindowsやmacOSやLinux "
+"用の事前にパッケージ化されたバイナリを提供しています。"
 
 #: ../../sources/guide/basic.rst:14
 msgid "Have a look at one of these pages for detailed installation instructions:"
@@ -81,7 +85,9 @@ msgstr ":class:`~kivy.app.App` クラスをサブクラス化します"
 msgid ""
 "implementing its :meth:`~kivy.app.App.build` method so it returns a "
 ":class:`~kivy.uix.Widget` instance (the root of your widget tree)"
-msgstr ":meth:`~kivy.app.App.build` メソッドを実装して :class:`~kivy.uix.Widget` インスタンス(ウィジェット・ツリーのルート)を返すようにする"
+msgstr ""
+":meth:`~kivy.app.App.build` メソッドを実装して :class:`~kivy.uix.Widget` "
+"インスタンス(ウィジェット・ツリーのルート)を返すようにする"
 
 #: ../../sources/guide/basic.rst:36
 msgid ""
@@ -90,184 +96,217 @@ msgid ""
 msgstr "上記でサブクラス化したクラスをインスタンス化し、 その :meth:`~kivy.app.App.run` メソッドを呼び出します。"
 
 #: ../../sources/guide/basic.rst:39
-msgid "Here is an example of a minimal application::"
-msgstr "以下が最小限のアプリケーションの例です::"
+msgid "Here is an example of a minimal application"
+msgstr "以下が最小限のアプリケーションの例です"
 
-#: ../../sources/guide/basic.rst:57
+#: ../../sources/guide/basic.rst:60
 msgid "You can save this to a text file, `main.py` for example, and run it."
 msgstr "上記をテキスト・ファイル、たとえば `main.py` に保存し、実行します。"
 
-#: ../../sources/guide/basic.rst:60
+#: ../../sources/guide/basic.rst:63
 msgid "Kivy App Life Cycle"
 msgstr "Kivy App Life Cycle"
 
-#: ../../sources/guide/basic.rst:62
+#: ../../sources/guide/basic.rst:65
 msgid "First off, let's get familiar with the Kivy app life cycle."
 msgstr "まず、 Kivy アプリのライフサイクルに慣れましょう。"
 
-#: ../../sources/guide/basic.rst:66
+#: ../../sources/guide/basic.rst:69
 msgid ""
 "As you can see above, for all intents and purposes, our entry point into "
 "our App is the run() method, and in our case that is \"MyApp().run()\". "
 "We will get back to this, but let's start from the line::"
-msgstr "上記のように、 すべての意図と目的において、 私達のアプリへのエントリ・ポイントは run() メソッドであり、 この場合は \"MyApp().run()\" です。 これについてはまた後ほど紹介しますが、 まずは以下の行から始めましょう::"
+msgstr ""
+"上記のように、 すべての意図と目的において、 私達のアプリへのエントリ・ポイントは run() メソッドであり、 この場合は "
+"\"MyApp().run()\" です。 これについてはまた後ほど紹介しますが、 まずは以下の行から始めましょう::"
 
-#: ../../sources/guide/basic.rst:72
+#: ../../sources/guide/basic.rst:75
 msgid ""
 "It's required that the base Class of your App inherits from the `App` "
 "class. It's present in the kivy_installation_dir/kivy/app.py."
-msgstr "あなたのアプリの基底クラスは `App` クラスから継承する必要があります。 これは kivy_installation_dir/kivy/app.py にあります。"
+msgstr ""
+"あなたのアプリの基底クラスは `App` クラスから継承する必要があります。 これは "
+"kivy_installation_dir/kivy/app.py にあります。"
 
-#: ../../sources/guide/basic.rst:76
+#: ../../sources/guide/basic.rst:79
 msgid ""
 "Go ahead and open up that file if you want to delve deeper into what the "
 "Kivy App class does. We encourage you to open the code and read through "
 "it. Kivy is based on Python and uses Sphinx for documentation, so the "
 "documentation for each class is in the actual file."
-msgstr "Kivy App クラスの機能をさらに詳しく調べたい場合は、 当該のファイルを開いてください。 コードを開いて一読することをお勧めします。 Kivy は Python ベースでドキュメントには Sphinx を使用しているため、 各クラスのドキュメントは当該のファイルにあります。"
+msgstr ""
+"Kivy App クラスの機能をさらに詳しく調べたい場合は、 当該のファイルを開いてください。 コードを開いて一読することをお勧めします。 "
+"Kivy は Python ベースでドキュメントには Sphinx を使用しているため、 各クラスのドキュメントは当該のファイルにあります。"
 
-#: ../../sources/guide/basic.rst:81
+#: ../../sources/guide/basic.rst:84
 msgid "Similarly on line 5::"
 msgstr "同様に5行目::"
 
-#: ../../sources/guide/basic.rst:85
+#: ../../sources/guide/basic.rst:88
 msgid ""
 "One important thing to note here is the way packages/classes are laid "
 "out. The :class:`~kivy.uix` module is the section that holds the user "
 "interface elements like layouts and widgets."
-msgstr "で、 ここで注意すべき重要な点の 1 つは、 パッケージ/クラス の配置方法です。 :class:`~kivy.uix` モジュールは、 レイアウトやウィジェットなどのユーザー・インターフェイス要素を保持するセクションです。"
+msgstr ""
+"で、 ここで注意すべき重要な点の 1 つは、 パッケージ/クラス の配置方法です。 :class:`~kivy.uix` モジュールは、 "
+"レイアウトやウィジェットなどのユーザー・インターフェイス要素を保持するセクションです。"
 
-#: ../../sources/guide/basic.rst:89
+#: ../../sources/guide/basic.rst:92
 msgid "Moving on to line 8::"
 msgstr "それでは8行目に移動して::"
 
-#: ../../sources/guide/basic.rst:93
+#: ../../sources/guide/basic.rst:96
 msgid ""
 "This is where we are `defining` the Base Class of our Kivy App. You "
 "should only ever need to change the name of your app `MyApp` in this "
 "line."
 msgstr "これは、 私達の Kivy アプリの基底クラスを「定義」しています。 あなたはこの行でアプリの名前 `MyApp` を変更するだけでいいはずです。"
 
-#: ../../sources/guide/basic.rst:96
+#: ../../sources/guide/basic.rst:99
 msgid "Further on to line 10::"
 msgstr "さらに10行目に行って::"
 
-#: ../../sources/guide/basic.rst:100
+#: ../../sources/guide/basic.rst:103
 msgid ""
 "As highlighted by the image above, show casing the `Kivy App Life Cycle`,"
 " this is the function where you should initialize and return your `Root "
 "Widget`. This is what we do on line 11::"
-msgstr "上記 `Kivy App Life Cycle` の図で強調されているように、 `Kivy App Life Cycle` では、 この関数で「ルート・ウィジェット」を初期化して返す必要があります。 これは 11行目で行うことです::"
+msgstr ""
+"上記 `Kivy App Life Cycle` の図で強調されているように、 `Kivy App Life Cycle` では、 "
+"この関数で「ルート・ウィジェット」を初期化して返す必要があります。 これは 11行目で行うことです::"
 
-#: ../../sources/guide/basic.rst:106
+#: ../../sources/guide/basic.rst:109
 msgid ""
 "Here we initialize a Label with text 'Hello World' and return its "
 "instance. This Label will be the Root Widget of this App."
-msgstr "ここでは、 'Hello World' というテキストで Label を初期化し、 そのインスタンスを返します。 この Label は、 このアプリのルート・ウィジェットになります。"
+msgstr ""
+"ここでは、 'Hello World' というテキストで Label を初期化し、 そのインスタンスを返します。 この Label は、 "
+"このアプリのルート・ウィジェットになります。"
 
-#: ../../sources/guide/basic.rst:110
+#: ../../sources/guide/basic.rst:113
 msgid ""
 "Python uses indentation to denote code blocks, therefore take note that "
 "in the code provided above, at line 11 the class and function definition "
 "ends."
-msgstr "Python はインデントを使用してコード・ブロックを示します。 したがって上記のコードでは、 11 行目でクラスと関数の定義が終了していることに注意してください。"
+msgstr ""
+"Python はインデントを使用してコード・ブロックを示します。 したがって上記のコードでは、 11 "
+"行目でクラスと関数の定義が終了していることに注意してください。"
 
-#: ../../sources/guide/basic.rst:113
+#: ../../sources/guide/basic.rst:116
 msgid "Now on to the portion that will make our app run at line 14 and 15::"
 msgstr "次に、 私達のアプリを実行する部分に進みます。 それは14行目と15行目です::"
 
-#: ../../sources/guide/basic.rst:118
+#: ../../sources/guide/basic.rst:121
 msgid ""
 "Here the class `MyApp` is initialized and its run() method called. This "
 "initializes and starts our Kivy application."
-msgstr "ここでクラス `MyApp` が初期化され、その run() メソッドが呼び出されます。 これにより、 私達の Kivy アプリケーションが初期化されて開始されます。"
+msgstr ""
+"ここでクラス `MyApp` が初期化され、その run() メソッドが呼び出されます。 これにより、 私達の Kivy "
+"アプリケーションが初期化されて開始されます。"
 
-#: ../../sources/guide/basic.rst:123
+#: ../../sources/guide/basic.rst:126
 msgid "Running the application"
 msgstr "Running the application"
 
-#: ../../sources/guide/basic.rst:124
+#: ../../sources/guide/basic.rst:127
 msgid "To run the application, follow the instructions for your operating system:"
 msgstr "アプリケーションを実行するには、 以下の、あなたが使っているオペレーティング・システムでの手順に従ってください:"
 
-#: ../../sources/guide/basic.rst:126
+#: ../../sources/guide/basic.rst:129
 msgid ""
 "For Windows, Linux, macOS, or the RPi. From the :ref:`terminal<command-"
 "line>` where you installed Kivy simply run::"
-msgstr "Windows または Linux または macOS または RPi の場合。 Kivy をインストールした :ref:`terminal<command-line>` から以下を実行するだけです::"
+msgstr ""
+"Windows または Linux または macOS または RPi の場合。 Kivy をインストールした :ref:`terminal"
+"<command-line>` から以下を実行するだけです::"
 
-#: ../../sources/guide/basic.rst:131
+#: ../../sources/guide/basic.rst:134
 msgid ""
 "For Android or iOS, your application needs some complementary files to be"
 " able to run. See :doc:`/guide/packaging-android` or See :doc:`/guide"
 "/packaging-ios` for further reference."
-msgstr "Android または iOS の場合、 あなたのアプリケーションを実行するにはいくつかの補足ファイルが必要です。 詳細については、:doc:`/guide/packaging-android` または :doc:`/guide/packaging-ios` を参照してください。"
+msgstr ""
+"Android または iOS の場合、 あなたのアプリケーションを実行するにはいくつかの補足ファイルが必要です。 "
+"詳細については、:doc:`/guide/packaging-android` または :doc:`/guide/packaging-ios` "
+"を参照してください。"
 
-#: ../../sources/guide/basic.rst:134
+#: ../../sources/guide/basic.rst:137
 msgid ""
 "A window should open, showing a single Label (with the Text 'Hello "
 "World') that covers the entire window's area. That's all there is to it."
-msgstr "ウィンドウが開き、 ウィンドウの領域全体をカバーする('Hello World' というテキストを含む)単一のラベルが表示されます。 ただそれだけです。"
+msgstr ""
+"ウィンドウが開き、 ウィンドウの領域全体をカバーする('Hello World' というテキストを含む)単一のラベルが表示されます。 "
+"ただそれだけです。"
 
-#: ../../sources/guide/basic.rst:142
+#: ../../sources/guide/basic.rst:145
 msgid "Customize the application"
 msgstr "Customize the application"
 
-#: ../../sources/guide/basic.rst:144
+#: ../../sources/guide/basic.rst:147
 msgid "Lets extend this application a bit, say a simple UserName/Password page."
 msgstr "このアプリケーションを少し拡張して、 単純な UserName/Password ページにしてみましょう。"
 
-#: ../../sources/guide/basic.rst:176
+#: ../../sources/guide/basic.rst:179
 msgid "At line 2 we import a :class:`~kivy.uix.gridlayout.Gridlayout`::"
 msgstr "上記2行目で :class:`~kivy.uix.gridlayout.Gridlayout` をインポートします::"
 
-#: ../../sources/guide/basic.rst:180
+#: ../../sources/guide/basic.rst:183
 msgid ""
 "This class is used as a Base for our Root Widget (LoginScreen) defined at"
 " line 7::"
 msgstr "このクラスは、 7行目で定義するルート・ウィジェット(LoginScreen)の基底として使用されます::"
 
-#: ../../sources/guide/basic.rst:185
+#: ../../sources/guide/basic.rst:188
 msgid ""
 "At line 9 in the class LoginScreen, we override the method "
 ":meth:`~kivy.widget.Widget.__init__` so as to add widgets and to define "
 "their behavior::"
-msgstr "9行目のクラス LoginScreen で、メソッド :meth:`~kivy.widget.Widget.__init__` をオーバーライドして、 ウィジェットを追加し、その振る舞いを定義します::"
+msgstr "LoginScreen クラス内(9行目〜)で、メソッド :meth:`~kivy.widget.Widget.__init__` をオーバーライドして、 ウィジェットを追加し、 その振る舞いを定義します::"
 
-#: ../../sources/guide/basic.rst:192
+#: ../../sources/guide/basic.rst:195
 msgid ""
 "One should not forget to call super in order to implement the "
 "functionality of the original class being overloaded. Also note that it "
 "is good practice not to omit the `**kwargs` while calling super, as they "
 "are sometimes used internally."
-msgstr "オーバーロードされている元のクラスの機能を実装するために、 super を呼び出すことを忘れないでください。 また、 `**kwargs` は内部で使用される場合があるため、 super を呼び出すときに省略しないことをお勧めします。"
+msgstr ""
+"オーバーロードされている元のクラスの機能を実装するために、 super を呼び出すことを忘れないでください。 また、 `**kwargs` "
+"は内部で使用される場合があるため、 super を呼び出すときに省略しないことをお勧めします。"
 
-#: ../../sources/guide/basic.rst:196
+#: ../../sources/guide/basic.rst:199
 msgid "Moving on to Line 11 and beyond::"
 msgstr "11行目以降::"
 
-#: ../../sources/guide/basic.rst:206
+#: ../../sources/guide/basic.rst:209
 msgid ""
 "We ask the GridLayout to manage its children in two columns and add a "
 ":class:`~kivy.uix.label.Label` and a "
 ":class:`~kivy.uix.textinput.TextInput` for the username and password."
-msgstr "GridLayout にその子を2列で管理するよう依頼し、 かつ、 ユーザー名とパスワード用に :class:`~kivy.uix.label.Label` と :class:`~kivy.uix.textinput.TextInput` を追加するように依頼します。"
+msgstr ""
+"GridLayout にその子を2列で管理するよう依頼し、 かつ、 ユーザー名とパスワード用に "
+":class:`~kivy.uix.label.Label` と :class:`~kivy.uix.textinput.TextInput` "
+"を追加するように依頼します。"
 
-#: ../../sources/guide/basic.rst:210
+#: ../../sources/guide/basic.rst:213
 msgid "Running the above code will give you a window that should look like this:"
 msgstr "上記コードを実行すると、 以下のようなウィンドウが表示されます:"
 
-#: ../../sources/guide/basic.rst:215
+#: ../../sources/guide/basic.rst:218
 msgid ""
 "Try re-sizing the window and you will see that the widgets on screen "
 "adjust themselves according to the size of the window without you having "
 "to do anything. This is because widgets use size hinting by default."
-msgstr "ウィンドウのサイズを変更してみてください。 何もしなくても、 画面上のウィジェットがウィンドウのサイズに合わせて自動的に調整されることがわかります。 これは、 ウィジェットがデフォルトでサイズヒントを使用するためです。"
+msgstr ""
+"ウィンドウのサイズを変更してみてください。 何もしなくても、 "
+"画面上のウィジェットがウィンドウのサイズに合わせて自動的に調整されることがわかります。 これは、 "
+"ウィジェットがデフォルトでサイズヒントを使用するためです。"
 
-#: ../../sources/guide/basic.rst:219
+#: ../../sources/guide/basic.rst:222
 msgid ""
 "The code above doesn't handle the input from the user, does no validation"
 " or anything else. We will delve deeper into this and "
 ":class:`~kivy.widget.Widget` size and positioning in the coming sections."
-msgstr "上記コードは、 ユーザーからの入力を処理せず、何も検証しません。 これと :class:`~kivy.widget.Widget` のサイズと配置については、 次のセクションで詳しく説明します。"
+msgstr ""
+"上記コードは、 ユーザーからの入力を処理せず、何も検証しません。 これと :class:`~kivy.widget.Widget` "
+"のサイズと配置については、 次のセクションで詳しく説明します。"
 

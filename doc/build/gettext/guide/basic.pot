@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-12 08:37+0900\n"
+"POT-Creation-Date: 2023-02-07 00:45+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,133 +81,133 @@ msgid "instantiating this class, and calling its :meth:`~kivy.app.App.run` metho
 msgstr ""
 
 #: ../../sources/guide/basic.rst:39
-msgid "Here is an example of a minimal application::"
-msgstr ""
-
-#: ../../sources/guide/basic.rst:57
-msgid "You can save this to a text file, `main.py` for example, and run it."
+msgid "Here is an example of a minimal application"
 msgstr ""
 
 #: ../../sources/guide/basic.rst:60
+msgid "You can save this to a text file, `main.py` for example, and run it."
+msgstr ""
+
+#: ../../sources/guide/basic.rst:63
 msgid "Kivy App Life Cycle"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:62
+#: ../../sources/guide/basic.rst:65
 msgid "First off, let's get familiar with the Kivy app life cycle."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:66
+#: ../../sources/guide/basic.rst:69
 msgid "As you can see above, for all intents and purposes, our entry point into our App is the run() method, and in our case that is \"MyApp().run()\". We will get back to this, but let's start from the line::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:72
+#: ../../sources/guide/basic.rst:75
 msgid "It's required that the base Class of your App inherits from the `App` class. It's present in the kivy_installation_dir/kivy/app.py."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:76
+#: ../../sources/guide/basic.rst:79
 msgid "Go ahead and open up that file if you want to delve deeper into what the Kivy App class does. We encourage you to open the code and read through it. Kivy is based on Python and uses Sphinx for documentation, so the documentation for each class is in the actual file."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:81
+#: ../../sources/guide/basic.rst:84
 msgid "Similarly on line 5::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:85
+#: ../../sources/guide/basic.rst:88
 msgid "One important thing to note here is the way packages/classes are laid out. The :class:`~kivy.uix` module is the section that holds the user interface elements like layouts and widgets."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:89
+#: ../../sources/guide/basic.rst:92
 msgid "Moving on to line 8::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:93
+#: ../../sources/guide/basic.rst:96
 msgid "This is where we are `defining` the Base Class of our Kivy App. You should only ever need to change the name of your app `MyApp` in this line."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:96
+#: ../../sources/guide/basic.rst:99
 msgid "Further on to line 10::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:100
+#: ../../sources/guide/basic.rst:103
 msgid "As highlighted by the image above, show casing the `Kivy App Life Cycle`, this is the function where you should initialize and return your `Root Widget`. This is what we do on line 11::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:106
+#: ../../sources/guide/basic.rst:109
 msgid "Here we initialize a Label with text 'Hello World' and return its instance. This Label will be the Root Widget of this App."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:110
+#: ../../sources/guide/basic.rst:113
 msgid "Python uses indentation to denote code blocks, therefore take note that in the code provided above, at line 11 the class and function definition ends."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:113
+#: ../../sources/guide/basic.rst:116
 msgid "Now on to the portion that will make our app run at line 14 and 15::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:118
+#: ../../sources/guide/basic.rst:121
 msgid "Here the class `MyApp` is initialized and its run() method called. This initializes and starts our Kivy application."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:123
+#: ../../sources/guide/basic.rst:126
 msgid "Running the application"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:124
+#: ../../sources/guide/basic.rst:127
 msgid "To run the application, follow the instructions for your operating system:"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:126
+#: ../../sources/guide/basic.rst:129
 msgid "For Windows, Linux, macOS, or the RPi. From the :ref:`terminal<command-line>` where you installed Kivy simply run::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:131
+#: ../../sources/guide/basic.rst:134
 msgid "For Android or iOS, your application needs some complementary files to be able to run. See :doc:`/guide/packaging-android` or See :doc:`/guide/packaging-ios` for further reference."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:134
+#: ../../sources/guide/basic.rst:137
 msgid "A window should open, showing a single Label (with the Text 'Hello World') that covers the entire window's area. That's all there is to it."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:142
+#: ../../sources/guide/basic.rst:145
 msgid "Customize the application"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:144
+#: ../../sources/guide/basic.rst:147
 msgid "Lets extend this application a bit, say a simple UserName/Password page."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:176
+#: ../../sources/guide/basic.rst:180
 msgid "At line 2 we import a :class:`~kivy.uix.gridlayout.Gridlayout`::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:180
+#: ../../sources/guide/basic.rst:184
 msgid "This class is used as a Base for our Root Widget (LoginScreen) defined at line 7::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:185
+#: ../../sources/guide/basic.rst:189
 msgid "At line 9 in the class LoginScreen, we override the method :meth:`~kivy.widget.Widget.__init__` so as to add widgets and to define their behavior::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:192
+#: ../../sources/guide/basic.rst:196
 msgid "One should not forget to call super in order to implement the functionality of the original class being overloaded. Also note that it is good practice not to omit the `**kwargs` while calling super, as they are sometimes used internally."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:196
+#: ../../sources/guide/basic.rst:200
 msgid "Moving on to Line 11 and beyond::"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:206
+#: ../../sources/guide/basic.rst:210
 msgid "We ask the GridLayout to manage its children in two columns and add a :class:`~kivy.uix.label.Label` and a :class:`~kivy.uix.textinput.TextInput` for the username and password."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:210
+#: ../../sources/guide/basic.rst:214
 msgid "Running the above code will give you a window that should look like this:"
 msgstr ""
 
-#: ../../sources/guide/basic.rst:215
+#: ../../sources/guide/basic.rst:219
 msgid "Try re-sizing the window and you will see that the widgets on screen adjust themselves according to the size of the window without you having to do anything. This is because widgets use size hinting by default."
 msgstr ""
 
-#: ../../sources/guide/basic.rst:219
+#: ../../sources/guide/basic.rst:223
 msgid "The code above doesn't handle the input from the user, does no validation or anything else. We will delve deeper into this and :class:`~kivy.widget.Widget` size and positioning in the coming sections."
 msgstr ""

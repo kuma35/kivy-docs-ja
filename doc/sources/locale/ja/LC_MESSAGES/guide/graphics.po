@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Kivy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kivy 2.2.0.dev0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-12 08:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-02-09 00:01+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../sources/guide/graphics.rst:4
 msgid "Graphics"
-msgstr ""
+msgstr "Graphics"
 
 #: ../../sources/guide/graphics.rst:7
 msgid "Introduction to Canvas"
-msgstr ""
+msgstr "Introduction to Canvas"
 
 #: ../../sources/guide/graphics.rst:9
 msgid ""
@@ -31,21 +31,21 @@ msgid ""
 "can see as both an unlimited drawing board or as a set of drawing "
 "instructions. There are numerous instructions you can apply (add) to your"
 " canvas, but there are two main variations:"
-msgstr ""
+msgstr "ウィジェットのグラフィカル表現は、 キャンバス(canvas)を使用してレンダリングされます。 キャンバスは、 無制限の描画ボード(drawing board)または一連の描画命令(set of drawing instructions)の両方として表示できます。 あなたのキャンバスに適用(追加)できる命令は多数ありますが、 主なバリエーションは以下の 2 つです:"
 
 #: ../../sources/guide/graphics.rst:14
 msgid ":mod:`context instructions <kivy.graphics.context_instructions>`"
-msgstr ""
+msgstr ":mod:`context instructions <kivy.graphics.context_instructions>`"
 
 #: ../../sources/guide/graphics.rst:15
 msgid ":mod:`vertex instructions <kivy.graphics.vertex_instructions>`"
-msgstr ""
+msgstr ":mod:`vertex instructions <kivy.graphics.vertex_instructions>`"
 
 #: ../../sources/guide/graphics.rst:17
 msgid ""
 "Context instructions don't draw anything, but they change the results of "
 "the vertex instructions."
-msgstr ""
+msgstr "コンテキスト命令(Context instructions)は何も描画しませんが、 頂点命令(vertex instructions)の結果を変更します。"
 
 #: ../../sources/guide/graphics.rst:20
 msgid ""
@@ -56,15 +56,15 @@ msgid ""
 ":mod:`~kivy.graphics.canvas` group respectively. This means that they "
 "will appear under (be executed before) and above (be executed after) "
 "them. Those groups are not created until the user accesses them."
-msgstr ""
+msgstr "キャンパスには、 命令の 2 つのサブセットを含めることができます。 それは  :mod:`canvas.before <kivy.graphics.Canvas.before>` 命令グループと :mod:`canvas.after <kivy.graphics.Canvas.after>` 命令グループです。 これらの命令グループは、 それぞれ `~kivy.graphics.canvas` 命令グループの前と後に実行されます。 これは、 それらが :mod:`canvas.before <kivy.graphics.Canvas.before>` 命令グループが `~kivy.graphics.canvas` 命令グループの下 (前に実行される) および、 :mod:`canvas.after <kivy.graphics.Canvas.after>` 命令グループが `~kivy.graphics.canvas` 命令グループの上 (後で実行される) に表示されることを意味します。 これら命令グループは、 ユーザーがアクセスするまで作成されません。"
 
 #: ../../sources/guide/graphics.rst:28
 msgid "To add a canvas instruction to a widget, you use the canvas context:"
-msgstr ""
+msgstr "キャンバス命令をウィジェットに追加するには、 キャンバス・コンテキストを使用します:"
 
 #: ../../sources/guide/graphics.rst:45
 msgid "Context instructions"
-msgstr ""
+msgstr "Context instructions"
 
 #: ../../sources/guide/graphics.rst:47
 msgid ""
@@ -72,39 +72,39 @@ msgid ""
 "translate, and scale your canvas. You can also attach a texture or change"
 " the drawing color. This one is the most commonly used, but others are "
 "really useful too::"
-msgstr ""
+msgstr "コンテキスト命令は、 opengl コンテキストを操作します。 あなたのキャンバスを回転や平行移動や拡大縮小できます。 テクスチャを当て嵌めたり、 描画色を変更することもできます。 これは最も一般的に使用されますが、 他のものも非常に便利です::"
 
 #: ../../sources/guide/graphics.rst:55
 msgid "Drawing instructions"
-msgstr ""
+msgstr "Drawing instructions"
 
 #: ../../sources/guide/graphics.rst:57
 msgid ""
 "Drawing instructions range from very simple ones, like drawing a line or "
 "a polygon, to more complex ones, like meshes or bezier curves::"
-msgstr ""
+msgstr "描画命令(drawing instructions)は、 線や多角形の描画などの非常に単純な命令から、 メッシュやベジェ曲線などのより複雑な命令までさまざまです::"
 
 #: ../../sources/guide/graphics.rst:69
 msgid "Manipulating instructions"
-msgstr ""
+msgstr "Manipulating instructions"
 
 #: ../../sources/guide/graphics.rst:71
 msgid ""
 "Sometimes you want to update or remove the instructions you have added to"
 " a canvas. This can be done in various ways depending on your needs:"
-msgstr ""
+msgstr "キャンバスに追加した命令(instructions)を更新または削除したい場合があります。 これは、 あなたのニーズに応じてさまざまな方法で実行できます:"
 
 #: ../../sources/guide/graphics.rst:74
 msgid "You can keep a reference to your instructions and update them::"
-msgstr ""
+msgstr "あなたの命令への参照を保持し、 それらを更新できます::"
 
 #: ../../sources/guide/graphics.rst:90
 msgid "Or you can clean your canvas and start fresh::"
-msgstr ""
+msgstr "または、 あなたのキャンバスをクリアして、 最初からやり直すこともできます::"
 
 #: ../../sources/guide/graphics.rst:106
 msgid ""
 "Note that updating the instructions is considered the best practice as it"
 " involves less overhead and avoids creating new instructions."
-msgstr ""
+msgstr "注意: 命令の更新は、 オーバーヘッドが少なく、 新しい命令の作成を回避できるため、 ベスト・プラクティスと考えられています。"
 
